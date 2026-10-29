@@ -1,75 +1,91 @@
-export type Sprite = {w: number; h: number; headX: number; headY: number; headR: number; footX: number; footY: number};
+export type Sprite = {handX: number; handY: number; w: number; h: number; headX: number; headY: number; headR: number; footX: number; footY: number};
 export const SPRITES: Record<string, Sprite> = {
   "rope": {
-    "w": 572,
-    "h": 1216,
-    "headX": 316,
-    "headY": 195,
-    "headR": 148.765869140625,
-    "footX": 373.5,
-    "footY": 1204.0
+    "handX": 1079,
+    "handY": 703,
+    "w": 1080,
+    "h": 1600,
+    "headX": 278,
+    "headY": 293,
+    "headR": 212.9224853515625,
+    "footX": 534.9,
+    "footY": 1588.0
   },
   "point": {
-    "w": 572,
-    "h": 1216,
-    "headX": 316,
-    "headY": 195,
-    "headR": 148.765869140625,
-    "footX": 373.5,
-    "footY": 1204.0
+    "handX": 590,
+    "handY": 555,
+    "w": 597,
+    "h": 1600,
+    "headX": 268,
+    "headY": 275,
+    "headR": 211.08837890625,
+    "footX": 286.8,
+    "footY": 1588.0
   },
   "think": {
-    "w": 572,
-    "h": 1216,
-    "headX": 316,
-    "headY": 195,
-    "headR": 148.765869140625,
-    "footX": 373.5,
-    "footY": 1204.0
+    "handX": 557,
+    "handY": 1555,
+    "w": 564,
+    "h": 1600,
+    "headX": 269,
+    "headY": 284,
+    "headR": 209.4976806640625,
+    "footX": 308.3,
+    "footY": 1588.0
   },
   "thumbs": {
-    "w": 572,
-    "h": 1216,
-    "headX": 316,
-    "headY": 195,
-    "headR": 148.765869140625,
-    "footX": 373.5,
-    "footY": 1204.0
+    "handX": 579,
+    "handY": 1100,
+    "w": 586,
+    "h": 1600,
+    "headX": 291,
+    "headY": 285,
+    "headR": 213.5518035888672,
+    "footX": 319.3,
+    "footY": 1588.0
   },
   "shocked": {
-    "w": 572,
-    "h": 1216,
-    "headX": 316,
-    "headY": 195,
-    "headR": 148.765869140625,
-    "footX": 373.5,
-    "footY": 1204.0
+    "handX": 547,
+    "handY": 720,
+    "w": 554,
+    "h": 1600,
+    "headX": 273,
+    "headY": 296,
+    "headR": 205.3426513671875,
+    "footX": 287.7,
+    "footY": 1588.0
   },
   "nervous": {
-    "w": 572,
-    "h": 1216,
-    "headX": 316,
-    "headY": 195,
-    "headR": 148.765869140625,
-    "footX": 373.5,
-    "footY": 1204.0
+    "handX": 507,
+    "handY": 1557,
+    "w": 514,
+    "h": 1600,
+    "headX": 252,
+    "headY": 274,
+    "headR": 201.87875366210938,
+    "footX": 283.7,
+    "footY": 1588.0
   },
   "bucket": {
-    "w": 572,
-    "h": 1216,
-    "headX": 316,
-    "headY": 195,
-    "headR": 148.765869140625,
-    "footX": 373.5,
-    "footY": 1204.0
+    "handX": 822,
+    "handY": 823,
+    "w": 829,
+    "h": 1600,
+    "headX": 260,
+    "headY": 290,
+    "headR": 197.7425994873047,
+    "footX": 294.8,
+    "footY": 1588.0
   },
   "facepalm": {
-    "w": 572,
-    "h": 1216,
-    "headX": 316,
-    "headY": 195,
-    "headR": 148.765869140625,
-    "footX": 373.5,
-    "footY": 1204.0
+    "handX": 579,
+    "handY": 1553,
+    "w": 587,
+    "h": 1600,
+    "headX": 288,
+    "headY": 267,
+    "headR": 205.95010375976562,
+    "footX": 352.3,
+    "footY": 1588.0
   }
 };

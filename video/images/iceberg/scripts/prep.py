@@ -11,6 +11,8 @@ for arg in sys.argv[1:]:
     ys, xs = np.where(a > 20)
     x0, x1, y0, y1 = max(xs.min() - 12, 0), min(xs.max() + 13, a.shape[1]), max(ys.min() - 12, 0), min(ys.max() + 13, a.shape[0])
     im = im.crop((x0, y0, x1, y1))
+    if im.height > 1600:  # big enough for the 4K render, much lighter to load
+        im = im.resize((round(im.width * 1600 / im.height), 1600), Image.LANCZOS)
     a = np.array(im)[..., 3]
     h, w = a.shape
     a8 = (a > 128).astype(np.uint8)
@@ -25,8 +27,12 @@ for arg in sys.argv[1:]:
     fy, fx = np.where(band > 0)
     foot = (float(fx.mean()) if len(fx) else w / 2, float(h - 12))
     im.save(ROOT + f'public/iceberg/sci/{name}.png')
-    out[name] = {'w': w, 'h': h, 'headX': int(hx), 'headY': int(hy), 'headR': float(dt[hy, hx]), 'footX': round(foot[0], 1), 'footY': round(foot[1], 1)}
+    # rightmost opaque point (end of the rope / held object)
+    ys2, xs2 = np.where(a > 128)
+    i = xs2.argmax()
+    out_hand = (int(xs2[i]), int(ys2[i]))
+    out[name] = {'handX': out_hand[0], 'handY': out_hand[1], 'w': w, 'h': h, 'headX': int(hx), 'headY': int(hy), 'headR': float(dt[hy, hx]), 'footX': round(foot[0], 1), 'footY': round(foot[1], 1)}
     print(name, out[name])
-ts = 'export type Sprite = {w: number; h: number; headX: number; headY: number; headR: number; footX: number; footY: number};\n'
+ts = 'export type Sprite = {handX: number; handY: number; w: number; h: number; headX: number; headY: number; headR: number; footX: number; footY: number};\n'
 ts += 'export const SPRITES: Record<string, Sprite> = ' + json.dumps(out, indent=2) + ';\n'
 open(ROOT + 'src/iceberg/sprites.ts', 'w').write(ts)

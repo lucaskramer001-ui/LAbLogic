@@ -87,3 +87,10 @@ export const Sci: React.FC<{
     </div>
   );
 };
+
+// Scene position of the pose's hand (rightmost point of the cut-out, mirrored when flipped).
+export const handAt = (pose: Pose, x: number, y: number, headR: number, flip = false) => {
+  const sp = SPRITES[pose];
+  const k = headR / sp.headR;
+  return {x: x + (flip ? -1 : 1) * (sp.handX - sp.footX) * k, y: y + (sp.handY - sp.footY) * k};
+};

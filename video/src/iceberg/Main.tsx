@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {AbsoluteFill, Audio, Img, Sequence, continueRender, delayRender, staticFile, useCurrentFrame} from 'remotion';
 import {FPS, S, END, at, endOf} from './timing';
 import {Captions} from './Captions';
-import {Sci} from './Sci';
+import {Sci, handAt} from './Sci';
 import {SFX, dbAt} from './sfx';
 import {
   BigText,
@@ -153,6 +153,7 @@ const blink = (t: number, times: number[]) => {
 
 const CoverScene: React.FC<{t: number}> = ({t}) => {
   const bob = Math.sin(t * 3) * 6;
+  const coverHand = handAt('rope', 200, 1760, 52);
   return (
     <Stage>
       <Layer>
@@ -166,10 +167,10 @@ const CoverScene: React.FC<{t: number}> = ({t}) => {
           <ellipse cx={770} cy={1600} rx={300} ry={64} fill={C.sea} stroke={C.ink} strokeWidth={INK_W} />
           <Berg x={770} y={1600} s={1.05} face={{mood: 'smug', look: {x: -0.6, y: 0}, open: blink(t, [0.9])}} />
         </g>
-        <Rope x1={300} y1={1420} x2={560} y2={1560 + bob} sag={60} />
+        <Rope x1={coverHand.x - 6} y1={coverHand.y} x2={600} y2={1560 + bob} sag={40} />
       </Layer>
       <Img src={staticFile('iceberg/wordmark.png')} style={{position: 'absolute', left: 540 - 270, top: 180, width: 540}} />
-      <Sci t={t} x={230} y={1750} headR={50} poses={[[0, 'rope']]} />
+      <Sci t={t} x={200} y={1760} headR={52} poses={[[0, 'rope']]} />
     </Stage>
   );
 };
@@ -286,12 +287,13 @@ const HistoryScene: React.FC<{t: number}> = ({t}) => {
         <Sun x={870} y={500} r={85} t={t} hot={1} />
         <Sea y={WL} t={t} />
         <Desert x={1060} y={WL - 20} s={0.85} />
+        <Sea y={WL} t={t} x0={-400} x1={1480} />
         <Puffs x={tugX + 34} y={WL - 210} t={t} />
         <Rope x1={tugX - 211 * 0.75} y1={WL - 66} x2={bergX + 140 * 0.6} y2={WL - 50} sag={14} />
         <Berg x={bergX} y={WL} s={0.6} face={{mood: 'worried', look: {x: 1, y: -0.2}, open: blink(t, [13.2])}} />
         <Tug x={tugX} y={WL} s={0.75} rock={rock} />
         <Pill x={540} y={430} text="1970s" s={pop(t, at('1970s'))} size={66} />
-        <Pill x={860} y={640} text="ARABIA" s={pop(t, at('arabia'))} bg={C.paper} />
+        <Pill x={770} y={640} text="ARABIA" s={pop(t, at('arabia'))} bg={C.paper} />
         <Pill x={330} y={590} text="THE PLAN" s={pop(t, at('plan'))} bg={C.paper} size={46} />
       </Layer>
       <Sci t={t} x={940} y={WL - 60} headR={26} poses={[[0, 'think']]} />
@@ -472,13 +474,15 @@ const MonthsScene: React.FC<{t: number}> = ({t}) => {
   const prevLabel = dayAt(k);
   const flip = flipLocal;
   const drift = (t - t0) * 60;
+  const rockY = Math.sin(t * 3.1) * 4;
+  const monthsHand = handAt('rope', 780 + drift - 120, WL - 46 + rockY, 26, true);
   return (
     <Stage cam={{x: 540 + drift * 0.3, y: 1020, s: 1.15 * punch(t, t0)}}>
       <Layer>
         <Sky />
         <Sea y={WL} t={t} x0={-400} x1={2000} />
         <Puffs x={780 + drift + 34} y={WL - 210} t={t} />
-        <Rope x1={780 + drift - 211 * 0.75} y1={WL - 66} x2={300 + drift + 140 * 0.62} y2={WL - 50} sag={14} />
+        <Rope x1={monthsHand.x + 4} y1={monthsHand.y} x2={300 + drift + 140 * 0.62} y2={WL - 50} sag={10} />
         <Berg x={300 + drift} y={WL} s={0.62} sweat={t * 0.8} face={{mood: 'worried', look: {x: 1, y: 0}, open: blink(t, [38.3])}} />
         <Tug x={780 + drift} y={WL} s={0.75} rock={rock} />
         <g transform={`translate(${drift * 0.3} 0)`}>
@@ -486,7 +490,7 @@ const MonthsScene: React.FC<{t: number}> = ({t}) => {
           <Pill x={540} y={760} text="2 MONTHS" s={pop(t, at('two', 1))} size={58} />
         </g>
       </Layer>
-      <Sci t={t} x={780 + drift - 110} y={WL - 46 + rock * 2} headR={26} poses={[[0, 'rope']]} />
+      <Sci t={t} x={780 + drift - 120} y={WL - 46 + rockY} headR={26} poses={[[0, 'rope']]} flip />
     </Stage>
   );
 };
