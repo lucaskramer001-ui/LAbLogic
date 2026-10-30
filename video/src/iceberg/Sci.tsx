@@ -3,7 +3,7 @@ import {Img, staticFile} from 'remotion';
 import {SPRITES} from './sprites';
 import {clamp} from './anim';
 
-export type Pose = 'rope' | 'point' | 'think' | 'thumbs' | 'shocked' | 'nervous' | 'bucket' | 'facepalm';
+export type Pose = 'rope' | 'point' | 'think' | 'thumbs' | 'shocked' | 'nervous' | 'bucket' | 'facepalm' | 'throw' | 'present' | 'calc' | 'hot';
 
 // The scientist: a cut-out picture per pose. Swaps happen on the narrowest frame of a quick squash
 // (never a cross-fade). x/y = feet in scene coordinates; headR = on-screen head radius.

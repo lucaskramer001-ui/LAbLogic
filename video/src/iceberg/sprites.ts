@@ -87,5 +87,49 @@ export const SPRITES: Record<string, Sprite> = {
     "headR": 205.95010375976562,
     "footX": 352.3,
     "footY": 1588.0
+  },
+  "throw": {
+    "handX": 1222,
+    "handY": 761,
+    "w": 1230,
+    "h": 1600,
+    "headX": 632,
+    "headY": 291,
+    "headR": 207.2852783203125,
+    "footX": 388.1,
+    "footY": 1588.0
+  },
+  "present": {
+    "handX": 855,
+    "handY": 629,
+    "w": 862,
+    "h": 1600,
+    "headX": 250,
+    "headY": 269,
+    "headR": 194.0601806640625,
+    "footX": 319.8,
+    "footY": 1588.0
+  },
+  "calc": {
+    "handX": 853,
+    "handY": 1526,
+    "w": 861,
+    "h": 1600,
+    "headX": 468,
+    "headY": 267,
+    "headR": 183.9377899169922,
+    "footX": 495.9,
+    "footY": 1588.0
+  },
+  "hot": {
+    "handX": 608,
+    "handY": 767,
+    "w": 615,
+    "h": 1600,
+    "headX": 332,
+    "headY": 296,
+    "headR": 200.69427490234375,
+    "footX": 321.9,
+    "footY": 1588.0
   }
 };
