@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {AbsoluteFill, Audio, Img, Sequence, continueRender, delayRender, staticFile, useCurrentFrame} from 'remotion';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import {AbsoluteFill, Audio, Img, Sequence, continueRender, delayRender, getInputProps, staticFile, useCurrentFrame} from 'remotion';
 import {FPS, END, ph} from './timing';
 import {S} from './scenes';
 import {Sci} from '../iceberg/Sci';
@@ -101,6 +101,8 @@ const IntroScene: React.FC<{t: number}> = ({t}) => {
   const bigger = 1 + 0.32 * prog(t, ph('three point four'), ph('2050') + 0.5, easeOutBack);
   const pan = prog(t, ph('some of it ends up') - 0.4, ph('rivers') + 0.6);
   const fire = t > ph('burned') - 0.1;
+  const panStart = ph('some of it ends up') - 0.4;
+  const away = 1 - prog(t, panStart - 0.35, panStart, (u) => u);
   return (
     <Stage cam={{x: lerp(960, 1900, pan), s: punch(t, 0)}}>
       <Layer>
@@ -116,12 +118,10 @@ const IntroScene: React.FC<{t: number}> = ({t}) => {
           <TrashHeap x={1060} y={860} s={1.05} grow={grow} t={t} />
           {fire && <Fire x={1120} y={500} t={t} s={pop(t, ph('burned') - 0.1, 0.4)} />}
         </g>
-        <Pill x={1060} y={150} text="2 BILLION TONNES A YEAR" s={pop(t, ph('two billion'))} size={56} />
-        <Pill x={1060} y={260} text="WORLD BANK" s={pop(t, ph("world bank's")) * 0.8} bg={C.paper} size={44} />
-        <g transform={`translate(${1500 + 600 * pan} 400)`}>
-          <Pill x={0} y={0} text="3.4 BILLION BY 2050" s={pop(t, ph('three point four')) * (1 - pan)} bg={C.red} fg={C.paper} size={50} />
-        </g>
-        <Pill x={2700} y={260} text="RIVERS AND OCEANS" s={pop(t, ph('rivers'))} bg={C.paper} size={50} />
+        <Pill x={1060} y={150} text="2 BILLION TONNES A YEAR" s={pop(t, ph('two billion')) * away} size={56} />
+        <Pill x={1060} y={260} text="WORLD BANK" s={pop(t, ph("world bank's")) * 0.8 * away} bg={C.paper} size={44} />
+        <Pill x={1400} y={400} text="3.4 BILLION BY 2050" s={pop(t, ph('three point four')) * away} bg={C.red} fg={C.paper} size={50} />
+        <Pill x={2250} y={260} text="RIVERS AND OCEANS" s={pop(t, ph('rivers') + 0.6)} bg={C.paper} size={50} />
       </Layer>
       <Sci t={t} x={330} y={1010} headR={58} poses={[[0, 'present'], [ph('landfills'), 'nervous']]} />
     </Stage>
@@ -246,14 +246,14 @@ const OrbitScene: React.FC<{t: number}> = ({t}) => {
         {showRocket && ru > 0.6 && <Arrow x1={rocket.x + tang.x * 40} y1={rocket.y + tang.y * 40} x2={rocket.x + tang.x * 210} y2={rocket.y + tang.y * 210} w={16} head={36} />}
         {z < 0.2 && (
           <g>
-            <Pill x={e.x + tang.x * 330 + 40} y={e.y + tang.y * 330 - 60} text="30 KM/S" s={pop(t, ph('thirty kilometers')) * (t < ph('sixty-seven') ? 1 : 0)} size={50} />
-            <Pill x={e.x + tang.x * 330 + 40} y={e.y + tang.y * 330 - 60} text="67,000 MPH" s={pop(t, ph('sixty-seven')) * (t < ph("and here's") ? 1 : 0)} size={50} />
+            <Pill x={1500} y={150} text="30 KM/S" s={pop(t, ph('thirty kilometers')) * (t < ph('sixty-seven') ? 1 : 0)} size={50} />
+            <Pill x={1500} y={150} text="67,000 MPH" s={pop(t, ph('sixty-seven')) * (t < ph("and here's") ? 1 : 0)} size={50} />
           </g>
         )}
         {showRocket && ru > 0.6 && <Pill x={rocket.x + tang.x * 120 + 150} y={rocket.y + tang.y * 120 - 60} text="ALREADY 30 KM/S" s={pop(t, ph('already flying'))} size={44} />}
         {gravity && <Pill x={e.x + (SUN_C.x - e.x) * 0.55 + 110} y={e.y + (SUN_C.y - e.y) * 0.55} text="GRAVITY" s={pop(t, ph('fall into the sun')) * 0.8} bg={C.red} fg={C.paper} size={44} />}
-        <Pill x={1560} y={130} text="THAT'S AN ORBIT" s={pop(t, ph('orbit is'))} size={56} />
-        <Pill x={1560} y={130} text="FALLING... AND MISSING" s={pop(t, ph('it is falling')) * (t < ph('orbit is') ? 1 : 0)} bg={C.paper} size={48} />
+        <Pill x={1400} y={110} text="THAT'S AN ORBIT" s={pop(t, ph('orbit is'))} size={56} />
+        <Pill x={1400} y={110} text="FALLING... AND MISSING" s={pop(t, ph('it is falling')) * (t < ph('orbit is') ? 1 : 0)} bg={C.paper} size={48} />
       </Layer>
     </Stage>
   );
@@ -310,7 +310,7 @@ const TrainScene: React.FC<{t: number}> = ({t}) => {
             <path d={`M ${ghostX - 26} 830 L ${ghostX + 26} 880 M ${ghostX + 26} 830 L ${ghostX - 26} 880`} stroke={C.red} strokeWidth={12} strokeLinecap="round" />
           </g>
         )}
-        <Pill x={1460} y={180} text="KEEPS THE TRAIN'S SPEED" s={pop(t, ph("keeps the train's"))} size={50} />
+        <Pill x={1300} y={180} text="KEEPS THE TRAIN'S SPEED" s={pop(t, ph("keeps the train's"))} size={50} />
         <Arrow x1={1180} y1={360} x2={1180 + 340 * pop(t, ph('fast train'))} y2={360} />
       </Layer>
     </Stage>
@@ -345,7 +345,7 @@ const CircleScene: React.FC<{t: number}> = ({t}) => {
           <path d={`M ${SUN_C.x + Math.cos(bagA - 1.2) * ORBIT_R} ${SUN_C.y + Math.sin(bagA - 1.2) * ORBIT_R} A ${ORBIT_R} ${ORBIT_R} 0 0 1 ${b.x} ${b.y}`} stroke={C.yellow} strokeWidth={8} fill="none" strokeLinecap="round" />
         )}
         <TrashBag x={b.x} y={b.y} s={0.75} rot={Math.sin(t * 2) * 14} face={{mood: 'happy', look: {x: -0.5, y: 0}}} />
-        <Pill x={1560} y={130} text="RIGHT ALONGSIDE US" s={pop(t, ph('alongside'))} size={52} />
+        <Pill x={1420} y={120} text="RIGHT ALONGSIDE US" s={pop(t, ph('alongside'))} size={52} />
       </Layer>
     </Stage>
   );
@@ -384,7 +384,7 @@ const CancelScene: React.FC<{t: number}> = ({t}) => {
           <Pill x={0} y={150} text="SLOW DOWN" s={pop(t, slowT)} bg={C.green} size={58} />
           <Pill x={0} y={290} text="BY A LOT" s={pop(t, lotT)} size={52} />
         </g>
-        <Pill x={560} y={130} text="CANCEL THE SIDEWAYS SPEED" s={pop(t, ph('cancel'))} size={46} />
+        <Pill x={640} y={120} text="CANCEL THE SIDEWAYS SPEED" s={pop(t, ph('cancel'))} size={46} />
       </Layer>
     </Stage>
   );
@@ -407,7 +407,7 @@ const ParkerScene: React.FC<{t: number}> = ({t}) => {
         <Pill x={px} y={py + 320} text="−53,000 MPH" s={pop(t, ph('fifty-three thousand'))} bg={C.red} fg={C.paper} size={50} />
         <Pill x={620} y={130} text="NASA PARKER SOLAR PROBE" s={pop(t, ph('parker solar probe'))} size={50} />
         <Pill x={620} y={240} text="LAUNCHED 2018" s={pop(t, ph('2018'))} bg={C.paper} size={44} />
-        <Pill x={1180} y={940} text="DIDN'T EVEN NEED TO HIT IT" s={pop(t, ph("didn't even need"))} bg={C.paper} size={44} />
+        <Pill x={620} y={350} text="DIDN'T EVEN NEED TO HIT IT" s={pop(t, ph("didn't even need"))} bg={C.paper} size={44} />
       </Layer>
     </Stage>
   );
@@ -428,7 +428,7 @@ const EnergyScene: React.FC<{t: number}> = ({t}) => {
         <Bar x={330} y={395} w={unit} color={MARS} label="" value="MARS" grow={mars} h={74} />
         <Sun x={190} y={680} r={56} t={t} face={{mood: 'smug'}} />
         <Bar x={330} y={645} w={unit * 55} color={'#FFC93C'} label="" value="" grow={sun} h={74} />
-        {sun > 0.98 && <Pill x={330 + unit * 55 - 120} y={800} text="55× MORE" s={pop(t, ph('fifty-five') + 1.2)} bg={C.red} fg={C.paper} size={60} />}
+        {sun > 0.98 && <Pill x={1450} y={800} text="55× MORE" s={pop(t, ph('fifty-five') + 1.2)} bg={C.red} fg={C.paper} size={60} />}
         <text x={960} y={1000} textAnchor="middle" fontFamily={FONT_DISPLAY} fontWeight={800} fontSize={34} fill={C.paper} opacity={0.85}>
           SOURCE: NASA
         </text>
@@ -468,14 +468,14 @@ const VenusScene: React.FC<{t: number}> = ({t}) => {
         <Sun x={SUN_C.x} y={SUN_C.y} r={62} t={t} face={{mood: zoom > 0.5 ? 'surprised' : 'happy', open: blink(t)}} />
         <Planet x={SUN_C.x + Math.cos(va) * vr} y={SUN_C.y + Math.sin(va) * vr} r={30} color={VENUS} face={{mood: 'happy'}} />
         <Probe x={pxy.x} y={pxy.y} s={0.32} rot={(Math.atan2(SUN_C.y - pxy.y, SUN_C.x - pxy.x) * 180) / Math.PI + 180} glow={prg} />
-        <Pill x={300} y={150} text={`VENUS FLYBYS: ${n}/7`} s={pop(t, ph('borrowed help')) * (zoom < 0.3 ? 1 : 0)} size={50} />
-        {calS > 0 && zoom < 0.4 && <Calendar x={1640} y={300} s={calS * 0.8} label={calLabel} flip={t > ph('six years') && t < ph('six years') + 0.3 ? (t - ph('six years')) / 0.3 : 0} prev="2018" />}
+        <Pill x={640} y={190} text={`VENUS FLYBYS: ${n}/7`} s={pop(t, ph('borrowed help')) * (zoom < 0.3 ? 1 : 0)} size={50} />
+        {calS > 0 && zoom < 0.4 && <Calendar x={1500} y={320} s={calS * 0.7} label={calLabel} flip={t > ph('six years') && t < ph('six years') + 0.3 ? (t - ph('six years')) / 0.3 : 0} prev="2018" />}
       </Layer>
     </Stage>
       {zoom > 0.3 && (
         <Layer>
           <Pill x={960} y={110} text="DEC 24, 2024" s={pop(t, ph('christmas eve') + 0.3)} size={56} />
-          <Pill x={520} y={980} text="3.8 MILLION MILES FROM THE SURFACE" s={pop(t, ph('three point eight')) * 0.8} bg={C.paper} size={44} />
+          <Pill x={620} y={980} text="3.8 MILLION MILES FROM THE SURFACE" s={pop(t, ph('three point eight')) * 0.8} bg={C.paper} size={44} />
           <Pill x={1500} y={980} text="430,000 MPH" s={pop(t, ph('four hundred and thirty'))} bg={C.red} fg={C.paper} size={50} />
           {t > ph('no spacecraft') && <Stamp x={1500} y={330} text="CLOSEST EVER" s={pop(t, ph('no spacecraft'), 0.35) * 0.7} color={C.green} />}
         </Layer>
@@ -495,9 +495,9 @@ const EscapeScene: React.FC<{t: number}> = ({t}) => {
       <Layer>
         <SpaceBg t={t} />
         <BigText x={960} y={170} text="EASIER TO LEAVE THAN TO HIT" size={78} fill={C.yellow} />
-        <Bar x={620} y={380} w={unit * 12} color={C.green} label="LEAVE THE SOLAR SYSTEM" value="+12 KM/S" grow={esc} h={84} />
-        <Bar x={620} y={600} w={unit * 28.5} color={C.red} label="HIT THE SUN" value="" grow={hit} h={84} />
-        {hit > 0.98 && <Pill x={620 + unit * 28.5 - 210} y={760} text="ALMOST ALL OF 30 KM/S" s={pop(t, ph("earth's thirty"))} size={46} />}
+        <Bar x={720} y={380} w={unit * 12} color={C.green} label="LEAVE THE SOLAR SYSTEM" value="+12 KM/S" grow={esc} h={84} />
+        <Bar x={720} y={600} w={unit * 28.5} color={C.red} label="HIT THE SUN" value="" grow={hit} h={84} />
+        {hit > 0.98 && <Pill x={1300} y={770} text="ALMOST ALL OF 30 KM/S" s={pop(t, ph("earth's thirty"))} size={46} />}
         <text x={960} y={1010} textAnchor="middle" fontFamily={FONT_DISPLAY} fontWeight={800} fontSize={30} fill={C.paper} opacity={0.8}>
           SPEED CHANGE NEEDED, STARTING FROM EARTH'S ORBIT (ROUGH FIGURES)
         </text>
@@ -529,13 +529,13 @@ const MathScene: React.FC<{t: number}> = ({t}) => {
               const a = t * 0.8 + (i * Math.PI) / 2;
               return <TrashBag key={i} x={1520 + Math.cos(a) * 235} y={500 + Math.sin(a) * 235} s={0.35 * pop(t, ph('low earth orbit') + i * 0.1)} />;
             })}
-            <Pill x={1520} y={160} text="LOW EARTH ORBIT" s={pop(t, ph('low earth orbit'))} size={46} />
-            <Pill x={1520} y={830} text="A FEW HUNDRED KM UP" s={pop(t, ph('a few hundred'))} bg={C.paper} size={42} />
+            <Pill x={1500} y={160} text="LOW EARTH ORBIT" s={pop(t, ph('low earth orbit'))} size={46} />
+            <Pill x={1440} y={830} text="A FEW HUNDRED KM UP" s={pop(t, ph('a few hundred'))} bg={C.paper} size={42} />
             {heavyS > 0 && (
               <g>
                 <HeavyRocket x={880} y={760} s={1.25 * heavyS} />
-                <Pill x={880} y={120} text="FALCON HEAVY" s={heavyS} size={50} />
-                <Pill x={880} y={850} text="~64 TONNES TO ORBIT" s={pop(t, ph('sixty-four tonnes'))} bg={C.paper} size={42} />
+                <Pill x={760} y={120} text="FALCON HEAVY" s={heavyS} size={50} />
+                <Pill x={760} y={225} text="~64 TONNES TO ORBIT" s={pop(t, ph('sixty-four tonnes'))} bg={C.paper} size={42} />
               </g>
             )}
           </g>
@@ -543,9 +543,9 @@ const MathScene: React.FC<{t: number}> = ({t}) => {
         {showEq && (
           <g>
             <BigText x={1150} y={250} text="2,000,000,000 T ÷ 64 T" size={78} s={pop(t, calcT)} />
-            <BigText x={1150} y={420} text="≈ 31 MILLION LAUNCHES" size={92} fill={C.yellow} s={pop(t, ph('thirty-one million'))} />
+            <BigText x={1150} y={420} text="ABOUT 31 MILLION LAUNCHES" size={72} fill={C.yellow} s={pop(t, ph('thirty-one million'))} />
             <Pill x={1150} y={545} text="FOR ONE YEAR OF TRASH" s={pop(t, ph('for one year'))} bg={C.paper} size={44} />
-            <Pill x={1150} y={670} text="≈ 86,000 LAUNCHES A DAY" s={pop(t, perDay)} bg={C.red} fg={C.paper} size={52} />
+            <Pill x={1150} y={670} text="ABOUT 86,000 LAUNCHES A DAY" s={pop(t, perDay)} bg={C.red} fg={C.paper} size={52} />
             {stream &&
               Array.from({length: 14}).map((_, i) => {
                 const u = ((t - perDay) * 0.8 + i / 14) % 1;
@@ -570,9 +570,9 @@ const CompareScene: React.FC<{t: number}> = ({t}) => {
       <Layer>
         <Sunburst t={t} cx={960} cy={1300} />
         <BigText x={960} y={180} text="LAUNCHES PER YEAR" size={86} />
-        <Bar x={640} y={360} w={6} color={C.teal} label="2024 (A RECORD)" value="≈ 260" grow={a} h={84} />
+        <Bar x={640} y={360} w={6} color={C.teal} label="2024 (A RECORD)" value="ABOUT 260" grow={a} h={84} />
         <Bar x={640} y={560} w={2000} color={C.red} label="TRASH PLAN" value="" grow={b} h={84} />
-        {b > 0.3 && <Pill x={1380} y={720} text="≈ 31,000,000 →" s={pop(t, ph('two hundred and sixty') + 1.0)} bg={C.red} fg={C.paper} size={56} />}
+        {b > 0.3 && <Pill x={1380} y={720} text="ABOUT 31,000,000" s={pop(t, ph('two hundred and sixty') + 1.0)} bg={C.red} fg={C.paper} size={56} />}
       </Layer>
     </Stage>
   );
@@ -596,7 +596,7 @@ const OnlyOrbitScene: React.FC<{t: number}> = ({t}) => {
         {sunPart && (
           <g>
             <Rocket x={1380} y={640} s={1.25 * pop(t, ph('a rocket heading for the sun') - 0.1)} bag />
-            <Pill x={1380} y={950} text="TO THE SUN: A SMALL PART OF THE LOAD" s={pop(t, ph('small part')) * 0.9} bg={C.paper} size={42} />
+            <Pill x={1330} y={170} text="TO THE SUN: MUCH LESS CARGO" s={pop(t, ph('small part'))} bg={C.paper} size={40} />
           </g>
         )}
       </Layer>
@@ -641,8 +641,8 @@ const FailScene: React.FC<{t: number}> = ({t}) => {
             const y = Math.min(300 + vy * d + 0.5 * 900 * d * d, 900 + (i % 3) * 20);
             return <TrashBag key={i} x={x} y={y} s={0.5} rot={d * 200 * (i % 2 ? 1 : -1)} />;
           })}
-        <Pill x={480} y={160} text="MORE RELIABLE THAN EVER" s={pop(t, ph('far more reliable'))} bg={C.paper} size={46} />
-        <Pill x={480} y={270} text="...BUT LAUNCHES STILL FAIL" s={pop(t, ph('still fail'))} bg={C.red} fg={C.paper} size={46} />
+        <Pill x={640} y={160} text="MORE RELIABLE THAN EVER" s={pop(t, ph('far more reliable'))} bg={C.paper} size={46} />
+        <Pill x={640} y={270} text="...BUT LAUNCHES STILL FAIL" s={pop(t, ph('still fail'))} bg={C.red} fg={C.paper} size={46} />
         <Pill x={1500} y={160} text="SKY, SEA OR LAND" s={pop(t, ph('across the sky'))} size={48} />
       </Layer>
       <Sci t={t} x={300} y={1040} headR={52} poses={[[0, 'think'], [boomT, 'nervous']]} tremble={boom ? 1 : 0} />
@@ -668,8 +668,8 @@ const HistoryScene: React.FC<{t: number}> = ({t}) => {
         {!phase2 && (
           <g>
             <Barrel x={1020} y={930} s={1.6 * pop(t, ph('nuclear waste') - 0.1, 0.5)} />
-            <Pill x={1450} y={420} text="NUCLEAR WASTE" s={pop(t, ph('nuclear waste'))} bg={C.paper} size={48} />
-            <Pill x={1450} y={540} text="SMALL • DANGEROUS FOR A LONG TIME" s={pop(t, ph('small in volume')) * 0.8} size={40} />
+            <Pill x={1300} y={400} text="NUCLEAR WASTE" s={pop(t, ph('nuclear waste'))} bg={C.paper} size={48} />
+            <Pill x={1300} y={520} text="SMALL • DANGEROUS FOR A LONG TIME" s={pop(t, ph('small in volume')) * 0.8} size={40} />
           </g>
         )}
         {phase2 && !phase3 && (
@@ -800,7 +800,7 @@ const FinalScene: React.FC<{t: number}> = ({t}) => {
         <Bin x={1420} y={880} s={1.1} color={C.green} />
         {t > throwT && !inBin && <TrashBag x={bx} y={by} s={0.6} rot={u * 540} face={{mood: u > 0.45 ? 'scared' : 'happy'}} />}
         {inBin && t - (throwT + flight) < 0.5 && <Puffs x={1400} y={690} t={(t - throwT - flight) * 3} color="#E9EEF2" n={4} rise={90} />}
-        <Pill x={960} y={120} text="HARDER TO HIT THAN IT LOOKS" s={pop(t, ph('harder to hit'))} size={56} />
+        <Pill x={820} y={120} text="HARDER TO HIT THAN IT LOOKS" s={pop(t, ph('harder to hit'))} size={56} />
       </Layer>
       <Sci t={t} x={360} y={1010} headR={58} poses={[[0, 'throw'], [throwT, 'present'], [throwT + flight + 0.1, 'facepalm']]} />
     </Stage>
@@ -826,6 +826,52 @@ const EndCard: React.FC<{t: number}> = ({t}) => {
       <Img src={staticFile('iceberg/wordmark.png')} style={{position: 'absolute', left: 960 - 550 * s, top: 420 - 100 * s, width: 1100 * s}} />
     </Stage>
   );
+};
+
+
+// QA only (input prop {probe: true}): log the on-screen box of every label, text and character cut-out.
+const LayoutProbe: React.FC<{root: React.RefObject<HTMLDivElement | null>; frame: number}> = ({root, frame}) => {
+  useLayoutEffect(() => {
+    const el = root.current;
+    if (!el) return;
+    const base = el.getBoundingClientRect();
+    const sx = base.width / W;
+    const visible = (n: Element) => {
+      for (let e: Element | null = n; e && e !== el; e = e.parentElement) {
+        const o = e.getAttribute('opacity');
+        if (o !== null && parseFloat(o) < 0.05) return false;
+        const st = (e as HTMLElement).style;
+        if (st && st.opacity !== '' && parseFloat(st.opacity) < 0.05) return false;
+      }
+      return true;
+    };
+    const box = (n: Element) => {
+      const r = n.getBoundingClientRect();
+      return [(r.left - base.left) / sx, (r.top - base.top) / sx, r.width / sx, r.height / sx].map((v) => Math.round(v));
+    };
+    const items: Array<{k: string; t: string; b: number[]; inner?: number[]}> = [];
+    el.querySelectorAll('[data-label]').forEach((g) => {
+      if (!visible(g)) return;
+      const b = box(g);
+      if (b[2] < 4 || b[3] < 4) return;
+      const txt = g.querySelector('text');
+      const rect = g.querySelector('rect');
+      items.push({k: 'label', t: g.getAttribute('data-label') || '', b, inner: txt && rect ? [...box(txt), ...box(rect)] : undefined});
+    });
+    el.querySelectorAll('text').forEach((tx) => {
+      if (tx.closest('[data-label]') || !visible(tx)) return;
+      const b = box(tx);
+      if (b[2] < 4 || !tx.textContent) return;
+      items.push({k: 'text', t: tx.textContent, b});
+    });
+    el.querySelectorAll('img').forEach((im) => {
+      const src = im.getAttribute('src') || '';
+      if (!src.includes('/sci/')) return;
+      items.push({k: 'sci', t: src.split('/').pop() || '', b: box(im)});
+    });
+    console.log('LAYOUT ' + JSON.stringify({f: frame, items}));
+  });
+  return null;
 };
 
 const SCENES: Array<[number, React.FC<{t: number}>]> = [
@@ -855,11 +901,14 @@ export const TrashSun: React.FC = () => {
   useFonts();
   const frame = useCurrentFrame();
   const t = frame / FPS;
+  const root = useRef<HTMLDivElement>(null);
+  const probe = Boolean((getInputProps() as {probe?: boolean}).probe);
   let Scene = SCENES[0][1];
   for (const [st, Sc] of SCENES) if (t >= st) Scene = Sc;
   return (
-    <AbsoluteFill style={{backgroundColor: C.sky}}>
+    <AbsoluteFill style={{backgroundColor: C.sky}} ref={root}>
       <Scene t={t} />
+      {probe && <LayoutProbe root={root} frame={frame} />}
       <Sequence from={Math.round(0.4 * FPS)} layout="none">
         <Audio src={staticFile('sun/vo/vo.wav')} />
       </Sequence>

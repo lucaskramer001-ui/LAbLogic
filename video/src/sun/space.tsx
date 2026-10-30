@@ -1,5 +1,5 @@
 import React from 'react';
-import {C, Face, FONT_DISPLAY, INK_W, Mood} from '../iceberg/art';
+import {C, Face, FONT_DISPLAY, INK_W, Mood, textWidth} from '../iceberg/art';
 import {rnd} from '../iceberg/anim';
 
 export const SPACE = '#1B2A4A';
@@ -266,9 +266,9 @@ export const Bin: React.FC<{x: number; y: number; s?: number; color?: string}> =
 
 // Red rubber-stamp label, rotated.
 export const Stamp: React.FC<{x: number; y: number; text: string; s?: number; rot?: number; color?: string; size?: number}> = ({x, y, text, s = 1, rot = -7, color = C.red, size = 72}) => {
-  const w = text.length * size * 0.82 + 90;
+  const w = textWidth(text, size, 900) + size * 1.3;
   return (
-    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`} data-label={text}>
       <rect x={-w / 2} y={-size * 0.95} width={w} height={size * 1.9} rx={18} fill={C.paper} stroke={color} strokeWidth={13} />
       <text x={0} y={size * 0.36} textAnchor="middle" fontFamily={FONT_DISPLAY} fontWeight={900} fontSize={size} fill={color}>
         {text}

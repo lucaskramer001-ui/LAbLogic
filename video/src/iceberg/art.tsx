@@ -1,4 +1,5 @@
 import React from 'react';
+import fontWidths from './fontWidths.json';
 
 // Lab Logic palette (brand kit) + a few scene colours in the same flat style.
 export const C = {
@@ -28,6 +29,14 @@ export const C = {
 };
 export const INK_W = 7;
 export const FONT_DISPLAY = 'Montserrat, "Arial Black", Arial, sans-serif';
+
+// Advance width of a string in Montserrat (from the font file), in px.
+export const textWidth = (text: string, size: number, weight: 800 | 900 = 800, letterSpacing = 0) => {
+  const tbl = (fontWidths as Record<string, Record<string, number>>)[String(weight)];
+  let w = 0;
+  for (const ch of text) w += (tbl[ch] ?? 0.7) * size;
+  return w + letterSpacing * Math.max(0, [...text].length - 1);
+};
 
 // ---------------------------------------------------------------- faces on objects
 export type Mood = 'happy' | 'surprised' | 'worried' | 'scared' | 'smug' | 'squeeze' | 'neutral' | 'dizzy';
@@ -384,10 +393,10 @@ export const IceShelf: React.FC<{x: number; y: number; s?: number}> = ({x, y, s 
 
 // ---------------------------------------------------------------- labels
 export const Pill: React.FC<{x: number; y: number; text: string; s?: number; bg?: string; fg?: string; size?: number}> = ({x, y, text, s = 1, bg = C.yellow, fg = C.ink, size = 54}) => {
-  const w = text.length * size * 0.74 + size * 1.1;
+  const w = textWidth(text, size, 800, size * 0.04) + size * 1.4;
   const h = size * 1.6;
   return (
-    <g transform={`translate(${x} ${y}) scale(${s})`}>
+    <g transform={`translate(${x} ${y}) scale(${s})`} data-label={text}>
       <rect x={-w / 2 + 8} y={-h / 2 + 8} width={w} height={h} rx={h / 2} fill={C.ink} />
       <rect x={-w / 2} y={-h / 2} width={w} height={h} rx={h / 2} fill={bg} stroke={C.ink} strokeWidth={6} />
       <text x={0} y={size * 0.36} textAnchor="middle" fontFamily={FONT_DISPLAY} fontWeight={800} fontSize={size} fill={fg} letterSpacing={size * 0.04}>
@@ -407,7 +416,7 @@ export const BigText: React.FC<{x: number; y: number; text: string; size?: numbe
   s = 1,
   anchor = 'middle',
 }) => (
-  <g transform={`translate(${x} ${y}) scale(${s})`}>
+  <g transform={`translate(${x} ${y}) scale(${s})`} data-label={text}>
     <text x={7} y={9} textAnchor={anchor} fontFamily={FONT_DISPLAY} fontWeight={900} fontSize={size} fill={C.ink} stroke={C.ink} strokeWidth={size * 0.2} strokeLinejoin="round">
       {text}
     </text>
