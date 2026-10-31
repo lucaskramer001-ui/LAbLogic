@@ -26,10 +26,11 @@ def access_token() -> str:
 
 
 def upload(video: str, title: str, description: str, tags: list, publish_at_utc: str | None = None,
-           category_id: str = '28', made_for_kids: bool = False, language: str = 'en') -> str:
-    """Upload a video. With publish_at_utc (RFC 3339) it stays private and goes public at that time."""
+           category_id: str = '28', made_for_kids: bool = False, language: str = 'en', privacy: str | None = None) -> str:
+    """Upload a video. With publish_at_utc (RFC 3339) it stays private and goes public at that time.
+    `privacy` ('private', 'unlisted', 'public') overrides the default when no publish time is given."""
     tok = access_token()
-    status = {'privacyStatus': 'private' if publish_at_utc else 'public', 'selfDeclaredMadeForKids': made_for_kids}
+    status = {'privacyStatus': 'private' if publish_at_utc else (privacy or 'public'), 'selfDeclaredMadeForKids': made_for_kids}
     if publish_at_utc:
         status['publishAt'] = publish_at_utc
     meta = {
