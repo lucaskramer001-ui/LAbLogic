@@ -153,24 +153,25 @@ const blink = (t: number, times: number[]) => {
 
 const CoverScene: React.FC<{t: number}> = ({t}) => {
   const bob = Math.sin(t * 3) * 6;
-  const coverHand = handAt('rope', 200, 1760, 52);
+  // Everything sits inside the 3:4 profile-grid crop (rows 240-1680) used by Instagram and TikTok.
+  const coverHand = handAt('rope', 210, 1625, 46);
   return (
     <Stage>
       <Layer>
         <Sunburst t={t} cx={540} cy={1250} />
-        <BigText x={540} y={470} text="WHY DON'T WE" size={112} />
-        <BigText x={540} y={600} text="JUST" size={112} />
-        <BigText x={540} y={770} text="TOW AN" size={150} fill={C.yellow} />
-        <BigText x={540} y={930} text="ICEBERG?" size={150} fill={C.yellow} />
+        <BigText x={540} y={530} text="WHY DON'T WE" size={106} />
+        <BigText x={540} y={652} text="JUST" size={106} />
+        <BigText x={540} y={812} text="TOW AN" size={142} fill={C.yellow} />
+        <BigText x={540} y={964} text="ICEBERG?" size={142} fill={C.yellow} />
         {/* the berg floats on a little round patch of sea, like the cover objects */}
         <g transform={`translate(0 ${bob})`}>
-          <ellipse cx={770} cy={1600} rx={300} ry={64} fill={C.sea} stroke={C.ink} strokeWidth={INK_W} />
-          <Berg x={770} y={1600} s={1.05} face={{mood: 'smug', look: {x: -0.6, y: 0}, open: blink(t, [0.9])}} />
+          <ellipse cx={770} cy={1505} rx={290} ry={60} fill={C.sea} stroke={C.ink} strokeWidth={INK_W} />
+          <Berg x={770} y={1505} s={0.95} face={{mood: 'smug', look: {x: -0.6, y: 0}, open: blink(t, [0.9])}} />
         </g>
-        <Rope x1={coverHand.x - 6} y1={coverHand.y} x2={600} y2={1560 + bob} sag={40} />
+        <Rope x1={coverHand.x - 6} y1={coverHand.y} x2={600} y2={1470 + bob} sag={36} />
       </Layer>
-      <Img src={staticFile('iceberg/wordmark.png')} style={{position: 'absolute', left: 540 - 270, top: 180, width: 540}} />
-      <Sci t={t} x={200} y={1760} headR={52} poses={[[0, 'rope']]} />
+      <Img src={staticFile('iceberg/wordmark.png')} style={{position: 'absolute', left: 540 - 250, top: 300, width: 500}} />
+      <Sci t={t} x={210} y={1625} headR={46} poses={[[0, 'rope']]} />
     </Stage>
   );
 };

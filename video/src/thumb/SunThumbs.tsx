@@ -7,7 +7,7 @@ import {Arrow, Rocket, SPACE, SPACE_L, Sun, TrashBag} from '../sun/space';
 // YouTube thumbnails (1280x720) for the trash-into-the-Sun video: MrBeast-style composition
 // (huge shocked face, one big object, 2-3 words, red arrow/circle) in the Lab Logic look.
 
-const useFonts = () => {
+export const useFonts = () => {
   const [handle] = useState(() => delayRender('fonts'));
   useEffect(() => {
     const f = new FontFace('Montserrat', `url(${staticFile('fonts/montserrat-latin-900-normal.woff2')})`, {weight: '900'});
@@ -19,7 +19,7 @@ const useFonts = () => {
 };
 
 // Dark sunburst radiating from the Sun (flat colours, no gradients).
-const Rays: React.FC<{cx: number; cy: number}> = ({cx, cy}) => (
+export const Rays: React.FC<{cx: number; cy: number}> = ({cx, cy}) => (
   <g>
     <rect x={0} y={0} width={1280} height={720} fill={SPACE} />
     {Array.from({length: 16}).map((_, i) => {
@@ -32,7 +32,7 @@ const Rays: React.FC<{cx: number; cy: number}> = ({cx, cy}) => (
 );
 
 // The scientist, big and close (feet far below the frame), with a thick yellow rim like a sticker.
-const BigSci: React.FC<{pose: string; x: number; y: number; headR: number; flip?: boolean}> = ({pose, x, y, headR, flip}) => {
+export const BigSci: React.FC<{pose: string; x: number; y: number; headR: number; flip?: boolean}> = ({pose, x, y, headR, flip}) => {
   const sp = SPRITES[pose];
   const k = headR / sp.headR;
   const w = sp.w * k;
@@ -47,7 +47,7 @@ const BigSci: React.FC<{pose: string; x: number; y: number; headR: number; flip?
   return <Img src={staticFile(`iceberg/sci/${pose}.png`)} style={{...style, filter}} />;
 };
 
-const RedCircle: React.FC<{x: number; y: number; r: number}> = ({x, y, r}) => (
+export const RedCircle: React.FC<{x: number; y: number; r: number}> = ({x, y, r}) => (
   <g>
     <ellipse cx={x} cy={y} rx={r * 1.08} ry={r} fill="none" stroke={C.ink} strokeWidth={22} />
     <ellipse cx={x} cy={y} rx={r * 1.08} ry={r} fill="none" stroke={C.red} strokeWidth={12} />

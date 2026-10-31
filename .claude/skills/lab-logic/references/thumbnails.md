@@ -24,10 +24,24 @@ Established on the trash-into-the-Sun video and the woodpecker redesign; the use
 - Rejected by the user as weak: "55× HARDER" (harder than what?), "IT MISSES?!" (gives the answer away).
 - Avoid untrue clickbait ("IMPOSSIBLE", "IT COMES BACK").
 
+## Every episode gets two thumbnails
+1. **9:16 cover (YouTube Shorts, Instagram Reels, TikTok):** frame 0 of the Short, exported as
+   `publish/episodes/<slug>/cover.jpg`. TikTok's API can only use a frame of the video as cover, and Instagram's API
+   only a frame unless the image is at a public URL, so the cover must *be* frame 0.
+   **Grid-safe layout:** Instagram and TikTok profile grids crop covers to the centre 3:4 (rows 240-1680 of 1920).
+   Keep the wordmark, all text, the scientist (feet included) and the object inside that band; text inside 330-1100.
+   Iceberg cover layout: wordmark top 300 (500 px wide), title lines at y 530/652/812/964 (sizes 106/106/142/142),
+   object waterline 1505, scientist feet 1625 (headR 46). Check with a crop overlay before rendering.
+2. **16:9 thumbnail (YouTube long-form):** the MrBeast-style composition below, 1280x720.
+   Iceberg options: `IcebergThumbA` "90% HIDDEN" (sea cut open, giant underwater part) and
+   `IcebergThumbB` "3 KM ICEBERG?!" (giant berg over a tiny Cape Town).
+
 ## Shorts covers
 Frame 0 of the Short = the cover (see brand.md): wordmark, "WHY DON'T WE JUST" in Paper, payoff words in Lab Yellow,
 scientist + object with a face on the Sky Blue sunburst.
 
 ## Existing files
-- `video/out/thumbs/SunThumbC.png` (chosen), `SunThumbA.png`, `SunThumbB.png`, `WoodpeckerThumb.png`.
-- Sources: `video/src/thumb/SunThumbs.tsx`, `video/src/thumb/WoodpeckerThumb.tsx`.
+- `video/out/thumbs/SunThumbC.png` (chosen), `SunThumbA.png`, `SunThumbB.png`, `WoodpeckerThumb.png`,
+  `IcebergThumbA.png`, `IcebergThumbB.png`.
+- Sources: `video/src/thumb/SunThumbs.tsx` (exports Rays, BigSci, RedCircle, useFonts), `WoodpeckerThumb.tsx`,
+  `IcebergThumbs.tsx`.
