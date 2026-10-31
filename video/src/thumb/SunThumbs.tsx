@@ -104,3 +104,45 @@ export const SunThumbB: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+// C: "31 MILLION ROCKETS" — a sky jammed with trash rockets heading for a smug Sun.
+export const SunThumbC: React.FC = () => {
+  useFonts();
+  const sun = {x: 1150, y: 120, r: 190};
+  // a swarm of rockets rising towards the upper right, big in front, small behind
+  const rockets = Array.from({length: 34}).map((_, i) => {
+    const r1 = Math.sin(i * 12.9898) * 43758.5453;
+    const r2 = Math.sin(i * 78.233) * 12345.678;
+    const u = r1 - Math.floor(r1);
+    const v = r2 - Math.floor(r2);
+    const depth = 0.35 + 0.65 * ((i * 7) % 34) / 34;
+    return {x: 470 + u * 820, y: 260 + v * 520, s: 0.16 + 0.32 * depth, d: depth};
+  }).sort((a, b) => a.d - b.d);
+  const hero = {x: 790, y: 560};
+  // where a bag sits on top of a rocket's nose (rocket rotated 38°, nose 165 px up at s = 1)
+  const nose = {x: Math.sin((38 * Math.PI) / 180) * 215, y: -Math.cos((38 * Math.PI) / 180) * 215};
+  return (
+    <AbsoluteFill>
+      <svg width={1280} height={720} viewBox="0 0 1280 720" style={{position: 'absolute'}}>
+        <Rays cx={sun.x} cy={sun.y} />
+        <Sun x={sun.x} y={sun.y} r={sun.r} t={0.4} face={{mood: 'smug', look: {x: -1, y: 1}}} />
+        {rockets.map((r, i) => (
+          <g key={i}>
+            <Rocket x={r.x} y={r.y} s={r.s} rot={38} flame={1} t={i * 0.37} />
+            <TrashBag x={r.x + nose.x * r.s} y={r.y + nose.y * r.s} s={r.s * 1.05} rot={38} />
+          </g>
+        ))}
+        <Rocket x={hero.x} y={hero.y} s={0.9} rot={38} flame={1} t={0.2} />
+        <TrashBag x={hero.x + nose.x * 0.9} y={hero.y + nose.y * 0.9} s={1.0} rot={20} face={{mood: 'scared', look: {x: 1, y: -1}}} />
+        <RedCircle x={hero.x + nose.x * 0.9} y={hero.y + nose.y * 0.9} r={92} />
+      </svg>
+      <BigSci pose="shocked" x={215} y={360} headR={140} />
+      <svg width={1280} height={720} viewBox="0 0 1280 720" style={{position: 'absolute'}}>
+        <g transform="rotate(-4 560 150)">
+          <BigText x={600} y={150} text="31 MILLION" size={136} fill={C.yellow} />
+          <BigText x={600} y={272} text="ROCKETS" size={112} fill={C.paper} />
+        </g>
+      </svg>
+    </AbsoluteFill>
+  );
+};
