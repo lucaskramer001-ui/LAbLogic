@@ -46,10 +46,18 @@ Long-form: upload the SRT in YouTube Studio → Subtitles → Upload file → Wi
 | Instagram Reels | same | cover image 1080×1920 with grid-safe 3:4 centre, own caption |
 | YouTube long-form | 1920×1080 60 fps | thumbnail, chapters, SRT, pinned comment; publish 1-3 days after the Short and link them |
 
-## Posting (see automation.md)
-- YouTube Data API supports scheduled uploads (`publishAt`), but unaudited API projects can only upload private
-  videos - request the audit early.
-- TikTok and Instagram need app review / a Business account linked to a Facebook page; a scheduler with approved
-  access (Buffer, Metricool, Publer) is the quickest route.
-- Best times: start with sensible defaults, then read each platform's audience-activity analytics weekly.
-- The user's audience time zone is not confirmed yet (assumed English-speaking/US) - ask.
+## Posting (built: `publish/`, see publish/README.md)
+- `python publish/post.py check | plan <plan.json> | run <plan.json> [--now] | due`. Plans live in
+  `publish/episodes/<slug>.json` (+ text files for description/caption); posted items are recorded in
+  `publish/state.json` so nothing posts twice.
+- YouTube: resumable upload with `publishAt` (scheduled by YouTube), thumbnail, SRT captions, first comment
+  (pin by hand). Unaudited API projects upload private only - the audit was to be requested by the user.
+- Instagram: Reels via Instagram API with Instagram Login (resumable upload, then publish); no API scheduling, so
+  `post.py` posts when due. Token lasts 60 days (`auth.py instagram-refresh`).
+- TikTok: Content Posting API Direct Post (FILE_UPLOAD in 5-64 MB chunks); private (SELF_ONLY) until the app passes
+  review/audit.
+- Credentials only as environment variables (YT_*, IG_*, TIKTOK_*); the user runs `publish/auth.py` on their own
+  computer so tokens never appear in chat. Instagram/TikTok files go in `publish/outbox/` (1080x1920, committed,
+  < 100 MB) so scheduled sessions can reach them.
+- Audience time zone: **US Eastern** (confirmed). Default slots: Shorts Tue/Thu/Sat 12:00 YouTube, 18:00 TikTok,
+  19:00 Instagram; long-form Sat/Sun 10:00, 1-3 days after the Short. Adjust from analytics after 3-4 weeks.
