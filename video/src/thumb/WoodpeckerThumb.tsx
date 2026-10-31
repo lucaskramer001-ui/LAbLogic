@@ -82,17 +82,25 @@ const Stars: React.FC<{x: number; y: number; rx: number}> = ({x, y, rx}) => (
 
 export const WoodpeckerThumb: React.FC = () => {
   useFonts();
-  // trunk and the point where the beak hits it
-  const trunk = {x0: 690, x1: 830};
-  const hit = {x: trunk.x1, y: 250};
-  // woodpecker cut-out: 805x1500, beak tip at (6, 152); head centre at about (300, 210)
+  // Woodpecker cut-out: 805x1500, beak tip at (6, 152), claw tips at about (250, 700), head at (300, 205).
+  // It is tilted into a downward peck around the beak tip so the claws (and tail) rest on the trunk edge.
   const s = 0.56;
-  const bird = {left: hit.x - 6 * s + 4, top: hit.y - 152 * s};
-  const head = {x: bird.left + 300 * s, y: bird.top + 205 * s};
+  const tilt = 15;
+  const rad = (tilt * Math.PI) / 180;
+  const tip = {x: 812, y: 225};
+  const rel = (px: number, py: number) => {
+    const dx = (px - 6) * s;
+    const dy = (py - 152) * s;
+    return {x: tip.x + dx * Math.cos(rad) - dy * Math.sin(rad), y: tip.y + dx * Math.sin(rad) + dy * Math.cos(rad)};
+  };
+  const claws = rel(250, 700);
+  const trunk = {x0: claws.x - 150, x1: claws.x + 4};
+  const head = rel(300, 205);
+  const bird = {left: tip.x - 6 * s, top: tip.y - 152 * s};
   return (
     <AbsoluteFill>
       <svg width={1280} height={720} viewBox="0 0 1280 720" style={{position: 'absolute'}}>
-        <Burst cx={hit.x} cy={hit.y} />
+        <Burst cx={tip.x} cy={tip.y} />
         {/* tree trunk */}
         <rect x={trunk.x0} y={-20} width={trunk.x1 - trunk.x0} height={760} fill="#9C5B2E" stroke={C.ink} strokeWidth={INK_W} />
         <rect x={trunk.x1 - 40} y={-20} width={40} height={760} fill="#82491F" />
@@ -100,12 +108,25 @@ export const WoodpeckerThumb: React.FC = () => {
         {[[720, 420, 120], [760, 560, 140], [735, 40, 90]].map(([x, y, h], i) => (
           <path key={i} d={`M ${x} ${y} q 6 ${h / 2} 0 ${h}`} stroke={C.ink} strokeWidth={6} fill="none" strokeLinecap="round" />
         ))}
-        <Impact x={hit.x - 6} y={hit.y} r={64} />
-        <Chip x={760} y={170} rot={-30} s={1.2} />
-        <Chip x={735} y={330} rot={40} s={1} />
-        <Chip x={650} y={230} rot={15} s={1.1} />
       </svg>
-      <Img src={staticFile('woodpecker/woodpecker.png')} style={{position: 'absolute', left: bird.left, top: bird.top, width: 805 * s, height: 1500 * s}} />
+      <Img
+        src={staticFile('woodpecker/woodpecker.png')}
+        style={{
+          position: 'absolute',
+          left: bird.left,
+          top: bird.top,
+          width: 805 * s,
+          height: 1500 * s,
+          transformOrigin: `${6 * s}px ${152 * s}px`,
+          transform: `rotate(${tilt}deg)`,
+        }}
+      />
+      <svg width={1280} height={720} viewBox="0 0 1280 720" style={{position: 'absolute'}}>
+        <Impact x={tip.x + 6} y={tip.y + 2} r={58} />
+        <Chip x={trunk.x0 + 60} y={tip.y - 80} rot={-30} s={1.2} />
+        <Chip x={trunk.x0 + 30} y={tip.y + 90} rot={40} s={1} />
+        <Chip x={trunk.x0 - 50} y={tip.y + 10} rot={15} s={1.1} />
+      </svg>
       <Dizzy x={250} y={470} headR={128} />
       <svg width={1280} height={720} viewBox="0 0 1280 720" style={{position: 'absolute'}}>
         <Stars x={255} y={362} rx={138} />
