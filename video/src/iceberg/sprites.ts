@@ -131,5 +131,16 @@ export const SPRITES: Record<string, Sprite> = {
     "headR": 200.69427490234375,
     "footX": 321.9,
     "footY": 1588.0
+  },
+  "dizzy": {
+    "handX": 704,
+    "handY": 475,
+    "w": 711,
+    "h": 1600,
+    "headX": 385,
+    "headY": 294,
+    "headR": 229.70545959472656,
+    "footX": 354.7,
+    "footY": 1588.0
   }
 };
