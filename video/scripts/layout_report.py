@@ -11,7 +11,7 @@ for line in open(sys.argv[1]):
     items = d['items']
     for it in items:
         x, y, w, h = it['b']
-        if it['k'] == 'sci':
+        if it['k'] in ('sci', 'obj'):
             continue
         onscreen = x + w > 0 and y + h > 0 and x < W and y < H
         cut = x < -6 or y < -6 or x + w > W + 6 or y + h > H + 6
@@ -21,7 +21,12 @@ for line in open(sys.argv[1]):
             tx, ty, tw, th, rx, ry, rw, rh = it['inner']
             if rw > 150 and tw > rw * 0.96:
                 issues[('OVERFLOW', it['t'])].append(t)
-    labels = [i for i in items if i['k'] != 'sci']
+    labels = [i for i in items if i['k'] not in ('sci', 'obj')]
+    for o in [i for i in items if i['k'] == 'obj']:
+        for l in labels:
+            ov = inter(o['b'], l['b'])
+            if l['b'][2] * l['b'][3] and ov / (l['b'][2] * l['b'][3]) > 0.02:
+                issues[('ON ' + o['t'].upper(), l['t'])].append(t)
     for i in range(len(labels)):
         for j in range(i + 1, len(labels)):
             a, b = labels[i], labels[j]

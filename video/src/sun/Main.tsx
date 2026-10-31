@@ -165,7 +165,7 @@ const SunScene: React.FC<{t: number}> = ({t}) => {
         )}
         <Pill x={960} y={120} text="THE OBVIOUS FIX" s={pop(t, ph('obvious fix')) * (t < missT ? 1 : 0)} size={56} />
         <Pill x={960} y={120} text="ONE OF THE HARDEST PLACES TO REACH" s={pop(t, ph('hardest')) * (t < ph('heat') ? 1 : 0)} bg={C.paper} size={50} />
-        {t > ph('heat') && <Stamp x={1500} y={150} text="NOT THE HEAT" s={pop(t, ph('heat'), 0.35) * 0.9} />}
+        {t > ph('heat') && <Stamp x={900} y={140} text="NOT THE HEAT" s={pop(t, ph('heat'), 0.35) * 0.9} />}
       </Layer>
       <Sci t={t} x={170} y={1040} headR={52} poses={[[0, 'present'], [ph('obvious fix') - 0.1, 'throw'], [ph('it sounds simple'), 'think']]} />
     </Stage>
@@ -246,12 +246,12 @@ const OrbitScene: React.FC<{t: number}> = ({t}) => {
         {showRocket && ru > 0.6 && <Arrow x1={rocket.x + tang.x * 40} y1={rocket.y + tang.y * 40} x2={rocket.x + tang.x * 210} y2={rocket.y + tang.y * 210} w={16} head={36} />}
         {z < 0.2 && (
           <g>
-            <Pill x={1500} y={150} text="30 KM/S" s={pop(t, ph('thirty kilometers')) * (t < ph('sixty-seven') ? 1 : 0)} size={50} />
-            <Pill x={1500} y={150} text="67,000 MPH" s={pop(t, ph('sixty-seven')) * (t < ph("and here's") ? 1 : 0)} size={50} />
+            <Pill x={1500} y={970} text="30 KM/S" s={pop(t, ph('thirty kilometers')) * (t < ph('sixty-seven') ? 1 : 0)} size={50} />
+            <Pill x={1500} y={970} text="67,000 MPH" s={pop(t, ph('sixty-seven')) * (t < ph("and here's") ? 1 : 0)} size={50} />
           </g>
         )}
-        {showRocket && ru > 0.6 && <Pill x={rocket.x + tang.x * 120 + 150} y={rocket.y + tang.y * 120 - 60} text="ALREADY 30 KM/S" s={pop(t, ph('already flying'))} size={44} />}
-        {gravity && <Pill x={e.x + (SUN_C.x - e.x) * 0.55 + 110} y={e.y + (SUN_C.y - e.y) * 0.55} text="GRAVITY" s={pop(t, ph('fall into the sun')) * 0.8} bg={C.red} fg={C.paper} size={44} />}
+        {showRocket && ru > 0.6 && <Pill x={1480} y={970} text="ALREADY 30 KM/S" s={pop(t, ph('already flying'))} size={44} />}
+        {gravity && <Pill x={e.x + (SUN_C.x - e.x) * 0.38 + 170} y={e.y + (SUN_C.y - e.y) * 0.38} text="GRAVITY" s={pop(t, ph('fall into the sun')) * 0.8} bg={C.red} fg={C.paper} size={44} />}
         <Pill x={1400} y={110} text="THAT'S AN ORBIT" s={pop(t, ph('orbit is'))} size={56} />
         <Pill x={1400} y={110} text="FALLING... AND MISSING" s={pop(t, ph('it is falling')) * (t < ph('orbit is') ? 1 : 0)} bg={C.paper} size={48} />
       </Layer>
@@ -345,7 +345,7 @@ const CircleScene: React.FC<{t: number}> = ({t}) => {
           <path d={`M ${SUN_C.x + Math.cos(bagA - 1.2) * ORBIT_R} ${SUN_C.y + Math.sin(bagA - 1.2) * ORBIT_R} A ${ORBIT_R} ${ORBIT_R} 0 0 1 ${b.x} ${b.y}`} stroke={C.yellow} strokeWidth={8} fill="none" strokeLinecap="round" />
         )}
         <TrashBag x={b.x} y={b.y} s={0.75} rot={Math.sin(t * 2) * 14} face={{mood: 'happy', look: {x: -0.5, y: 0}}} />
-        <Pill x={1420} y={120} text="RIGHT ALONGSIDE US" s={pop(t, ph('alongside'))} size={52} />
+        <Pill x={1360} y={950} text="RIGHT ALONGSIDE US" s={pop(t, ph('alongside'))} size={52} />
       </Layer>
     </Stage>
   );
@@ -474,9 +474,9 @@ const VenusScene: React.FC<{t: number}> = ({t}) => {
     </Stage>
       {zoom > 0.3 && (
         <Layer>
-          <Pill x={960} y={110} text="DEC 24, 2024" s={pop(t, ph('christmas eve') + 0.3)} size={56} />
-          <Pill x={620} y={980} text="3.8 MILLION MILES FROM THE SURFACE" s={pop(t, ph('three point eight')) * 0.8} bg={C.paper} size={44} />
-          <Pill x={1500} y={980} text="430,000 MPH" s={pop(t, ph('four hundred and thirty'))} bg={C.red} fg={C.paper} size={50} />
+          <Pill x={330} y={110} text="DEC 24, 2024" s={pop(t, ph('christmas eve') + 0.3)} size={56} />
+          <Pill x={620} y={1010} text="3.8 MILLION MILES FROM THE SURFACE" s={pop(t, ph('three point eight')) * 0.8} bg={C.paper} size={44} />
+          <Pill x={1480} y={1010} text="430,000 MPH" s={pop(t, ph('four hundred and thirty'))} bg={C.red} fg={C.paper} size={50} />
           {t > ph('no spacecraft') && <Stamp x={1500} y={330} text="CLOSEST EVER" s={pop(t, ph('no spacecraft'), 0.35) * 0.7} color={C.green} />}
         </Layer>
       )}
@@ -715,7 +715,7 @@ const RecapScene: React.FC<{t: number}> = ({t}) => {
     <Stage cam={{s: punch(t, t0)}}>
       <Layer>
         <SpaceBg t={t} />
-        <Sun x={1500} y={560} r={260} t={t} face={{mood: 'smug', open: blink(t), look: {x: -1, y: 0}}} />
+        <Sun x={1620} y={560} r={230} t={t} face={{mood: 'smug', open: blink(t), look: {x: -1, y: 0}}} />
         <BigText x={620} y={190} text="WHY NOT?" size={110} fill={C.yellow} s={pop(t, t0 + 0.2)} />
         {items.map(([txt, w], i) => {
           const s = pop(t, ph(w, t0) - 0.05);
@@ -795,12 +795,12 @@ const FinalScene: React.FC<{t: number}> = ({t}) => {
     <Stage cam={{s: punch(t, t0)}}>
       <Layer>
         <rect x={-500} y={-500} width={3000} height={2200} fill={C.sky} />
-        <Sun x={1560} y={210} r={120} t={t} face={{mood: inBin ? 'smug' : u > 0 ? 'surprised' : 'happy', open: blink(t), look: {x: -1, y: 0.5}}} />
+        <Sun x={1700} y={230} r={120} t={t} face={{mood: inBin ? 'smug' : u > 0 ? 'surprised' : 'happy', open: blink(t), look: {x: -1, y: 0.5}}} />
         <Ground y={880} />
         <Bin x={1420} y={880} s={1.1} color={C.green} />
         {t > throwT && !inBin && <TrashBag x={bx} y={by} s={0.6} rot={u * 540} face={{mood: u > 0.45 ? 'scared' : 'happy'}} />}
         {inBin && t - (throwT + flight) < 0.5 && <Puffs x={1400} y={690} t={(t - throwT - flight) * 3} color="#E9EEF2" n={4} rise={90} />}
-        <Pill x={820} y={120} text="HARDER TO HIT THAN IT LOOKS" s={pop(t, ph('harder to hit'))} size={56} />
+        <Pill x={770} y={120} text="HARDER TO HIT THAN IT LOOKS" s={pop(t, ph('harder to hit'))} size={56} />
       </Layer>
       <Sci t={t} x={360} y={1010} headR={58} poses={[[0, 'throw'], [throwT, 'present'], [throwT + flight + 0.1, 'facepalm']]} />
     </Stage>
@@ -863,6 +863,12 @@ const LayoutProbe: React.FC<{root: React.RefObject<HTMLDivElement | null>; frame
       const b = box(tx);
       if (b[2] < 4 || !tx.textContent) return;
       items.push({k: 'text', t: tx.textContent, b});
+    });
+    el.querySelectorAll('[data-obj]').forEach((g) => {
+      if (!visible(g)) return;
+      // the Sun's outer glow is very faint: measure its solid disc (2nd/4th circle) instead
+      const core = g.getAttribute('data-obj') === 'sun' ? g.querySelectorAll('path')[0] : g;
+      items.push({k: 'obj', t: g.getAttribute('data-obj') || '', b: box(core || g)});
     });
     el.querySelectorAll('img').forEach((im) => {
       const src = im.getAttribute('src') || '';

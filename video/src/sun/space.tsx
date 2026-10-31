@@ -43,7 +43,7 @@ export const Sun: React.FC<{x: number; y: number; r: number; t: number; face?: {
     pts.push(`${x + rr * Math.cos(a)} ${y + rr * Math.sin(a)}`);
   }
   return (
-    <g>
+    <g data-obj="sun">
       <circle cx={x} cy={y} r={r * 1.55} fill={SUN} opacity={0.12} />
       <circle cx={x} cy={y} r={r * 1.33} fill={SUN} opacity={0.15} />
       <path d={'M ' + pts.join(' L ') + ' Z'} fill={SUN_D} stroke={C.ink} strokeWidth={INK_W} strokeLinejoin="round" />
@@ -56,7 +56,7 @@ export const Sun: React.FC<{x: number; y: number; r: number; t: number; face?: {
 
 // Earth: ocean disc with simple flat continents, optional face.
 export const Earth: React.FC<{x: number; y: number; r: number; rot?: number; face?: {mood?: Mood; open?: number; look?: {x: number; y: number}}}> = ({x, y, r, rot = 0, face}) => (
-  <g transform={`translate(${x} ${y})`}>
+  <g transform={`translate(${x} ${y})`} data-obj="earth">
     <clipPath id={`earthclip${Math.round(r)}`}>
       <circle r={r} />
     </clipPath>
@@ -79,7 +79,7 @@ export const Earth: React.FC<{x: number; y: number; r: number; rot?: number; fac
 );
 
 export const Planet: React.FC<{x: number; y: number; r: number; color: string; label?: string; face?: {mood?: Mood}}> = ({x, y, r, color, label, face}) => (
-  <g>
+  <g data-obj="planet">
     <circle cx={x} cy={y} r={r} fill={color} stroke={C.ink} strokeWidth={INK_W * 0.8} />
     <circle cx={x + r * 0.3} cy={y + r * 0.1} r={r * 0.9} fill="#000" opacity={0.1} clipPath="none" />
     {face && <Face x={x} y={y - r * 0.1} s={r / 160} mood={face.mood ?? 'happy'} gap={44} />}
