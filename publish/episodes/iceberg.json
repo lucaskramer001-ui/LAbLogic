@@ -7,8 +7,24 @@
       "file": "video/out/iceberg-lablogic-4K.mp4",
       "title": "Why Don't We Just Tow an Iceberg for Water?",
       "description_file": "publish/episodes/iceberg/youtube-description.md",
-      "tags": ["tow an iceberg", "towing icebergs", "iceberg towing", "iceberg drinking water", "iceberg water", "Cape Town water crisis", "Cape Town drought", "Antarctica icebergs", "how much of an iceberg is underwater", "Woods Hole iceberg study", "why don't we just", "science shorts", "Lab Logic", "freshwater"],
-      "publish_at_et": "2026-11-03 12:00"
+      "tags": [
+        "tow an iceberg",
+        "towing icebergs",
+        "iceberg towing",
+        "iceberg drinking water",
+        "iceberg water",
+        "Cape Town water crisis",
+        "Cape Town drought",
+        "Antarctica icebergs",
+        "how much of an iceberg is underwater",
+        "Woods Hole iceberg study",
+        "why don't we just",
+        "science shorts",
+        "Lab Logic",
+        "freshwater"
+      ],
+      "publish_at_et": "2026-11-03 12:00",
+      "thumbnail": "publish/episodes/iceberg/cover.jpg"
     },
     {
       "platform": "tiktok",

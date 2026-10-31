@@ -58,6 +58,21 @@ def validate(plan):
     return problems
 
 
+def frame0_cover(video, slug):
+    """Shorts covers are frame 0 by design (brand rule). Export it as a JPEG when the plan names no thumbnail."""
+    import subprocess
+    probe = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height',
+                            '-of', 'csv=p=0', video], capture_output=True, text=True)
+    w, h = (int(x) for x in probe.stdout.strip().split(',')[:2])
+    if h <= w:
+        return None  # landscape videos need a designed thumbnail in the plan
+    out = HERE / 'episodes' / slug / 'cover.jpg'
+    out.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', video, '-frames:v', '1', '-vf', 'scale=1080:1920:flags=lanczos',
+                    '-q:v', '3', str(out)], check=True)
+    return str(out)
+
+
 def key(plan, i):
     return f"{plan['slug']}#{i}:{plan['items'][i]['platform']}"
 
@@ -93,8 +108,9 @@ def do_run(path, now=False):
             import youtube
             publish_at = when.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ') if when and when > t_now else None
             vid = youtube.upload(video, it['title'], text_of(it, 'description'), it.get('tags', []), publish_at)
-            if it.get('thumbnail'):
-                youtube.set_thumbnail(vid, str(ROOT / it['thumbnail']))
+            thumb = str(ROOT / it['thumbnail']) if it.get('thumbnail') else frame0_cover(video, plan['slug'])
+            if thumb:
+                youtube.set_thumbnail(vid, thumb)
             if it.get('captions'):
                 youtube.add_captions(vid, str(ROOT / it['captions']))
             if text_of(it, 'comment'):

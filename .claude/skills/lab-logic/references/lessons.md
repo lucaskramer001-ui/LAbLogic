@@ -38,6 +38,11 @@
   right of the beak tip) and adjust (tilt) instead of leaving feet floating.
 - Rope/hand anchors: `prep.py` stores the rightmost opaque point; use `handAt()` so ropes start in the hand.
 
+## Publishing
+- The first YouTube test upload went out without a thumbnail: YouTube does not use frame 0 on its own. `post.py`
+  now exports frame 0 as `episodes/<slug>/cover.jpg` and sets it for vertical videos when the plan names no
+  thumbnail (the API accepted a 1080x1920 cover for the Short). Long-form needs a designed thumbnail in the plan.
+
 ## Environment
 - Higgsfield needs `upload.higgsfield.ai` and `*.cloudfront.net` allowed (environment → Edit → Network access).
   Network changes may only apply to new sessions.
