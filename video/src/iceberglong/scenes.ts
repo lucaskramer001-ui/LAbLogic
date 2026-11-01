@@ -1,0 +1,31 @@
+import {VO_END, ph} from './timing';
+
+// Scene start times, a beat before each scene's first word.
+export const S = {
+  intro: 0,
+  antarctica: ph('meanwhile') - 0.1,
+  fix: ph("so here's the obvious") - 0.1,
+  history: ph("let's start in 1977") - 0.1,
+  plan: ph("the prince's company") - 0.1,
+  under: ph('about ninety percent') - 0.1,
+  woods: ph('researchers at the woods') - 0.1,
+  building: ph("two hundred meters that's") - 0.1,
+  harbor: ph("so the iceberg can't") - 0.1,
+  canada: ph("then there's the tow") - 0.1,
+  tricky: ph('and those crews') - 0.1,
+  speed: ph('now picture doing') - 0.1,
+  melt: ph('and for the whole trip') - 0.1,
+  erosion: ph('warm water eats') - 0.1,
+  parked: ph('but the real trouble') - 0.1,
+  huge: ph('so how big would') - 0.1,
+  skirt: ph('people have suggested') - 0.1,
+  mix: ph('and that leads to') - 0.1,
+  sloane: ph('in 2018 during') - 0.1,
+  price: ph('by his own estimate') - 0.1,
+  cityNo: ph('the city said no') - 0.1,
+  saved: ph('so what did cape town') - 0.1,
+  rain: ph('then the rain') - 0.1,
+  recap: ph("so why don't we just tow") - 0.1,
+  final: ph('the ice is free') - 0.1,
+  endcard: VO_END + 0.5,
+};

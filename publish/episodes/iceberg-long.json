@@ -1,0 +1,33 @@
+{
+  "slug": "iceberg-long",
+  "note": "Long-form version of the iceberg Short. Times are US Eastern. The API project is not audited yet, so uploads stay private; publish or schedule in YouTube Studio.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/iceberglong/iceberg-tow-long-1080p.mp4",
+      "title": "Why Don't We Just Tow Icebergs for Drinking Water?",
+      "description_file": "publish/episodes/iceberg-long/youtube-description.md",
+      "comment_file": "publish/episodes/iceberg-long/pinned-comment.md",
+      "captions": "publish/episodes/iceberg-long/iceberg-tow-long.en.srt",
+      "thumbnail": "publish/episodes/iceberg-long/thumbnail.png",
+      "tags": [
+        "tow an iceberg",
+        "towing icebergs",
+        "iceberg towing",
+        "icebergs for drinking water",
+        "iceberg water",
+        "why don't we tow icebergs",
+        "Cape Town water crisis",
+        "Cape Town Day Zero",
+        "Antarctica icebergs",
+        "how much of an iceberg is underwater",
+        "Woods Hole iceberg study",
+        "Nick Sloane iceberg",
+        "why don't we just",
+        "Lab Logic",
+        "science animation"
+      ],
+      "publish_at_et": "2026-11-07 10:00"
+    }
+  ]
+}

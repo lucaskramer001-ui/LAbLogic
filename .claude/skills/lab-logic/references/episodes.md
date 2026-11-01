@@ -9,7 +9,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we throw trash into volcanoes? | example in the brief | treat as used |
 | Why don't we just fire our trash into the Sun? | Short (user's, Oct 28) + long-form | Short published: youtube.com/shorts/yXsZ-k38ZKA; long-form made |
 | Woodpecker: 400 G to the head, no headache? | Short (user's) | thumbnail redone in the new style |
-| Why don't we just tow an iceberg for water? | Short | made in this project |
+| Why don't we just tow an iceberg for water? | Short + long-form | made in this project |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -42,3 +42,20 @@ Add a row for every new episode (and every topic the user mentions as already do
 ## Woodpecker thumbnail redesign
 - `WoodpeckerThumb`: dizzy scientist + new high-res woodpecker, "400 G / NO HEADACHE?", red circle and arrow.
   ~8.5 Higgsfield credits.
+
+## Iceberg - long-form "Why Don't We Just Tow Icebergs for Drinking Water?" (5:29)
+- 919 words in two takes (155.0 s + 179.3 s), pauses capped at 0.5 s, no speed-up -> 324.7 s voice.
+  Render `video/out/iceberglong/iceberg-tow-long-1080p.mp4` (1920x1080, 60 fps, -14 LUFS) + SRT. Composition
+  `IcebergLong`, code `video/src/iceberglong/` (kit.tsx = shared long-form stage/labels/probe/end card; reuse it).
+- Extra facts beyond the Short: Day Zero, ~4 million people; Antarctica ~4,000 km south; 1977 Iowa State iceberg
+  conference backed by Prince Mohammed al-Faisal, glacier ice shipped from Alaska to Iowa, plan for a ~100 million t
+  berg, "within three years" (Time, 1977, via search snippets); berg ~200 m thick = ~50-story building; tugs tow
+  icebergs off Newfoundland away from oil platforms, ropes slip off and bergs can roll; tow 0.5 m/s (slower than a
+  slow walk); fabric skirt idea untested; Nick Sloane 2018: a fifth to a third of Cape Town's yearly water, ~$100M
+  tow + tens of millions to harvest; city said groundwater/desalination cheaper and less risky; residents cut use
+  to ~half (limit 50 L per person per day); Day Zero avoided after rain returned.
+- Chapters: 0:00 Day Zero / 0:27 obvious fix / 0:44 1977 plan / 1:17 90% underwater / 1:24 size / 1:44 harbor /
+  1:55 Newfoundland / 2:19 two months / 2:32 melting / 3:03 parked / 3:17 3 km / 3:46 getting water out /
+  4:13 Sloane plan + cost / 4:43 what Cape Town did / 5:01 recap.
+- Thumbnail `IcebergThumbB` "3 KM ICEBERG?!". Package in `publish/episodes/iceberg-long*`.
+- Costs: ~5,030 ElevenLabs credits (voice), Scribe free on the TTS node, no new Higgsfield pictures.

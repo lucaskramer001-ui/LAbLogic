@@ -100,3 +100,11 @@ poses each time; it rewrites `sprites.ts`) → check on a pink sheet. Sprites ar
 - Verify: resolution, 60 fps, frame count = duration × 60, audio length, LUFS ≈ −14, peak ≤ −1 dBFS, file
   timestamp is new, and a few frames pulled from the final file show the latest fixes.
 - Send the file to the user with the file-sending tool; commit and push the project (renders stay git-ignored).
+
+## Long-form shortcuts (from the iceberg long-form)
+- Start a new long-form by copying `video/src/iceberglong/` (timing.ts, scenes.ts, sfx.ts, Main.tsx) and importing
+  `kit.tsx` (Stage, Layer, Pill x1.18, span()/until() for labels that share a slot, slam stamps, Burst, EndCard,
+  LayoutProbe). Voice: `video/images/iceberg-long/scripts/voice.py 0.5 1.0` (edit the VO path).
+- Captions: `python3 video/scripts/srt.py <words.json> 0.4 <out.srt>`.
+- Slam-in stamps start at 1.3x, not 2.2x, or the layout check reports them as cut at the frame edge.
+- `layout_report.py` ignores two plain numbers overlapping (calendar page flips are intended).

@@ -25,7 +25,7 @@ for (const t of times) {
 const cols = Math.min(5, files.length);
 const rows = Math.ceil(files.length / cols);
 const inputs = files.flatMap((f) => ['-i', f]);
-const pads = files.map((_, i) => `[${i}:v]scale=${process.env.COMP === 'TrashSun' ? '480:270' : '270:480'},drawtext=text='${times[i]}':x=8:y=8:fontsize=26:fontcolor=white:box=1:boxcolor=black@0.6[v${i}]`).join(';');
-const layout = files.map((_, i) => `${(i % cols) * (process.env.COMP === 'TrashSun' ? 480 : 270)}_${Math.floor(i / cols) * (process.env.COMP === 'TrashSun' ? 270 : 480)}`).join('|');
+const pads = files.map((_, i) => `[${i}:v]scale=${(comp.width > comp.height) ? '480:270' : '270:480'},drawtext=text='${times[i]}':x=8:y=8:fontsize=26:fontcolor=white:box=1:boxcolor=black@0.6[v${i}]`).join(';');
+const layout = files.map((_, i) => `${(i % cols) * ((comp.width > comp.height) ? 480 : 270)}_${Math.floor(i / cols) * ((comp.width > comp.height) ? 270 : 480)}`).join('|');
 execFileSync('ffmpeg', ['-v', 'error', '-y', ...inputs, '-filter_complex', `${pads};${files.map((_, i) => `[v${i}]`).join('')}xstack=inputs=${files.length}:layout=${layout}:fill=black`, sheet]);
 console.log('sheet', sheet, comp.durationInFrames, 'frames');

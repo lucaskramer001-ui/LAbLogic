@@ -32,6 +32,9 @@ for line in open(sys.argv[1]):
             a, b = labels[i], labels[j]
             if a['t'] == b['t']:
                 continue
+            # calendar page flips: two plain numbers changing places on purpose
+            if a['k'] == b['k'] == 'text' and a['t'].isdigit() and b['t'].isdigit():
+                continue
             ov = inter(a['b'], b['b'])
             small = min(a['b'][2] * a['b'][3], b['b'][2] * b['b'][3])
             if small > 0 and ov / small > 0.04:
