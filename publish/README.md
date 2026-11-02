@@ -43,6 +43,11 @@ away with `publishAt`, so its file can stay in `video/out/`.
 3. Easiest: under "Generate access tokens", add the Lab Logic Instagram (Professional) account, log in, and copy the
    generated token and the Instagram user ID → `IG_ACCESS_TOKEN`, `IG_USER_ID`.
    Alternative: set a redirect URL under "Set up Instagram business login" and run `python publish/auth.py instagram`.
+4. If the app only shows **API setup with Facebook login**: link the Instagram account to the Lab Logic Facebook
+   Page, then in Graph API Explorer generate a User token with instagram_basic, instagram_content_publish,
+   pages_show_list, pages_read_engagement, business_management; `me/accounts?fields=name,instagram_business_account`
+   gives IG_USER_ID; extend the token to 60 days in the Access Token Debugger. `instagram.py` detects the token type
+   ("EAA..." = Facebook login) and uses graph.facebook.com.
 4. The app can stay in development mode for posting to your own account.
 
 ## Setup: TikTok (about 30 minutes + review time)
