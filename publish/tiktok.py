@@ -40,7 +40,10 @@ def post_video(video: str, caption: str, privacy: str | None = None) -> str:
     tok = access_token()
     info = creator_info(tok)
     options = info.get('privacy_level_options', [])
-    privacy = privacy or ('PUBLIC_TO_EVERYONE' if 'PUBLIC_TO_EVERYONE' in options else 'SELF_ONLY')
+    # Unaudited apps (and sandbox apps) may only post SELF_ONLY even when the account lists more options;
+    # set TIKTOK_AUDITED=1 in the environment once TikTok has approved the app.
+    audited = os.environ.get('TIKTOK_AUDITED') == '1'
+    privacy = privacy or ('PUBLIC_TO_EVERYONE' if audited and 'PUBLIC_TO_EVERYONE' in options else 'SELF_ONLY')
     if privacy not in options:
         raise PublishError(f'TikTok privacy {privacy} not allowed for this app/account (allowed: {options})')
     size = os.path.getsize(video)
