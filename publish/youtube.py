@@ -30,7 +30,7 @@ def upload(video: str, title: str, description: str, tags: list, publish_at_utc:
     """Upload a video. With publish_at_utc (RFC 3339) it stays private and goes public at that time.
     `privacy` ('private', 'unlisted', 'public') overrides the default when no publish time is given."""
     tok = access_token()
-    status = {'privacyStatus': 'private' if publish_at_utc else (privacy or 'public'), 'selfDeclaredMadeForKids': made_for_kids}
+    status = {'privacyStatus': 'private' if publish_at_utc else (privacy or 'private'), 'selfDeclaredMadeForKids': made_for_kids}
     if publish_at_utc:
         status['publishAt'] = publish_at_utc
     meta = {

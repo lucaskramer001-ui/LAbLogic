@@ -69,8 +69,10 @@ Long-form: upload the SRT in YouTube Studio → Subtitles → Upload file → Wi
   19:00 Instagram; long-form Sat/Sun 10:00, 1-3 days after the Short. Adjust from analytics after 3-4 weeks.
 
 ## Posting status (2026-11-03, first full run with the seawater Short)
-- YouTube: an upload without a time went **public** straight away, so the API project is no longer limited to
-  private uploads. Plans without `publish_at_et` publish immediately - always set a time unless the user says "now".
+- YouTube: an upload without a time went **public** straight away (the API project is no longer limited to private).
+  **User's rule (2026-11-03): every YouTube upload stays private after upload** so YouTube can finish processing;
+  with `publish_at_et` YouTube publishes it at that time, otherwise the user publishes it in Studio. `post.py` and
+  `youtube.upload()` default to private.
 - Instagram: public Reel posted by the API (works end to end).
 - TikTok: the unaudited app can't post at all while the Lab Logic TikTok account is public
   (`unaudited_client_can_only_post_to_private_accounts`). Until the app passes review, TikTok is uploaded by hand

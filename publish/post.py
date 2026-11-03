@@ -107,7 +107,9 @@ def do_run(path, now=False):
         if p == 'youtube':
             import youtube
             publish_at = when.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ') if when and when > t_now else None
-            vid = youtube.upload(video, it['title'], text_of(it, 'description'), it.get('tags', []), publish_at)
+            # Always upload private so YouTube can finish processing (HD/4K) first: with a time, YouTube publishes it
+            # then; without one it stays private until the user publishes it in YouTube Studio.
+            vid = youtube.upload(video, it['title'], text_of(it, 'description'), it.get('tags', []), publish_at, privacy='private')
             thumb = str(ROOT / it['thumbnail']) if it.get('thumbnail') else frame0_cover(video, plan['slug'])
             if thumb:
                 youtube.set_thumbnail(vid, thumb)
