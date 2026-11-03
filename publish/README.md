@@ -57,7 +57,8 @@ away with `publishAt`, so its file can stay in `video/out/`.
    Scopes: `user.info.basic`, `video.publish`.
 3. Use the app's **Sandbox** to test with the Lab Logic account, then run `python publish/auth.py tiktok` and store
    the printed values.
-4. Submit the app for review (TikTok asks for a short demo video of the posting flow). Until the app is reviewed
+4. (Optional - skipped for now: posts stay private and are switched to public by hand in the TikTok app.)
+   Submit the app for review (TikTok asks for a short demo video of the posting flow). Until the app is reviewed
    and audited, API posts can only be private (`SELF_ONLY`); `post.py` uses the best privacy level TikTok allows.
 
 ## Posting times (US Eastern, starting defaults)

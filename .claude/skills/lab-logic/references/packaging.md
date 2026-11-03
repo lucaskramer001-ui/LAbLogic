@@ -57,7 +57,10 @@ Long-form: upload the SRT in YouTube Studio → Subtitles → Upload file → Wi
   `post.py` posts when due. Token lasts 60 days (`auth.py instagram-refresh`).
 - TikTok: connected 2026-11-03 (sandbox app "Lab Logic Publisher", account @lablogic001; site + terms + privacy on
   GitHub Pages from `docs/`, URL-prefix verified). Posts are SELF_ONLY until the app passes review/audit, then set
-  TIKTOK_AUDITED=1. Content Posting API Direct Post (FILE_UPLOAD in 5-64 MB chunks); private (SELF_ONLY) until the app passes
+  TIKTOK_AUDITED=1. **User's choice (2026-11-03): no review for now** - every TikTok post goes up private and the user
+  switches it to Everyone in the TikTok app (... > Privacy settings). Remind them after each TikTok post. Review needs a
+  posting page meeting TikTok's UX rules (account name, privacy picked by user, comment/duet/stitch switches,
+  commercial-content switch, Music Usage Confirmation line, preview) - build it only if they ask. Content Posting API Direct Post (FILE_UPLOAD in 5-64 MB chunks); private (SELF_ONLY) until the app passes
   review/audit.
 - Credentials only as environment variables (YT_*, IG_*, TIKTOK_*); the user runs `publish/auth.py` on their own
   computer so tokens never appear in chat. Instagram/TikTok files go in `publish/outbox/` (1080x1920, committed,
