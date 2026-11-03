@@ -52,7 +52,8 @@ Long-form: upload the SRT in YouTube Studio → Subtitles → Upload file → Wi
   `publish/state.json` so nothing posts twice.
 - YouTube: resumable upload with `publishAt` (scheduled by YouTube), thumbnail, SRT captions, first comment
   (pin by hand). Unaudited API projects upload private only - the audit was to be requested by the user.
-- Instagram: Reels via Instagram API with Instagram Login (resumable upload, then publish); no API scheduling, so
+- Instagram: connected 2026-11-03 via **Facebook login** (account @lablogic001, linked to the Lab Logic Facebook
+  Page; token expires 2027-01-02, renew by then). Reels via the Instagram API (resumable upload, then publish); no API scheduling, so
   `post.py` posts when due. Token lasts 60 days (`auth.py instagram-refresh`).
 - TikTok: Content Posting API Direct Post (FILE_UPLOAD in 5-64 MB chunks); private (SELF_ONLY) until the app passes
   review/audit.
