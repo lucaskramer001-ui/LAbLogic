@@ -24,7 +24,7 @@ def access_token() -> str:
     if 'access_token' not in data:
         raise PublishError(f'TikTok token refresh failed: {data.get("error")} {data.get("error_description")}')
     if data.get('refresh_token') and data['refresh_token'] != os.environ.get('TIKTOK_REFRESH_TOKEN'):
-        log('TikTok issued a new refresh token: run `python auth.py tiktok-show-refresh` locally and update TIKTOK_REFRESH_TOKEN')
+        log('TikTok issued a new refresh token: if posting fails later, run `python auth.py tiktok` on your computer again and update TIKTOK_REFRESH_TOKEN')
     return data['access_token']
 
 
