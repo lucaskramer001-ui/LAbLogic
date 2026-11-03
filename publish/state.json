@@ -13,5 +13,14 @@
     "captions": "ok",
     "comment": "failed: YouTube comment failed: HTTP 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The comment thread could not be created due to insufficient permissions. The request might not be properly authorized.",
     "note": "uploaded 2026-11-01 via API (private: API project not audited yet); publish or schedule in YouTube Studio"
+  },
+  "seawater#0:youtube": {
+    "id": "nT71Ss44oQ0",
+    "url": "https://youtu.be/nT71Ss44oQ0",
+    "scheduled_for_et": null
+  },
+  "seawater#1:instagram": {
+    "id": "18170775772465758",
+    "posted_at_et": "2026-11-03 09:16"
   }
 }
