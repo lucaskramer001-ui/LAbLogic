@@ -142,5 +142,27 @@ export const SPRITES: Record<string, Sprite> = {
     "headR": 229.70545959472656,
     "footX": 354.7,
     "footY": 1588.0
+  },
+  "glass": {
+    "handX": 652,
+    "handY": 534,
+    "w": 659,
+    "h": 1600,
+    "headX": 259,
+    "headY": 279,
+    "headR": 204.2542724609375,
+    "footX": 307.9,
+    "footY": 1588.0
+  },
+  "thirsty": {
+    "handX": 617,
+    "handY": 883,
+    "w": 624,
+    "h": 1600,
+    "headX": 336,
+    "headY": 304,
+    "headR": 210.119384765625,
+    "footX": 277.0,
+    "footY": 1588.0
   }
 };

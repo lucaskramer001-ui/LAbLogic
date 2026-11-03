@@ -6,6 +6,7 @@ import {IcebergShort, DURATION_FRAMES} from './iceberg/Main';
 import {FPS} from './iceberg/timing';
 import {TrashSun, DURATION_FRAMES as SUN_FRAMES} from './sun/Main';
 import {IcebergLong, DURATION_FRAMES as ICEL_FRAMES} from './iceberglong/Main';
+import {SeawaterShort, DURATION_FRAMES as SEA_FRAMES} from './seawater/Main';
 
 export const Root = () => (
   <>
@@ -18,5 +19,6 @@ export const Root = () => (
     <Still id="IcebergThumbB" component={IcebergThumbB} width={1280} height={720} />
     <Composition id="TrashSun" component={TrashSun} durationInFrames={SUN_FRAMES} fps={60} width={1920} height={1080} />
     <Composition id="IcebergLong" component={IcebergLong} durationInFrames={ICEL_FRAMES} fps={60} width={1920} height={1080} />
+    <Composition id="Seawater" component={SeawaterShort} durationInFrames={SEA_FRAMES} fps={60} width={1080} height={1920} />
   </>
 );

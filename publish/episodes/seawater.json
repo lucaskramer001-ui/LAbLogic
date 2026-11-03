@@ -1,0 +1,38 @@
+{
+  "slug": "seawater",
+  "note": "Recreated in 4K from the user's 23 s Short. Test of the full posting process: everything posts when run (no times). YouTube stays private until the API audit; TikTok is private until the app is reviewed.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/seawater/drink-seawater-4K.mp4",
+      "title": "Why Don't We Just Drink the Ocean?",
+      "description_file": "publish/episodes/seawater/youtube-description.md",
+      "tags": [
+        "drink seawater",
+        "can you drink seawater",
+        "why can't we drink seawater",
+        "drinking salt water",
+        "salt water dehydration",
+        "seawater kidneys",
+        "drink the ocean",
+        "stranded at sea",
+        "survival science",
+        "human body facts",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    },
+    {
+      "platform": "instagram",
+      "file": "publish/outbox/seawater-1080x1920.mp4",
+      "caption_file": "publish/episodes/seawater/caption.md",
+      "thumb_offset_ms": 0
+    },
+    {
+      "platform": "tiktok",
+      "file": "publish/outbox/seawater-1080x1920.mp4",
+      "caption_file": "publish/episodes/seawater/caption.md"
+    }
+  ]
+}
