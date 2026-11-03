@@ -24,7 +24,11 @@ def graph() -> str:
 
 
 def whoami() -> dict:
-    r = requests.get(f'{graph()}/{VERSION}/{env("IG_USER_ID")}', params={'fields': 'id,username', 'access_token': env('IG_ACCESS_TOKEN')}, timeout=30)
+    # media_count only exists on Instagram accounts, so a Facebook Page id stored by mistake fails here
+    r = requests.get(f'{graph()}/{VERSION}/{env("IG_USER_ID")}', params={'fields': 'id,username,media_count', 'access_token': env('IG_ACCESS_TOKEN')}, timeout=30)
+    if r.status_code == 400 and 'media_count' in r.text:
+        raise PublishError('IG_USER_ID is not an Instagram account id (probably the Facebook Page id). Use the '
+                           'instagram_business_account id from me/accounts?fields=name,instagram_business_account')
     return check(r, 'Instagram account lookup').json()
 
 
