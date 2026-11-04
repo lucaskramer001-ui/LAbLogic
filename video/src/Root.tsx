@@ -2,12 +2,14 @@ import {Composition, Still} from 'remotion';
 import {SunThumbA, SunThumbB, SunThumbC} from './thumb/SunThumbs';
 import {WoodpeckerThumb} from './thumb/WoodpeckerThumb';
 import {IcebergThumbA, IcebergThumbB} from './thumb/IcebergThumbs';
+import {MoneyThumbA, MoneyThumbB} from './thumb/MoneyThumbs';
 import {IcebergShort, DURATION_FRAMES} from './iceberg/Main';
 import {FPS} from './iceberg/timing';
 import {TrashSun, DURATION_FRAMES as SUN_FRAMES} from './sun/Main';
 import {IcebergLong, DURATION_FRAMES as ICEL_FRAMES} from './iceberglong/Main';
 import {SeawaterShort, DURATION_FRAMES as SEA_FRAMES} from './seawater/Main';
 import {MoneyShort, MoneyCover, DURATION_FRAMES as MONEY_FRAMES} from './money/Main';
+import {MoneyLong, DURATION_FRAMES as MONEYL_FRAMES} from './moneylong/Main';
 
 export const Root = () => (
   <>
@@ -23,5 +25,8 @@ export const Root = () => (
     <Composition id="Seawater" component={SeawaterShort} durationInFrames={SEA_FRAMES} fps={60} width={1080} height={1920} />
     <Composition id="Money" component={MoneyShort} durationInFrames={MONEY_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="MoneyCover" component={MoneyCover} width={1080} height={1920} />
+    <Composition id="MoneyLong" component={MoneyLong} durationInFrames={MONEYL_FRAMES} fps={60} width={1920} height={1080} />
+    <Still id="MoneyThumbA" component={MoneyThumbA} width={1280} height={720} />
+    <Still id="MoneyThumbB" component={MoneyThumbB} width={1280} height={720} />
   </>
 );

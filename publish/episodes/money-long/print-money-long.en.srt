@@ -1,0 +1,504 @@
+1
+00:00:00,400 --> 00:00:03,270
+Governments run short of
+money all the time.
+
+2
+00:00:03,320 --> 00:00:07,230
+They have bills to pay, workers to
+pay, and debts to pay back.
+
+3
+00:00:07,340 --> 00:00:10,450
+And every government has
+something no one else has.
+
+4
+00:00:10,700 --> 00:00:12,140
+A printing press.
+
+5
+00:00:12,260 --> 00:00:14,010
+So here's the obvious fix.
+
+6
+00:00:14,260 --> 00:00:15,370
+Print more money.
+
+7
+00:00:15,520 --> 00:00:19,270
+Hand everyone a stack of cash,
+and poverty is solved.
+
+8
+00:00:19,540 --> 00:00:21,210
+It sounds too good to be true.
+
+9
+00:00:21,360 --> 00:00:22,230
+And it is.
+
+10
+00:00:22,500 --> 00:00:27,130
+But the reason is surprisingly simple, and
+it has nothing to do with paper
+
+11
+00:00:27,220 --> 00:00:28,010
+or ink.
+
+12
+00:00:28,260 --> 00:00:30,890
+Let's start with what money actually is.
+
+13
+00:00:31,300 --> 00:00:32,890
+Money isn't wealth.
+
+14
+00:00:33,140 --> 00:00:36,730
+You can't eat a banknote, live in
+it, or drive it to work.
+
+15
+00:00:36,940 --> 00:00:38,530
+Money is a ticket.
+
+16
+00:00:38,640 --> 00:00:41,900
+It's a ticket you trade for real
+things, like bread,
+
+17
+00:00:41,920 --> 00:00:44,790
+shoes, fuel and somebody's time.
+
+18
+00:00:44,920 --> 00:00:47,310
+The real wealth is the stuff.
+
+19
+00:00:47,520 --> 00:00:51,270
+And printing more tickets doesn't
+bake a single extra loaf.
+
+20
+00:00:51,520 --> 00:00:53,030
+Picture a tiny town.
+
+21
+00:00:53,180 --> 00:00:57,650
+It has ten loaves of bread, and all the people
+together have a hundred dollars.
+
+22
+00:00:57,940 --> 00:01:02,080
+If everyone spends their money on bread,
+each loaf ends up costing about
+
+23
+00:01:02,100 --> 00:01:03,340
+ten dollars.
+
+24
+00:01:03,360 --> 00:01:06,550
+Now the town prints another hundred
+dollars and hands it out.
+
+25
+00:01:06,680 --> 00:01:08,350
+Everyone feels richer.
+
+26
+00:01:08,500 --> 00:01:10,960
+But there are still only ten loaves.
+
+27
+00:01:10,980 --> 00:01:12,560
+So what happens?
+
+28
+00:01:12,660 --> 00:01:15,200
+People line up with more
+money than before,
+
+29
+00:01:15,220 --> 00:01:16,650
+and the baker notices.
+
+30
+00:01:16,940 --> 00:01:19,650
+The price climbs toward twenty
+dollars a loaf.
+
+31
+00:01:19,860 --> 00:01:23,770
+After all that printing, nobody can
+buy more bread than before.
+
+32
+00:01:24,020 --> 00:01:25,450
+That's inflation.
+
+33
+00:01:25,640 --> 00:01:28,270
+More money chasing the same
+amount of stuff.
+
+34
+00:01:28,460 --> 00:01:31,300
+Printing isn't the only thing
+that pushes prices up.
+
+35
+00:01:31,400 --> 00:01:34,940
+A bad harvest or more expensive
+oil can do it too,
+
+36
+00:01:34,960 --> 00:01:37,540
+because then there's less
+stuff to go around.
+
+37
+00:01:37,600 --> 00:01:41,580
+But the amount of money is something a
+government and its central bank control
+
+38
+00:01:41,600 --> 00:01:42,470
+directly.
+
+39
+00:01:42,600 --> 00:01:44,430
+And printing isn't even fair.
+
+40
+00:01:44,600 --> 00:01:48,670
+Whoever gets the new money first can
+spend it before prices rise.
+
+41
+00:01:48,900 --> 00:01:50,890
+Wages often catch up later.
+
+42
+00:01:50,980 --> 00:01:55,040
+And anyone with savings sitting in the
+bank pays the higher prices with
+
+43
+00:01:55,060 --> 00:01:57,240
+money that's now worth less.
+
+44
+00:01:57,320 --> 00:01:59,550
+Now push that idea much further.
+
+45
+00:01:59,680 --> 00:02:04,460
+Economists call it hyperinflation when
+prices rise more than fifty percent
+
+46
+00:02:04,480 --> 00:02:05,640
+in a single month.
+
+47
+00:02:05,700 --> 00:02:09,000
+And history has run this
+experiment more than once.
+
+48
+00:02:09,200 --> 00:02:11,320
+Germany, 1923.
+
+49
+00:02:11,340 --> 00:02:15,570
+After the First World War, Germany owed
+huge reparation payments.
+
+50
+00:02:15,860 --> 00:02:20,640
+In early 1923, French and Belgian
+troops occupied the Ruhr,
+
+51
+00:02:20,660 --> 00:02:24,360
+Germany's industrial heart, because
+payments had fallen behind.
+
+52
+00:02:24,500 --> 00:02:27,450
+German workers there stopped
+working in protest.
+
+53
+00:02:27,600 --> 00:02:31,400
+And the government paid for that passive
+resistance by printing money.
+
+54
+00:02:31,500 --> 00:02:36,160
+At the end of 1922, a loaf of bread in
+Berlin cost around a hundred and
+
+55
+00:02:36,180 --> 00:02:37,170
+sixty marks.
+
+56
+00:02:37,420 --> 00:02:42,440
+By late 1923, it cost around two
+hundred billion marks.
+
+57
+00:02:42,460 --> 00:02:45,760
+People's savings, built up
+over a lifetime,
+
+58
+00:02:45,780 --> 00:02:47,090
+became worthless.
+
+59
+00:02:47,380 --> 00:02:51,780
+The crisis ended in November 1923
+with a new currency,
+
+60
+00:02:51,800 --> 00:02:52,910
+the Rentenmark.
+
+61
+00:02:53,080 --> 00:02:57,220
+One new Rentenmark was worth one
+trillion old marks.
+
+62
+00:02:57,260 --> 00:02:59,680
+You might think the world
+learned its lesson.
+
+63
+00:02:59,700 --> 00:03:00,740
+It didn't.
+
+64
+00:03:00,760 --> 00:03:03,000
+Zimbabwe, 2008.
+
+65
+00:03:03,020 --> 00:03:07,000
+From the year 2000, the government
+seized large commercial farms,
+
+66
+00:03:07,020 --> 00:03:09,160
+and farm output collapsed.
+
+67
+00:03:09,180 --> 00:03:13,000
+The country was producing far less, and the
+government kept printing money
+
+68
+00:03:13,020 --> 00:03:14,380
+to pay its bills.
+
+69
+00:03:14,400 --> 00:03:15,580
+Fewer goods.
+
+70
+00:03:15,600 --> 00:03:16,540
+More money.
+
+71
+00:03:16,560 --> 00:03:18,440
+You already know where that goes.
+
+72
+00:03:18,460 --> 00:03:23,560
+By 2007, prices were rising so fast that the
+government tried the next obvious
+
+73
+00:03:23,580 --> 00:03:24,440
+fix.
+
+74
+00:03:24,460 --> 00:03:29,930
+In June 2007, it ordered shops to cut
+their prices roughly in half.
+
+75
+00:03:29,980 --> 00:03:34,227
+Police arrested thousands of shop owners
+and managers who didn't comply.
+
+76
+00:03:34,247 --> 00:03:39,600
+Within days, bread, milk, meat and cornmeal
+disappeared from the shelves.
+
+77
+00:03:39,620 --> 00:03:42,613
+Selling at those prices meant
+selling at a loss,
+
+78
+00:03:42,633 --> 00:03:45,347
+so shops ran out and weren't restocked.
+
+79
+00:03:45,367 --> 00:03:48,800
+A low price on an empty shelf
+doesn't feed anyone.
+
+80
+00:03:48,820 --> 00:03:50,533
+So the printing went on.
+
+81
+00:03:50,553 --> 00:03:55,680
+In November 2008, economists estimate prices
+in Zimbabwe were doubling about
+
+82
+00:03:55,700 --> 00:03:58,227
+every twenty-five hours.
+
+83
+00:03:58,247 --> 00:04:01,700
+Imagine the price of your
+groceries doubling every day.
+
+84
+00:04:01,720 --> 00:04:07,647
+In January 2009, the central bank issued a
+one hundred trillion dollar note.
+
+85
+00:04:07,667 --> 00:04:11,860
+A few months later, Zimbabwe gave up on its
+own currency and started using
+
+86
+00:04:11,880 --> 00:04:14,640
+US dollars and other foreign
+money instead.
+
+87
+00:04:14,660 --> 00:04:16,560
+And it still isn't the record.
+
+88
+00:04:16,580 --> 00:04:21,387
+That belongs to Hungary in 1946, right
+after the Second World War.
+
+89
+00:04:21,407 --> 00:04:26,080
+At the peak, prices there doubled
+about every fifteen hours.
+
+90
+00:04:26,100 --> 00:04:29,340
+Look at these stories together and
+you see the same pattern.
+
+91
+00:04:29,360 --> 00:04:32,353
+The amount of real stuff
+shrank or stalled,
+
+92
+00:04:32,373 --> 00:04:34,820
+and the amount of money exploded.
+
+93
+00:04:34,840 --> 00:04:37,460
+So should we never print money at all?
+
+94
+00:04:37,480 --> 00:04:38,500
+Not quite.
+
+95
+00:04:38,520 --> 00:04:40,520
+Printing money does have a job.
+
+96
+00:04:40,540 --> 00:04:44,520
+When an economy grows, people make more
+things and do more work.
+
+97
+00:04:44,540 --> 00:04:47,000
+If the amount of money never grew with it,
+
+98
+00:04:47,020 --> 00:04:48,807
+prices would slowly fall.
+
+99
+00:04:48,827 --> 00:04:53,140
+That sounds nice, but falling prices can
+make people delay spending and
+
+100
+00:04:53,160 --> 00:04:54,887
+make debts harder to pay.
+
+101
+00:04:54,907 --> 00:04:57,753
+That's why central banks add
+money carefully.
+
+102
+00:04:57,773 --> 00:05:02,020
+The US Federal Reserve, for example, aims for
+inflation of about two percent
+
+103
+00:05:02,040 --> 00:05:03,760
+a year over the long run.
+
+104
+00:05:03,780 --> 00:05:07,067
+Prices rise a little, slowly
+and predictably.
+
+105
+00:05:07,087 --> 00:05:11,630
+The trouble starts when money grows much
+faster than the things it can buy.
+
+106
+00:05:11,680 --> 00:05:13,820
+So why don't we just print more money?
+
+107
+00:05:13,840 --> 00:05:16,720
+Because money is a ticket,
+not the treasure.
+
+108
+00:05:16,740 --> 00:05:20,000
+Print more tickets, and each
+ticket buys less.
+
+109
+00:05:20,020 --> 00:05:24,300
+Push it too far, and a loaf of bread can
+cost two hundred billion.
+
+110
+00:05:24,320 --> 00:05:26,647
+More money doesn't make more bread.
+
+111
+00:05:26,667 --> 00:05:28,790
+It just makes bread cost more.
+

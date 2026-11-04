@@ -14,11 +14,11 @@ import {BigSci} from '../thumb/SunThumbs';
 export const DURATION_FRAMES = Math.ceil(END * FPS);
 const W = 1080;
 const H = 1920;
-const CASH = '#7BC67E';
-const CASH_D = '#4E9A55';
-const CRUST = '#E3A35A';
-const CRUST_D = '#C47F36';
-const PAPER_BG = '#FFF8E7';
+export const CASH = '#7BC67E';
+export const CASH_D = '#4E9A55';
+export const CRUST = '#E3A35A';
+export const CRUST_D = '#C47F36';
+export const PAPER_BG = '#FFF8E7';
 
 const useFonts = () => {
   const [handle] = useState(() => delayRender('fonts'));
@@ -64,7 +64,7 @@ const slam = (t: number, t0: number) => {
 // ------------------------------------------------------------------ props
 
 // Banknote (centre x, y), 240 x 120 at s = 1. No real currency design, just "$".
-const Bill: React.FC<{x: number; y: number; s?: number; rot?: number; label?: string}> = ({x, y, s = 1, rot = 0, label = '$'}) => (
+export const Bill: React.FC<{x: number; y: number; s?: number; rot?: number; label?: string}> = ({x, y, s = 1, rot = 0, label = '$'}) => (
   <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
     <rect x={-120} y={-60} width={240} height={120} rx={12} fill={CASH} stroke={C.ink} strokeWidth={6} />
     <rect x={-104} y={-46} width={208} height={92} rx={8} fill="none" stroke={CASH_D} strokeWidth={5} />
@@ -76,7 +76,7 @@ const Bill: React.FC<{x: number; y: number; s?: number; rot?: number; label?: st
 );
 
 // Stack of n bills (bottom at y).
-const Stack: React.FC<{x: number; y: number; n: number; s?: number}> = ({x, y, n, s = 1}) => (
+export const Stack: React.FC<{x: number; y: number; n: number; s?: number}> = ({x, y, n, s = 1}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     {Array.from({length: Math.max(0, Math.round(n))}).map((_, i) => (
       <g key={i} transform={`translate(${(i % 2 ? 6 : -6) + Math.sin(i * 1.7) * 4} ${-30 - i * 22})`}>
@@ -88,7 +88,7 @@ const Stack: React.FC<{x: number; y: number; n: number; s?: number}> = ({x, y, n
 );
 
 // Loaf of bread with an optional face (centre x, bottom y), ~220 wide at s = 1.
-const Loaf: React.FC<{x: number; y: number; s?: number; t: number; mood?: React.ComponentProps<typeof Face>['mood']; face?: boolean; rot?: number}> = ({x, y, s = 1, t, mood = 'happy', face = true, rot = 0}) => (
+export const Loaf: React.FC<{x: number; y: number; s?: number; t: number; mood?: React.ComponentProps<typeof Face>['mood']; face?: boolean; rot?: number}> = ({x, y, s = 1, t, mood = 'happy', face = true, rot = 0}) => (
   <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
     <path d="M -110 0 L -110 -70 C -130 -150 -40 -170 0 -150 C 40 -170 130 -150 110 -70 L 110 0 Z" fill={CRUST} stroke={C.ink} strokeWidth={INK_W} strokeLinejoin="round" />
     <path d="M -60 -140 L -40 -112 M -6 -148 L 14 -118 M 48 -140 L 66 -112" stroke={CRUST_D} strokeWidth={9} strokeLinecap="round" />
@@ -98,7 +98,7 @@ const Loaf: React.FC<{x: number; y: number; s?: number; t: number; mood?: React.
 );
 
 // Price tag that grows with its text (hole on the left), centre x, y.
-const Tag: React.FC<{x: number; y: number; text: string; s?: number; rot?: number; size?: number; bg?: string}> = ({x, y, text, s = 1, rot = 0, size = 70, bg = C.yellow}) => {
+export const Tag: React.FC<{x: number; y: number; text: string; s?: number; rot?: number; size?: number; bg?: string}> = ({x, y, text, s = 1, rot = 0, size = 70, bg = C.yellow}) => {
   const w = textWidth(text, size, 900) + size * 1.6;
   const h = size * 1.7;
   return (
@@ -114,7 +114,7 @@ const Tag: React.FC<{x: number; y: number; text: string; s?: number; rot?: numbe
 };
 
 // Money printer with a face; bills come out of the slot on the right.
-const Printer: React.FC<{x: number; y: number; s?: number; t: number; on?: boolean; mood?: React.ComponentProps<typeof Face>['mood']}> = ({x, y, s = 1, t, on = true, mood = 'happy'}) => {
+export const Printer: React.FC<{x: number; y: number; s?: number; t: number; on?: boolean; mood?: React.ComponentProps<typeof Face>['mood']}> = ({x, y, s = 1, t, on = true, mood = 'happy'}) => {
   const shakeX = on ? Math.sin(t * 40) * 2 : 0;
   return (
     <g transform={`translate(${x + shakeX} ${y}) scale(${s})`}>
@@ -132,7 +132,7 @@ const Printer: React.FC<{x: number; y: number; s?: number; t: number; on?: boole
 };
 
 // Bills flying out of the printer slot (x0, y0) in an arc, one every `gap` seconds.
-const BillStream: React.FC<{x0: number; y0: number; t: number; t0: number; gap?: number; dir?: number; n?: number}> = ({x0, y0, t, t0, gap = 0.22, dir = 1, n = 14}) => (
+export const BillStream: React.FC<{x0: number; y0: number; t: number; t0: number; gap?: number; dir?: number; n?: number}> = ({x0, y0, t, t0, gap = 0.22, dir = 1, n = 14}) => (
   <g>
     {Array.from({length: n}).map((_, i) => {
       const d = t - t0 - i * gap;
@@ -146,14 +146,14 @@ const BillStream: React.FC<{x0: number; y0: number; t: number; t0: number; gap?:
   </g>
 );
 
-const Shoe: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) => (
+export const Shoe: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     <path d="M -110 0 L -110 -90 L -50 -90 C -30 -50 30 -50 80 -40 C 120 -32 120 0 110 0 Z" fill={C.red} stroke={C.ink} strokeWidth={INK_W} strokeLinejoin="round" />
     <rect x={-116} y={-6} width={232} height={22} rx={8} fill={C.paper} stroke={C.ink} strokeWidth={6} />
     <path d="M -60 -70 L -30 -60 M -64 -50 L -30 -44" stroke={C.paper} strokeWidth={8} strokeLinecap="round" />
   </g>
 );
-const FuelCan: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) => (
+export const FuelCan: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     <path d="M -80 0 L -80 -150 L 30 -150 L 80 -100 L 80 0 Z" fill={C.red} stroke={C.ink} strokeWidth={INK_W} strokeLinejoin="round" />
     <rect x={-50} y={-180} width={60} height={30} rx={6} fill={C.ink} />
@@ -162,7 +162,7 @@ const FuelCan: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) =>
 );
 
 // Shop shelf (top at y) spanning x0..x1.
-const Shelf: React.FC<{x0: number; x1: number; y: number}> = ({x0, x1, y}) => (
+export const Shelf: React.FC<{x0: number; x1: number; y: number}> = ({x0, x1, y}) => (
   <g>
     <rect x={x0} y={y} width={x1 - x0} height={34} rx={8} fill="#B07A47" stroke={C.ink} strokeWidth={INK_W} />
     <rect x={x0 + 30} y={y + 34} width={22} height={60} fill="#8A5A34" stroke={C.ink} strokeWidth={5} />

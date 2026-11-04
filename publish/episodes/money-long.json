@@ -1,0 +1,32 @@
+{
+  "slug": "money-long",
+  "note": "Long-form of the money Short. YouTube uploads stay private; set publish_at_et (US Eastern) so YouTube publishes it, or publish by hand in Studio.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/moneylong/print-money-long-1080p.mp4",
+      "title": "Why Don't We Just Print More Money?",
+      "description_file": "publish/episodes/money-long/youtube-description.md",
+      "comment_file": "publish/episodes/money-long/pinned-comment.md",
+      "captions": "publish/episodes/money-long/print-money-long.en.srt",
+      "thumbnail": "publish/episodes/money-long/MoneyThumbA.png",
+      "tags": [
+        "why don't we just print more money",
+        "print more money",
+        "why can't governments print more money",
+        "hyperinflation explained",
+        "inflation explained",
+        "Weimar Germany hyperinflation",
+        "Zimbabwe hyperinflation",
+        "100 trillion dollar note",
+        "Hungary 1946 hyperinflation",
+        "Rentenmark",
+        "money printing",
+        "economics explained",
+        "why don't we just",
+        "Lab Logic",
+        "science animation"
+      ]
+    }
+  ]
+}
