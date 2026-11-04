@@ -55,3 +55,11 @@ Frame 0 of the Short = the cover, built as a component that is both the first sc
   `IcebergThumbA.png`, `IcebergThumbB.png`.
 - Sources: `video/src/thumb/SunThumbs.tsx` (exports Rays, BigSci, RedCircle, useFonts), `WoodpeckerThumb.tsx`,
   `IcebergThumbs.tsx`.
+
+### Vary the scientist's reaction
+The user noticed the same hands-on-cheeks "shocked" face on consecutive thumbnails. Rotate reactions between
+episodes (cash = gleeful, nervous = sweaty grimace, hot = red-faced, dizzy, facepalm, thirsty) and note which pose each
+thumbnail used in episodes.md. A dedicated new reaction pose (eyes bulging, pointing at the object, hand in hair) is a
+good next Higgsfield generation when credits allow (the plan ran out on 2026-11-04).
+Money long-form options: A "FOR ONE / LOAF?!" (cash), B "100 TRILLION / DOLLAR NOTE?!" (hot), C "PRICES x2 /
+EVERY DAY?!" (nervous, price tags $1 -> $128).

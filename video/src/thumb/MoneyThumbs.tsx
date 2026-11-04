@@ -37,13 +37,43 @@ export const MoneyThumbA: React.FC = () => {
         <Tag x={905} y={390} text="200,000,000,000" size={50} bg={C.red} rot={-3} />
         <Ring cx={900} cy={390} rx={350} ry={86} rot={-3} />
       </svg>
-      <BigSci pose="shocked" x={215} y={400} headR={128} />
+      <BigSci pose="cash" x={215} y={400} headR={128} />
       <svg width={1280} height={720} viewBox="0 0 1280 720" style={{position: 'absolute'}}>
         <g transform="rotate(-4 640 160)">
           <BigText x={700} y={125} text="FOR ONE" size={96} />
           <BigText x={700} y={262} text="LOAF?!" size={150} fill={C.yellow} />
         </g>
         <Arrow x1={1110} y1={230} x2={1050} y2={315} color={C.red} w={24} head={52} />
+      </svg>
+    </AbsoluteFill>
+  );
+};
+
+// C: "PRICES x2 EVERY DAY?!" - a loaf whose price tags double $1 -> $128 (Zimbabwe, Nov 2008: about every 25 hours).
+export const MoneyThumbC: React.FC = () => {
+  useFonts();
+  const tags: Array<[string, number, number, number]> = [
+    ['$1', 560, 620, 0.75],
+    ['$4', 680, 515, 0.85],
+    ['$16', 820, 410, 0.95],
+    ['$128', 1060, 290, 1.25],
+  ];
+  return (
+    <AbsoluteFill>
+      <svg width={1280} height={720} viewBox="0 0 1280 720" style={{position: 'absolute'}}>
+        <Rays cx={960} cy={560} />
+        <Loaf x={1085} y={730} s={1.3} t={0.4} mood="scared" />
+        {tags.map(([txt, x, y, s], i) => (
+          <Tag key={i} x={x} y={y} text={txt} size={58} s={s} rot={-6} bg={i === 3 ? C.red : C.yellow} />
+        ))}
+        <Ring cx={1060} cy={290} rx={175} ry={90} rot={-6} />
+      </svg>
+      <BigSci pose="nervous" x={215} y={400} headR={128} />
+      <svg width={1280} height={720} viewBox="0 0 1280 720" style={{position: 'absolute'}}>
+        <g transform="rotate(-4 640 120)">
+          <BigText x={720} y={120} text="PRICES x2" size={110} fill={C.yellow} />
+          <BigText x={720} y={215} text="EVERY DAY?!" size={80} />
+        </g>
       </svg>
     </AbsoluteFill>
   );
@@ -62,7 +92,7 @@ export const MoneyThumbB: React.FC = () => {
         </g>
         <Ring cx={890} cy={500} rx={335} ry={205} rot={-8} />
       </svg>
-      <BigSci pose="shocked" x={215} y={400} headR={128} />
+      <BigSci pose="hot" x={215} y={400} headR={128} />
       <svg width={1280} height={720} viewBox="0 0 1280 720" style={{position: 'absolute'}}>
         <g transform="rotate(-4 640 140)">
           <BigText x={720} y={135} text="100 TRILLION" size={108} fill={C.yellow} />
