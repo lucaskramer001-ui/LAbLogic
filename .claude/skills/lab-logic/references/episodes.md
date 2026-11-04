@@ -11,7 +11,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Woodpecker: 400 G to the head, no headache? | Short (user's) | thumbnail redone in the new style |
 | Why don't we just tow an iceberg for water? | Short + long-form | made in this project |
 | Why don't we just drink the ocean? (seawater) | Short (user's 23 s, recreated in 4K) | posted 2026-11-03 YouTube + Instagram |
-| Why don't we just print more money? | Short | made 2026-11-04 |
+| Why don't we just print more money? | Short + long-form | Short scheduled 2026-11-04 18:00 ET; long-form made |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -73,3 +73,13 @@ Add a row for every new episode (and every topic the user mentions as already do
   by source/date; Berlin ~2x10^11 most cited); Zimbabwe Nov 2008 prices doubling every 24.7 h (Hanke & Kwok, Cato
   Journal 2009 - estimate); 100 trillion dollar note issued Jan 2009. Bread-town example is illustrative.
 - Costs: ~1,221 ElevenLabs credits, 4.25 Higgsfield credits.
+
+## Money long-form (5:32)
+- 848 words, takes 186.1 s + 156.8 s, pauses 0.5 s -> 328.2 s. Composition `MoneyLong`, code `video/src/moneylong/`
+  (reuses money Short props exported from `video/src/money/Main.tsx`). Render `video/out/moneylong/print-money-long-1080p.mp4`.
+- Extra facts: Hanke-Krus hyperinflation = >50% a month; Ruhr occupied early 1923, passive resistance financed by
+  printing; Rentenmark Nov 1923 = 1 trillion old marks; Zimbabwe farm seizures from 2000, June 2007 order to cut
+  prices ~in half -> arrests, empty shelves (Mail & Guardian); currency given up April 2009; Hungary 1946 doubling
+  ~15 h (Hanke-Krus); Fed aims for 2% inflation over the long run (federalreserve.gov FAQ).
+- Thumbnails `MoneyThumbA` "FOR ONE / LOAF?!" (recommended) and `MoneyThumbB` "100 TRILLION / DOLLAR NOTE?!".
+- Costs: ~4,900 ElevenLabs credits.
