@@ -1,6 +1,6 @@
-Why don't we just print more money and hand everyone a stack of cash? Because money is a ticket for real things, not wealth itself, and printing more tickets doesn't bake a single extra loaf of bread.
+Why can't a country just print more money and hand everyone cash? Because money is only a ticket for real stuff, and when a country prints too much money, prices explode. That's hyperinflation.
 
-When money grows much faster than the stuff it can buy, prices take off: in Berlin a loaf went from about 160 marks at the end of 1922 to around 200 billion marks in late 1923, Zimbabwe's prices were doubling about every 25 hours in November 2008, and Hungary in 1946 still holds the record at about every 15 hours.
+Germany 1923: a loaf of bread in Berlin hit about 200 billion marks. Zimbabwe 2008: prices doubled about every 25 hours and a 100 trillion dollar note appeared. Hungary 1946 still holds the record.
 
 0:00 Why not just print more money?
 0:28 What money actually is
