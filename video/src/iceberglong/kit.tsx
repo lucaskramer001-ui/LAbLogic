@@ -166,12 +166,12 @@ export const EndCard: React.FC<{t: number; t0: number}> = ({t, t0}) => {
 };
 
 // QA only (input prop {probe: true}): log the on-screen box of every label, text and character cut-out.
-export const LayoutProbe: React.FC<{root: React.RefObject<HTMLDivElement | null>; frame: number}> = ({root, frame}) => {
+export const LayoutProbe: React.FC<{root: React.RefObject<HTMLDivElement | null>; frame: number; width?: number}> = ({root, frame, width = W}) => {
   useLayoutEffect(() => {
     const el = root.current;
     if (!el) return;
     const base = el.getBoundingClientRect();
-    const sx = base.width / W;
+    const sx = base.width / width;
     const visible = (n: Element) => {
       for (let e: Element | null = n; e && e !== el; e = e.parentElement) {
         const o = e.getAttribute('opacity');

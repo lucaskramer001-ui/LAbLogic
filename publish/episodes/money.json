@@ -1,0 +1,35 @@
+{
+  "slug": "money",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram posts when due. TikTok: upload by hand (app not reviewed; API refuses public accounts).",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/money/print-money-4K.mp4",
+      "title": "Why Don't We Just Print More Money?",
+      "description_file": "publish/episodes/money/youtube-description.md",
+      "tags": [
+        "why don't we just print more money",
+        "print more money",
+        "why can't we print more money",
+        "hyperinflation",
+        "inflation explained",
+        "Weimar hyperinflation",
+        "Zimbabwe hyperinflation",
+        "100 trillion dollar note",
+        "money printing",
+        "economics explained",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ],
+      "publish_at_et": "2026-11-05 12:00"
+    },
+    {
+      "platform": "instagram",
+      "file": "publish/outbox/money-1080x1920.mp4",
+      "caption_file": "publish/episodes/money/caption.md",
+      "thumb_offset_ms": 0,
+      "publish_at_et": "2026-11-05 19:00"
+    }
+  ]
+}

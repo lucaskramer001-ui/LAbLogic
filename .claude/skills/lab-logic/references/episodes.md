@@ -10,6 +10,8 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just fire our trash into the Sun? | Short (user's, Oct 28) + long-form | Short published: youtube.com/shorts/yXsZ-k38ZKA; long-form made |
 | Woodpecker: 400 G to the head, no headache? | Short (user's) | thumbnail redone in the new style |
 | Why don't we just tow an iceberg for water? | Short + long-form | made in this project |
+| Why don't we just drink the ocean? (seawater) | Short (user's 23 s, recreated in 4K) | posted 2026-11-03 YouTube + Instagram |
+| Why don't we just print more money? | Short | made 2026-11-04 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -59,3 +61,15 @@ Add a row for every new episode (and every topic the user mentions as already do
   4:13 Sloane plan + cost / 4:43 what Cape Town did / 5:01 recap.
 - Thumbnail `IcebergThumbB` "3 KM ICEBERG?!". Package in `publish/episodes/iceberg-long*`.
 - Costs: ~5,030 ElevenLabs credits (voice), Scribe free on the TTS node, no new Higgsfield pictures.
+
+## Seawater Short - "Why Don't We Just Drink the Ocean?" (24 s)
+- User's own 23 s Short (720p download) recreated in 4K: composition `Seawater`, code `video/src/seawater/`, new poses
+  `glass` and `thirsty`. Source: NOAA Ocean Service "Can humans drink seawater?". Posted 2026-11-03: YouTube
+  nT71Ss44oQ0 (public), Instagram reel DfSE1FEmwic; TikTok refused by the API (uploaded by hand).
+
+## Money Short - "Why Don't We Just Print More Money?" (~69 s)
+- 215 words, 82.8 s raw -> 67.75 s (pauses 0.26, atempo 1.1). Composition `Money`, code `video/src/money/`, new pose
+  `cash` (tossing banknotes). Facts: Berlin loaf ~160 marks end 1922 -> ~200 billion marks late 1923 (figures vary
+  by source/date; Berlin ~2x10^11 most cited); Zimbabwe Nov 2008 prices doubling every 24.7 h (Hanke & Kwok, Cato
+  Journal 2009 - estimate); 100 trillion dollar note issued Jan 2009. Bread-town example is illustrative.
+- Costs: ~1,221 ElevenLabs credits, 4.25 Higgsfield credits.
