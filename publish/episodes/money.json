@@ -22,7 +22,7 @@
         "Lab Logic",
         "science shorts"
       ],
-      "publish_at_et": "2026-11-05 12:00",
+      "publish_at_et": "2026-11-04 18:00",
       "thumbnail": "publish/episodes/money/cover.jpg"
     },
     {
@@ -30,7 +30,7 @@
       "file": "publish/outbox/money-1080x1920.mp4",
       "caption_file": "publish/episodes/money/caption.md",
       "thumb_offset_ms": 0,
-      "publish_at_et": "2026-11-05 19:00"
+      "publish_at_et": "2026-11-04 18:00"
     }
   ]
 }
