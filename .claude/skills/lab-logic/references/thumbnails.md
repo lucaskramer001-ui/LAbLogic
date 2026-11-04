@@ -36,9 +36,19 @@ Established on the trash-into-the-Sun video and the woodpecker redesign; the use
    Iceberg options: `IcebergThumbA` "90% HIDDEN" (sea cut open, giant underwater part) and
    `IcebergThumbB` "3 KM ICEBERG?!" (giant berg over a tiny Cape Town).
 
-## Shorts covers
-Frame 0 of the Short = the cover (see brand.md): wordmark, "WHY DON'T WE JUST" in Paper, payoff words in Lab Yellow,
-scientist + object with a face on the Sky Blue sunburst.
+## Shorts covers - MrBeast style, vertical (since the money Short, 2026-11-04; user asked for it)
+Frame 0 of the Short = the cover, built as a component that is both the first scene and a `<Still>` (e.g.
+`MoneyCover` in `video/src/money/Main.tsx`, rendered to `video/out/thumbs/<Id>.png`, copied to
+`publish/episodes/<slug>/cover.jpg`). 1080x1920, everything that matters inside the grid-safe rows 240-1680:
+- Wordmark small at the top (420 px wide, top 290).
+- 2 lines of text rotated -4 deg around (540, 640): Paper line ~124 px at y 560, Lab Yellow payoff ~196 px at y 770.
+  The text must add what the title doesn't say (title asks the question; cover shows the shocking number).
+- One big object with a face (scared/smug) lower right, a red circle around the key number, a red brand arrow
+  from the text to it (not over any letter).
+- BigSci (sticker-outlined scientist, shocked, headR ~112) lower left, body may run off below the grid crop.
+- Sky Blue sunburst from behind the object.
+- Approved first example: money Short "FOR ONE / LOAF?!" + price tag "200,000,000,000" on a scared loaf.
+- The older title-style cover (WHY DON'T WE JUST ... in big letters) is used by the iceberg and seawater Shorts.
 
 ## Existing files
 - `video/out/thumbs/SunThumbC.png` (chosen), `SunThumbA.png`, `SunThumbB.png`, `WoodpeckerThumb.png`,

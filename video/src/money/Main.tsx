@@ -6,7 +6,8 @@ import {Captions} from './Captions';
 import {Sci} from '../iceberg/Sci';
 import {BigText, C, Calendar, FONT_DISPLAY, Face, INK_W, Pill, Sky, Sunburst, textWidth} from '../iceberg/art';
 import {clamp, easeOutBack, easeOutCubic, lerp, pop, prog, rnd, wobble} from '../iceberg/anim';
-import {Stamp} from '../sun/space';
+import {Arrow, Stamp} from '../sun/space';
+import {BigSci} from '../thumb/SunThumbs';
 
 // "Why don't we just print more money?" - Short, 1080x1920 (rendered 4K with --scale=2).
 
@@ -184,23 +185,37 @@ const S = {
   end: VO_END + 0.3,
 };
 
-// Frame 0 = cover (grid-safe: everything inside rows 240-1680).
-const CoverScene: React.FC<{t: number}> = ({t}) => (
-  <Stage>
-    <Layer>
-      <Sunburst t={t} cx={540} cy={1250} />
-      <BigText x={540} y={530} text="WHY DON'T WE" size={106} />
-      <BigText x={540} y={652} text="JUST PRINT" size={106} />
-      <BigText x={540} y={812} text="MORE" size={142} fill={C.yellow} />
-      <BigText x={540} y={964} text="MONEY?" size={142} fill={C.yellow} />
-      <Printer x={790} y={1620} s={0.8} t={t} />
-      <Bill x={640} y={1180} s={0.55} rot={-18} />
-      <Bill x={930} y={1120} s={0.5} rot={22} />
-    </Layer>
-    <Img src={staticFile('iceberg/wordmark.png')} style={{position: 'absolute', left: 540 - 250, top: 300, width: 500}} />
-    <Sci t={t} x={300} y={1630} headR={48} poses={[[0, 'cash']]} />
-  </Stage>
+// Frame 0 = MrBeast-style cover for Shorts/Reels/TikTok (grid-safe: key content inside rows 240-1680).
+// Also rendered as the Still "MoneyCover" (YouTube Shorts thumbnail).
+export const MoneyCover: React.FC<{t?: number}> = ({t = 0}) => (
+  <AbsoluteFill style={{backgroundColor: C.sky}}>
+    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
+      <rect width={W} height={H} fill={C.sky} />
+      {Array.from({length: 18}).map((_, i) => {
+        const a0 = (i / 18) * Math.PI * 2;
+        const a1 = a0 + Math.PI / 18;
+        const R = 3000;
+        const cx = 660;
+        const cy = 1150;
+        return <path key={i} d={`M ${cx} ${cy} L ${cx + R * Math.cos(a0)} ${cy + R * Math.sin(a0)} L ${cx + R * Math.cos(a1)} ${cy + R * Math.sin(a1)} Z`} fill={C.skyL} />;
+      })}
+      <Loaf x={690} y={1440} s={2.2} t={t} mood="scared" />
+      <Tag x={640} y={985} text="200,000,000,000" size={56} bg={C.red} rot={-3} />
+      <ellipse cx={635} cy={985} rx={395} ry={112} fill="none" stroke={C.ink} strokeWidth={22} transform="rotate(-3 635 985)" />
+      <ellipse cx={635} cy={985} rx={395} ry={112} fill="none" stroke={C.red} strokeWidth={12} transform="rotate(-3 635 985)" />
+    </svg>
+    <BigSci pose="shocked" x={215} y={1215} headR={112} />
+    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
+      <g transform="rotate(-4 540 640)">
+        <BigText x={540} y={560} text="FOR ONE" size={124} />
+        <BigText x={540} y={770} text="LOAF?!" size={196} fill={C.yellow} />
+      </g>
+      <Arrow x1={950} y1={790} x2={880} y2={890} color={C.red} w={26} head={56} />
+    </svg>
+    <Img src={staticFile('iceberg/wordmark.png')} style={{position: 'absolute', left: 540 - 210, top: 290, width: 420}} />
+  </AbsoluteFill>
 );
+const CoverScene: React.FC<{t: number}> = ({t}) => <MoneyCover t={t} />;
 
 // Why not just print more? Hand everyone a stack of cash.
 const PrinterScene: React.FC<{t: number}> = ({t}) => {
