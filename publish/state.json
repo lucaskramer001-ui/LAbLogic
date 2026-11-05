@@ -27,5 +27,10 @@
     "id": "uOROHD5R34k",
     "url": "https://youtu.be/uOROHD5R34k",
     "scheduled_for_et": "2026-11-04 18:00"
+  },
+  "money#1:instagram": {
+    "id": "manual",
+    "posted_at_et": "2026-11-04 18:00",
+    "note": "posted by hand by the user: the Meta app was blocked (\"API access blocked\")"
   }
 }
