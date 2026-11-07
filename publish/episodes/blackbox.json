@@ -1,0 +1,28 @@
+{
+  "slug": "blackbox",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand for now (Meta app blocked, TikTok app not reviewed).",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/blackbox/blackbox-4K.mp4",
+      "title": "Why Don't We Just Build Planes Out of the Black Box?",
+      "description_file": "publish/episodes/blackbox/youtube-description.md",
+      "thumbnail": "publish/episodes/blackbox/cover.jpg",
+      "tags": [
+        "black box",
+        "flight recorder",
+        "why don't we make planes out of the black box",
+        "black box material",
+        "what is a black box made of",
+        "is the black box orange",
+        "flight data recorder",
+        "crash survivable memory unit",
+        "aviation safety",
+        "plane crash investigation",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

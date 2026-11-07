@@ -54,3 +54,8 @@
 - The user writes in English and sometimes German; answer in the language of the message.
 - They prefer concrete deliverables sent as files, honest notes on what wasn't verified, and options with a
   recommendation (thumbnail variants, title options).
+
+## Facts about people
+- Check every person's role before the voice-over: "a test pilot" was wrong for John Paul Stapp (a flight surgeon).
+- Fixing one sentence after the voice is made: regenerate that sentence plus the one before it, transcribe it,
+  splice it into take1 at word boundaries, match loudness, then rerun voice.py (see video/public/blackbox/vo).

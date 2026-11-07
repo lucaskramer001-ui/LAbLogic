@@ -11,6 +11,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Woodpecker: 400 G to the head, no headache? | Short (user's) | thumbnail redone in the new style |
 | Why don't we just tow an iceberg for water? | Short + long-form | made in this project |
 | Why don't we just drink the ocean? (seawater) | Short (user's 23 s, recreated in 4K) | posted 2026-11-03 YouTube + Instagram |
+| Why don't we just build planes out of the black box? | Short | made 2026-11-07 |
 | Why don't we just print more money? | Short + long-form | Short scheduled 2026-11-04 18:00 ET; long-form made |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
@@ -83,3 +84,13 @@ Add a row for every new episode (and every topic the user mentions as already do
   ~15 h (Hanke-Krus); Fed aims for 2% inflation over the long run (federalreserve.gov FAQ).
 - Thumbnails `MoneyThumbA` "FOR ONE / LOAF?!" (recommended) and `MoneyThumbB` "100 TRILLION / DOLLAR NOTE?!".
 - Costs: ~4,900 ElevenLabs credits.
+
+## Black box Short - "Why Don't We Just Build Planes Out of the Black Box?" (~71 s)
+- 224 words, Tim Riley, pauses 0.26 + atempo 1.1 -> 70.2 s. Composition `BlackBox`, cover Still `BlackBoxCover`
+  ("SURVIVES / 3,400 G?!", dizzy scientist), code `video/src/blackbox/` (BlackBox and Plane characters).
+- Facts: recorders are bright orange; memory chips in insulation + titanium/stainless shell; ETEP CSMU ~2 kg;
+  ED-112 tests 3,400 g / 6.5 ms, 1,100 C for 60 min, 5,000 lb crush (search snippets, manufacturer documents);
+  John Paul Stapp, Air Force flight surgeon, 46.2 g on 10 Dec 1954.
+- Fix made: first take said "a test pilot" - Stapp was a doctor; the two sentences were regenerated and spliced
+  into the take (levels matched to -1.5 dB) instead of redoing the whole take (~123 credits vs ~1,225).
+- Costs: ~1,350 ElevenLabs credits, no Higgsfield (out of credits).

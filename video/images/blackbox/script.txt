@@ -1,0 +1,13 @@
+After a plane crash, investigators search the wreckage for one thing: the black box. It's built to survive almost anything. So why don't we just build the whole plane out of it?
+
+First, the black box isn't black. It's bright orange, so searchers can spot it.
+
+And it isn't made of some magic material. The part that has to survive is small: a few memory chips. They sit inside thick layers of insulation, wrapped in a shell of titanium or stainless steel. One maker's armored memory unit weighs about two kilograms, just to protect a handful of chips.
+
+That armor is tested brutally. It has to survive an impact of three thousand four hundred g, a fire at eleven hundred degrees Celsius for a full hour, and being crushed under more than two tonnes.
+
+Now scale that up to a whole airliner. A plane is mostly empty space for people, bags and fuel. Wrap all of it in armor that thick, and it gets far too heavy to ever take off.
+
+And even if it did, it wouldn't save anyone inside. An Air Force doctor once survived about forty-six g for a split second. Three thousand four hundred g is far beyond what any human body can take.
+
+The black box doesn't make crashes survivable. It makes them understandable, so the next flight is safer.
