@@ -10,6 +10,7 @@ import {IcebergLong, DURATION_FRAMES as ICEL_FRAMES} from './iceberglong/Main';
 import {SeawaterShort, DURATION_FRAMES as SEA_FRAMES} from './seawater/Main';
 import {MoneyShort, MoneyCover, DURATION_FRAMES as MONEY_FRAMES} from './money/Main';
 import {MoneyLong, DURATION_FRAMES as MONEYL_FRAMES} from './moneylong/Main';
+import {DanceShort, DanceCover, DURATION_FRAMES as DANCE_FRAMES} from './dance/Main';
 import {BlackBoxShort, BlackBoxCover, DURATION_FRAMES as BB_FRAMES} from './blackbox/Main';
 
 export const Root = () => (
@@ -32,5 +33,7 @@ export const Root = () => (
     <Still id="MoneyThumbC" component={MoneyThumbC} width={1280} height={720} />
     <Composition id="BlackBox" component={BlackBoxShort} durationInFrames={BB_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="BlackBoxCover" component={BlackBoxCover} width={1080} height={1920} />
+    <Composition id="Dance" component={DanceShort} durationInFrames={DANCE_FRAMES} fps={60} width={1080} height={1920} />
+    <Still id="DanceCover" component={DanceCover} width={1080} height={1920} />
   </>
 );
