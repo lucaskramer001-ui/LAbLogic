@@ -949,7 +949,7 @@ const SFX: Cue[] = [
   ...CHAPTER_TIMES.map((v) => ({f: I('whoosh'), at: v - 0.3, db: -20})),
   ...CHAPTER_TIMES.map((v) => ({f: I('pop'), at: v + 0.1, db: -20})),
   {f: U('fire'), at: 0, db: -32},
-  {f: I('ocean'), at: S.af447, db: -28},
+  // waves are added in images/blackbox-long/scripts/mix.py, only while the sea surface is on screen
   ...[ph('the black box'), ph('obvious fix'), ph('bright orange'), ph('david warren'), ph('the comet'), ph('first prototype'), ph('required on airliners'), ph('there are two'),
     ph('speed'), ph('altitude'), ph('engine power'), ph("pilots' voices"), ph('alarms'), ph('switches'), ph('in the tail'), ph('memory chips'), ph('insulation'), ph('titanium'),
     ph('two kilograms'), ph('thirty days'), ph('air france'), ph('finally found'), ph('open the armor'), ph('take out the memory'), ph('clean it'), ph('copy everything'),

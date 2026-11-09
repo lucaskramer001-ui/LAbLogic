@@ -124,9 +124,13 @@ poses each time; it rewrites `sprites.ts`) → check on a pink sheet. Sprites ar
   node_type `music`, model `eleven_music_v2_5`, 1 generation, prompt "Instrumental ... no vocals ... even dynamics
   so it can loop ... 3 minutes" -> 180 s track for ~900 credits. Make two moods per long-form (curious + tense).
 - Sound effects from the same connector (`sfx`, `eleven_text_to_sound_v2`, ~17 credits); most come back ~1 s.
-- Mixing without re-rendering: `video/images/blackbox-long/scripts/mix.py` takes the finished video's audio,
-  adds the music bed (chapter-based crossfades, ducked -12 dB under the voice, -6 dB in pauses > 0.7 s, -4 dB on
-  the end card, fades) and the new sfx cues (times from words.json via ph()), then loudnorm -14 LUFS and mux
+- Mixing without re-rendering: `video/images/blackbox-long/scripts/mix.py` takes an audio-only render of the
+  composition (`npx remotion render ... audio_base.wav --codec=wav`, ~2 min, no frames), adds the music bed
+  (chapter-based crossfades, ducked -16 dB under the voice, -10 dB in pauses > 0.7 s, -7 dB on the end card,
+  fades; user said -12/-6 was too loud) and the new sfx cues (times from words.json via ph()), then loudnorm -14 LUFS and mux
   with `-c:v copy`. Keep the pre-music file as `*.nomusic.mp4`.
+- Ambience beds (waves, underwater) only while that place is ON SCREEN, cut to the scene with 0.5-0.8 s fades,
+  and quiet (waves ~-36 dB on ocean.wav). Never drop a long file (ocean.wav is 70 s) at a scene start without an
+  end - it ran on through three unrelated scenes and the user heard it.
 - DON'T transcribe music to check for vocals: the estimate said ~60 credits but each 3-min track cost 990 credits.
   The tracks were instrumental anyway; trust the "no vocals" prompt or ask the user to listen.
