@@ -1,6 +1,6 @@
 # Package - The Town That Couldn't Stop Dancing
 
-Title (YouTube Shorts): The Town That Couldn't Stop Dancing (1518)
+Title (YouTube Shorts): The Town That Couldn't Stop Dancing [Record 001]
 Alternatives: "The Dancing Plague of 1518 Was Real" / "Strasbourg Couldn't Stop Dancing (1518)"
 Cover: frame 0 / DanceCover - "THEY COULDN'T / STOP DANCING", woman silhouette in the moon, "Strasbourg, 1518".
 

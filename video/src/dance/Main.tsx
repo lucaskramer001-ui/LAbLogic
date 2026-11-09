@@ -26,7 +26,9 @@ import {
   flicker,
   slam,
   span,
+  reveal,
   until,
+  Watermark,
   useHollowFonts,
 } from '../hollow/kit';
 
@@ -50,7 +52,7 @@ const S = {
   fear: ph('years of famine') - 0.08,
   loop: ph('it all began') - 0.08,
 };
-const COVER_END = 1.15;
+const COVER_END = 0.5;
 
 const GROUPS = buildGroups(WORDS, [
   ['fifteen eighteen', '1518'],
@@ -105,7 +107,7 @@ const OneWoman: React.FC<{t: number; danceFrom: number; walkFrom?: number; spin?
 // ------------------------------------------------------------------ scenes
 
 const CoverText: React.FC<{t: number}> = ({t}) => {
-  const o = 1 - clamp((t - (COVER_END - 0.3)) / 0.3);
+  const o = 1 - clamp((t - (COVER_END - 0.2)) / 0.2);
   if (o <= 0) return null;
   return (
     <g opacity={o}>
@@ -148,7 +150,7 @@ const OpenScene: React.FC<{t: number}> = ({t}) => {
           })}
         <CoverText t={t} />
         <Note x={540} y={380} text="Strasbourg, July 1518" size={60} o={fadeIn(t, COVER_END, 0.5) * until(t, whyT)} />
-        <Title x={540} y={420} text="SHE DIDN'T STOP" size={92} s={pop(t, stopT - 0.05)} color={HC.bone} />
+        <Title x={540} y={420} text="SHE DIDN'T STOP" size={92} s={reveal(t, stopT - 0.05)} color={HC.bone} />
       </Layer>
     </Stage>
   );
@@ -181,7 +183,7 @@ const DaysScene: React.FC<{t: number}> = ({t}) => {
         </g>
         <Puppet x={620} y={1300} s={1.35} t={t} kind="woman" pose="dance" spin ph={0.2} />
         <Title x={540} y={430} text="4 DAYS" size={130} s={span(t, fourT - 0.05, sixT)} />
-        <Title x={540} y={430} text="MAYBE 6" size={130} s={pop(t, sixT - 0.05)} color={HC.ember} />
+        <Title x={540} y={430} text="MAYBE 6" size={130} s={reveal(t, sixT - 0.05)} color={HC.ember} />
       </Layer>
     </Stage>
   );
@@ -244,9 +246,9 @@ const CrowdScene: React.FC<{t: number}> = ({t}) => {
           <Puppet key={p.order} x={p.x} y={p.y} s={p.s} t={t} kind={p.order % 3 === 1 ? 'woman' : 'man'} pose="dance" ph={p.ph * 6} speed={0.9 + p.ph * 0.4} color={tones[p.tone]} flip={p.ph > 0.5} />
         ))}
         <rect x={-600} y={1335} width={W + 1200} height={H} fill={HC.void} />
-        <Title x={540} y={420} text="50 TO 400" size={140} s={pop(t, numT - 0.05)} color={HC.ember} />
+        <Title x={540} y={420} text="50 TO 400" size={140} s={reveal(t, numT - 0.05)} color={HC.ember} />
         <Note x={540} y={540} text="dancers, by August" size={62} o={fadeIn(t, numT + 0.4)} />
-        <Title x={540} y={1170} text="THEY COULD NOT STOP" size={66} s={pop(t, stopT - 0.05)} color={HC.bone} />
+        <Title x={540} y={1170} text="THEY COULD NOT STOP" size={66} s={reveal(t, stopT - 0.05)} color={HC.bone} />
       </Layer>
     </Stage>
   );
@@ -390,7 +392,7 @@ const StageScene: React.FC<{t: number}> = ({t}) => {
         <rect x={-600} y={1350} width={W + 1200} height={H} fill={HC.void} />
         <StageSet t={t} planks={planks} musicians={fadeIn(t, musT - 0.1, 0.3)} />
         <Title x={540} y={420} text="A WOODEN STAGE" size={96} s={span(t, stageT - 0.05, musT)} />
-        <Title x={540} y={420} text="KEEP THEM MOVING" size={92} s={pop(t, musT - 0.05)} color={HC.ember} />
+        <Title x={540} y={420} text="KEEP THEM MOVING" size={92} s={reveal(t, musT - 0.05)} color={HC.ember} />
       </Layer>
     </Stage>
   );
@@ -409,7 +411,7 @@ const WorseScene: React.FC<{t: number}> = ({t}) => {
         <rect x={-600} y={1350} width={W + 1200} height={H} fill={HC.void} />
         <StageSet t={t} planks={1} fallFrom={colT - 0.3} musicians={1 - fadeIn(t, colT, 0.6)} />
         <Title x={540} y={420} text="IT MADE THINGS WORSE" size={76} s={span(t, t0 + 0.1, numT)} />
-        <Title x={540} y={460} text="15 A DAY?" size={150} s={pop(t, numT - 0.05)} color={HC.bloodHi} glow={HC.blood} />
+        <Title x={540} y={460} text="15 A DAY?" size={150} s={reveal(t, numT - 0.05)} color={HC.bloodHi} glow={HC.blood} />
         <Note x={540} y={590} text="later accounts" size={58} o={fadeIn(t, numT + 0.3)} />
         {t > argT && <Seal x={540} y={790} text="DISPUTED" s={slam(t, argT)} size={78} />}
       </Layer>
@@ -555,8 +557,8 @@ const FearScene: React.FC<{t: number}> = ({t}) => {
             ))}
             <rect x={-600} y={1340} width={W + 1200} height={H} fill={HC.void} />
             <path d="M 360 1180 Q 540 1340 720 1180 Z" fill={HC.void} />
-            <Title x={540} y={460} text="FAMINE" size={140} s={pop(t, ph('famine') - 0.05)} color={HC.bone} />
-            <Title x={540} y={620} text="DISEASE" size={140} s={pop(t, ph('disease') - 0.05)} color={HC.rot} glow={HC.rot} />
+            <Title x={540} y={460} text="FAMINE" size={140} s={reveal(t, ph('famine') - 0.05)} color={HC.bone} />
+            <Title x={540} y={620} text="DISEASE" size={140} s={reveal(t, ph('disease') - 0.05)} color={HC.rot} glow={HC.rot} />
           </g>
         ) : (
           <g>
@@ -579,7 +581,7 @@ const FearScene: React.FC<{t: number}> = ({t}) => {
               ))}
             <Title x={540} y={460} text="AN ANGRY SAINT" size={100} s={span(t, saintT - 0.05, fearT)} color={HC.bloodHi} glow={HC.blood} />
             <Title x={540} y={460} text="FEAR SPREAD" size={124} s={span(t, fearT - 0.05, danceT)} />
-            <Title x={540} y={460} text="SO DID THE DANCE" size={98} s={pop(t, danceT - 0.05)} color={HC.ember} />
+            <Title x={540} y={460} text="SO DID THE DANCE" size={98} s={reveal(t, danceT - 0.05)} color={HC.ember} />
           </g>
         )}
       </Layer>
@@ -619,6 +621,7 @@ const SCENES: Array<[number, React.FC<{t: number}>]> = [
   [S.loop, LoopScene],
 ];
 const CUTS = SCENES.slice(1).map(([at]) => at);
+const XF = 0.5; // dissolve length (s), centred on each cut
 
 // ------------------------------------------------------------------ sound
 
@@ -648,15 +651,33 @@ export const DanceShort: React.FC = () => {
   const t = frame / FPS;
   const root = useRef<HTMLDivElement>(null);
   const probe = Boolean((getInputProps() as {probe?: boolean}).probe);
-  let Scene = SCENES[0][1];
-  for (const [st, Sc] of SCENES) if (t >= st) Scene = Sc;
-  // a quick blink to black on every cut (eyes closing), instead of a punch-in
-  const blink = Math.max(0, ...CUTS.map((c) => 1 - Math.abs(t - c) / 0.09)) * 0.85;
-  const red = t >= S.worse && t < S.ban ? 0.25 * fadeIn(t, S.worse, 0.8) : 0;
+  // cross-dissolve between scenes: the incoming scene fades in over the outgoing one and settles from a slight zoom
+  let si = 0;
+  for (let i = 0; i < SCENES.length; i++) if (t >= SCENES[i][0]) si = i;
+  const [st, Scene] = SCENES[si];
+  const u = si > 0 ? clamp((t - (st - XF / 2)) / XF) : 1;
+  const Prev = si > 0 && u < 1 ? SCENES[si - 1][1] : null;
+  // and the transition into the next scene starts half a dissolve early
+  const nxt = si + 1 < SCENES.length ? SCENES[si + 1] : null;
+  const un = nxt ? clamp((t - (nxt[0] - XF / 2)) / XF) : 0;
+  const ease = (x: number) => x * x * (3 - 2 * x);
+  const sway = `rotate(${0.35 * Math.sin(t * 0.45)}deg) translate(${6 * Math.sin(t * 0.31)}px, ${5 * Math.sin(t * 0.37 + 1)}px) scale(1.012)`;
+  const red = t >= S.worse && t < S.ban ? 0.25 * fadeIn(t, S.worse, 0.8) * (1 - fadeIn(t, S.ban - 0.4, 0.4)) : 0;
   return (
     <AbsoluteFill style={{backgroundColor: HC.void}} ref={root}>
-      <Scene t={t} />
-      <Overlay t={t} wash={HC.blood} washO={red} dark={blink} />
+      <AbsoluteFill style={{transform: sway}}>
+        {Prev && <Prev t={t} />}
+        <AbsoluteFill style={{opacity: Prev ? ease(u) : 1, transform: Prev ? `scale(${1.035 - 0.035 * ease(u)})` : undefined}}>
+          <Scene t={t} />
+        </AbsoluteFill>
+        {nxt && un > 0 && (
+          <AbsoluteFill style={{opacity: ease(un), transform: `scale(${1.035 - 0.035 * ease(un)})`}}>
+            {React.createElement(nxt[1], {t})}
+          </AbsoluteFill>
+        )}
+      </AbsoluteFill>
+      <Overlay t={t} wash={HC.blood} washO={red} />
+      <Watermark o={0.6 * fadeIn(t, COVER_END, 0.4)} />
       {probe && <LayoutProbe root={root} frame={frame} width={W} />}
       <HollowCaptions t={t} groups={GROUPS} keys={KEYS} hide={t < COVER_END} />
       <Sequence from={Math.round(0.1 * FPS)} layout="none">

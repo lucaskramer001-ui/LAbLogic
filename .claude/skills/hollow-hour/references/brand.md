@@ -27,7 +27,13 @@
   sheet of episode 1). Towns are drawn as a street corridor with the gap in the middle.
 - Hypnotic motion: `Spiral` (slow rotating spiral arms, low contrast), `drift()` (camera never stops pushing in),
   `flicker()` on every light, dancers spin with a paper-puppet flip.
-- Cuts are a quick **blink to black** (0.18 s), not punch-ins. Film grain + vignette on top (`Overlay`).
+- **Style v2 (2026-11-09, "more professional and smooth"):** scenes **cross-dissolve** (0.5 s, incoming settles from
+  1.035x) instead of blink cuts; the whole frame has a slow camera sway (±0.35°); titles **reveal** smoothly (fade,
+  18 px rise, tracking closes, blur clears; `reveal()`), never springy pops; `Title` is Cinzel Bold with wide tracking,
+  a thin dark edge, soft black shadow and faint coloured glow (no thick cartoon outline); `Overlay` adds drifting fog
+  bands and floating dust motes over film grain and vignette.
+- **Watermark:** small "HOLLOW HOUR" + crescent between ember rules at y 1668 on every frame after the cover
+  (`Watermark` in kit.tsx), like Scary Interesting / MORGAR.
 - One colour wash per mood: blood red for death / danger, sickly green (rot) for poison / disease.
 
 ## Palette (`HC` in kit.tsx)
@@ -45,8 +51,9 @@
 ## Type
 - **Cinzel Black 900 / Bold 700** (OFL): titles, captions, stamps. `video/public/fonts/cinzel-latin-*.woff2`.
 - **IM Fell English italic** (OFL): dates, places, "later accounts", source notes - the old-print voice.
-- `Title` auto-fits to 940 px. Captions: 2-3 words, Cinzel Black 92 px, bone, 18 px ink stroke, active word ember,
-  keywords blood-red once said, centred at y 1500. Numbers as digits (1518, 400).
+- `Title` auto-fits to 940 px. **Captions (horror style, v2):** 2-3 words, Cinzel Bold 84 px, tracking 6, bone on a
+  soft black halo (2 px edge only); each word rises out of a blur as it is spoken; the spoken word burns red `#FF4F3F`
+  with a glow and faint flicker; keywords stay ember once said; centred at y 1500. Numbers as digits (1518, 400).
 
 ## Voice
 - ElevenLabs **Jack - Deep Dark Horror Narrator** (`BVPhWQykET1TSvfGzrUr`, American, low, cold calm), `eleven_v4`.
@@ -85,6 +92,6 @@ Rules that follow from it:
 - Titles: one curiosity line < 50 chars + series tag, e.g. "The Town That Couldn't Stop Dancing [Record 001]".
   No hashtags in the title (put them in the description). One emoji optional (🕯 fits the brand).
 - Topic mix per 4 Shorts: 2 experiments, 1 legend, 1 dark record; hoaxes as specials.
-- Small "HOLLOW HOUR" watermark low on every frame (like Scary Interesting / MORGAR) - not built yet.
-- Frame 0 = cover but visible < 0.5 s; test a no-text opening frame against it.
+- Small "HOLLOW HOUR" watermark low on every frame (built: `Watermark`).
+- Frame 0 = cover but visible < 0.5 s (COVER_END 0.5 in the dance Short); test a no-text opening frame against it.
 - Stay distinct from ParaHaunt: true records, narration, sources, warm candle/moon light, the Keeper.

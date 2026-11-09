@@ -395,7 +395,8 @@ export const Puppet: React.FC<{
 
 // ------------------------------------------------------------------ text
 
-// Big title text: Cinzel Black, bone with ink stroke and a soft ember glow behind.
+// Title text, cinematic: Cinzel Bold with wide tracking, bone, a thin dark edge for readability and a soft dark
+// shadow plus a faint coloured glow. `s` is a 0..1 reveal (fade, small rise, tracking closes in, blur clears).
 export const Title: React.FC<{x: number; y: number; text: string; size?: number; color?: string; s?: number; rot?: number; glow?: string; anchor?: 'middle' | 'start' | 'end'; label?: string; maxW?: number}> = ({
   x,
   y,
@@ -409,20 +410,35 @@ export const Title: React.FC<{x: number; y: number; text: string; size?: number;
   label,
   maxW = 940,
 }) => {
-  if (s <= 0.001) return null;
-  // auto-fit: Cinzel Black caps ~0.86 em per character incl. letter spacing; keep within maxW px
+  const v = clamp(s);
+  if (v <= 0.001) return null;
   const fit = Math.min(1, maxW / (text.length * size * 0.86));
+  const track = size * lerp(0.16, 0.08, v);
+  const blur = (1 - v) * 10;
+  const id = `tg${Math.round(x)}${Math.round(y)}${text.length}`;
   return (
-    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s * fit})`} data-label={label ?? text}>
-      <text textAnchor={anchor} fontFamily={SERIF} fontWeight={900} fontSize={size} fill="none" stroke={glow} strokeWidth={size * 0.32} opacity={0.18} strokeLinejoin="round" letterSpacing={size * 0.04}>
+    <g transform={`translate(${x} ${y + (1 - v) * 18}) rotate(${rot * 0.5}) scale(${fit * lerp(0.97, 1, v)})`} opacity={v} data-label={label ?? text}>
+      <defs>
+        <filter id={id} x="-30%" y="-60%" width="160%" height="220%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation={size * 0.09} result="b" />
+          <feFlood floodColor="#000" floodOpacity="0.95" />
+          <feComposite in2="b" operator="in" result="sh" />
+          <feGaussianBlur in="SourceGraphic" stdDeviation={size * 0.18} result="g" />
+          <feMerge>
+            <feMergeNode in="sh" />
+            <feMergeNode in="sh" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <text textAnchor={anchor} fontFamily={SERIF} fontWeight={700} fontSize={size} fill={glow} opacity={0.22} letterSpacing={track} style={{filter: `blur(${size * 0.22}px)`}}>
         {text}
       </text>
-      <text textAnchor={anchor} y={size * 0.07} fontFamily={SERIF} fontWeight={900} fontSize={size} fill={HC.ink} stroke={HC.ink} strokeWidth={size * 0.2} strokeLinejoin="round" letterSpacing={size * 0.04}>
-        {text}
-      </text>
-      <text textAnchor={anchor} fontFamily={SERIF} fontWeight={900} fontSize={size} fill={color} stroke={HC.ink} strokeWidth={size * 0.16} paintOrder="stroke fill" strokeLinejoin="round" letterSpacing={size * 0.04}>
-        {text}
-      </text>
+      <g filter={`url(#${id})`} style={blur > 0.3 ? {filter: `blur(${blur}px)`} : undefined}>
+        <text textAnchor={anchor} fontFamily={SERIF} fontWeight={700} fontSize={size} fill={color} stroke="rgba(5,4,5,0.85)" strokeWidth={size * 0.035} paintOrder="stroke fill" letterSpacing={track}>
+          {text}
+        </text>
+      </g>
     </g>
   );
 };
@@ -430,7 +446,7 @@ export const Title: React.FC<{x: number; y: number; text: string; size?: number;
 // Italic old-print note ("Strasbourg, July 1518", "later accounts").
 export const Note: React.FC<{x: number; y: number; text: string; size?: number; color?: string; o?: number; anchor?: 'middle' | 'start' | 'end'}> = ({x, y, text, size = 56, color = HC.bone, o = 1, anchor = 'middle'}) =>
   o <= 0.001 ? null : (
-    <text x={x} y={y} textAnchor={anchor} fontFamily={FELL} fontStyle="italic" fontSize={size} fill={color} opacity={o} stroke={HC.ink} strokeWidth={size * 0.14} paintOrder="stroke fill" data-label={text}>
+    <text x={x} y={y} textAnchor={anchor} fontFamily={FELL} fontStyle="italic" fontSize={size} fill={color} opacity={o} stroke="rgba(5,4,5,0.8)" strokeWidth={size * 0.06} paintOrder="stroke fill" style={{filter: 'drop-shadow(0 0 10px rgba(0,0,0,0.9))'}} data-label={text}>
       {text}
     </text>
   );
@@ -457,7 +473,12 @@ export const slam = (t: number, t0: number) => {
 };
 export const until = (t: number, t1: number, d = 0.3) => 1 - clamp((t - (t1 - d)) / d);
 export const fadeIn = (t: number, t0: number, d = 0.4) => clamp((t - t0) / d);
-export const span = (t: number, t0: number, t1 = 1e9) => pop(t, t0) * until(t, t1);
+// Smooth reveal 0..1 (ease-out), used instead of the springy pop for a calmer, more cinematic feel.
+export const reveal = (t: number, t0: number, d = 0.55) => {
+  const u = clamp((t - t0) / d);
+  return 1 - Math.pow(1 - u, 3);
+};
+export const span = (t: number, t0: number, t1 = 1e9) => reveal(t, t0) * until(t, t1, 0.4);
 
 // Wordmark: HOLLOW HOUR in Cinzel, the second O of HOLLOW a crescent moon.
 export const Wordmark: React.FC<{x: number; y: number; s?: number; o?: number}> = ({x, y, s = 1, o = 1}) =>
@@ -477,17 +498,53 @@ export const Wordmark: React.FC<{x: number; y: number; s?: number; o?: number}> 
 
 // ------------------------------------------------------------------ overlays
 
-// Film grain (moving), vignette and an optional colour wash on top of everything.
-export const Overlay: React.FC<{t: number; wash?: string; washO?: number; dark?: number}> = ({t, wash, washO = 0, dark = 0}) => {
+// Film grain (moving), drifting fog, floating dust, vignette and an optional colour wash on top of everything.
+export const Overlay: React.FC<{t: number; wash?: string; washO?: number; dark?: number; fog?: number}> = ({t, wash, washO = 0, dark = 0, fog = 1}) => {
   const f = Math.floor(t * 24);
   const ox = Math.floor(rnd(f) * 120);
   const oy = Math.floor(rnd(f + 99) * 120);
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
       {wash && washO > 0 && <AbsoluteFill style={{backgroundColor: wash, opacity: washO, mixBlendMode: 'multiply'}} />}
-      <AbsoluteFill style={{background: 'radial-gradient(ellipse 75% 60% at 50% 46%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.78) 100%)'}} />
-      <Img src={staticFile('hollow/grain.png')} style={{position: 'absolute', left: -ox, top: -oy, width: 1200 * 1.8, height: 1200 * 1.8, opacity: 0.16, imageRendering: 'pixelated'}} />
+      {fog > 0 && (
+        <svg width={W} height={H} style={{position: 'absolute', left: 0, top: 0}}>
+          <defs>
+            <radialGradient id="fogb">
+              <stop offset="0" stopColor="#CFC6D8" stopOpacity="0.16" />
+              <stop offset="1" stopColor="#CFC6D8" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+          {[0, 1, 2, 3].map((i) => {
+            const x = ((i * 420 + t * (18 + i * 6)) % 1900) - 400;
+            return <ellipse key={i} cx={x} cy={1180 + i * 110 + 20 * Math.sin(t * 0.4 + i)} rx={620} ry={150} fill="url(#fogb)" opacity={fog} />;
+          })}
+          {Array.from({length: 26}).map((_, i) => {
+            const sp = 14 + rnd(i) * 22;
+            const y = H - ((t * sp + rnd(i + 40) * H) % (H + 40));
+            const x = rnd(i + 7) * W + 30 * Math.sin(t * 0.5 + i);
+            const tw = 0.35 + 0.35 * Math.sin(t * 1.3 + i * 2.1);
+            return <circle key={i} cx={x} cy={y} r={1.4 + rnd(i + 3) * 2.2} fill={HC.bone} opacity={0.35 * tw * fog} />;
+          })}
+        </svg>
+      )}
+      <AbsoluteFill style={{background: 'radial-gradient(ellipse 78% 62% at 50% 46%, rgba(0,0,0,0) 42%, rgba(0,0,0,0.82) 100%)'}} />
+      <Img src={staticFile('hollow/grain.png')} style={{position: 'absolute', left: -ox, top: -oy, width: 1200 * 1.8, height: 1200 * 1.8, opacity: 0.12, imageRendering: 'pixelated'}} />
       {dark > 0 && <AbsoluteFill style={{backgroundColor: '#000', opacity: dark}} />}
     </AbsoluteFill>
   );
 };
+
+// Small persistent channel mark on every frame (so reposts and stitches carry the brand).
+export const Watermark: React.FC<{y?: number; o?: number}> = ({y = 1668, o = 0.62}) => (
+  <svg width={W} height={H} style={{position: 'absolute', left: 0, top: 0, pointerEvents: 'none'}} opacity={o}>
+    <g transform={`translate(540 ${y})`} data-label="watermark">
+      <line x1={-215} x2={-168} y1={-9} y2={-9} stroke={HC.ember} strokeWidth={1.5} opacity={0.8} />
+      <line x1={150} x2={197} y1={-9} y2={-9} stroke={HC.ember} strokeWidth={1.5} opacity={0.8} />
+      <circle cx={-150} cy={-9} r={7} fill={HC.bone} />
+      <circle cx={-147} cy={-11} r={6} fill={HC.void} />
+      <text x={0} y={0} textAnchor="middle" fontFamily={SERIF} fontWeight={700} fontSize={27} letterSpacing={6} fill={HC.bone} style={{filter: 'drop-shadow(0 0 6px rgba(0,0,0,0.95))'}}>
+        HOLLOW HOUR
+      </text>
+    </g>
+  </svg>
+);
