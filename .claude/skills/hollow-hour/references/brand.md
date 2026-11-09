@@ -67,3 +67,24 @@
   believed - told in under a minute, with the sources in every description."
 - Instagram: "Real records. Unreal stories. 🕯 / Dark history in 60 seconds. Sources in every caption."
 - TikTok: "Real records. Unreal stories. 🕯 Dark history in 60 s."
+
+## Competitor analysis v2 (real YouTube data, 2026-11-09; raw data + scraper in publish/brand/hollow-hour/research/)
+| Channel | Subs | Median Short views | Format |
+|---|---|---|---|
+| Zack D. Films | 29.6M | 7.85M | 3D animation, "Why ..." + 1 emoji |
+| Sean Andrew | 7.51M | 5.1M | face, history/myth tests |
+| ParaHaunt (closest to us) | 453K | 2.25M | flat 2D animated urban legends, red/black, "[Urban Legend]" tag |
+| MrBallen Shorts | 3.26M | 349K | host face |
+| Mr. Nightmare | 7.16M | 288K | photos, red-box captions |
+| Scary Interesting | 2.06M | 208K | stock footage, 2-word titles, name on every frame |
+| Absolute History | 3.7M | 195K | presenter, numbered series |
+Biggest topics in 355 search results: human experiments (Milgram ~43M, "Worst Experiment in History" 39M), urban legends
+around the world (40M), bizarre punishments/royals (26M), photos with disturbing backstories.
+
+Rules that follow from it:
+- Titles: one curiosity line < 50 chars + series tag, e.g. "The Town That Couldn't Stop Dancing [Record 001]".
+  No hashtags in the title (put them in the description). One emoji optional (🕯 fits the brand).
+- Topic mix per 4 Shorts: 2 experiments, 1 legend, 1 dark record; hoaxes as specials.
+- Small "HOLLOW HOUR" watermark low on every frame (like Scary Interesting / MORGAR) - not built yet.
+- Frame 0 = cover but visible < 0.5 s; test a no-text opening frame against it.
+- Stay distinct from ParaHaunt: true records, narration, sources, warm candle/moon light, the Keeper.
