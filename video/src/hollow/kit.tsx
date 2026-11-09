@@ -100,8 +100,8 @@ export const Glow: React.FC<{id: string; cx?: number; cy?: number; r?: number; i
           <stop offset="1" stopColor={outer} />
         </radialGradient>
       </defs>
-      <rect x={-600} y={-600} width={W + 1200} height={H + 1200} fill={outer} />
-      <rect x={-600} y={-600} width={W + 1200} height={H + 1200} fill={`url(#${id})`} />
+      <rect x={-3000} y={-3000} width={9000} height={9000} fill={outer} />
+      <rect x={-3000} y={-3000} width={9000} height={9000} fill={`url(#${id})`} />
     </g>
   );
 };
@@ -396,7 +396,7 @@ export const Puppet: React.FC<{
 // ------------------------------------------------------------------ text
 
 // Big title text: Cinzel Black, bone with ink stroke and a soft ember glow behind.
-export const Title: React.FC<{x: number; y: number; text: string; size?: number; color?: string; s?: number; rot?: number; glow?: string; anchor?: 'middle' | 'start' | 'end'; label?: string}> = ({
+export const Title: React.FC<{x: number; y: number; text: string; size?: number; color?: string; s?: number; rot?: number; glow?: string; anchor?: 'middle' | 'start' | 'end'; label?: string; maxW?: number}> = ({
   x,
   y,
   text,
@@ -407,10 +407,11 @@ export const Title: React.FC<{x: number; y: number; text: string; size?: number;
   glow = HC.ember,
   anchor = 'middle',
   label,
+  maxW = 940,
 }) => {
   if (s <= 0.001) return null;
-  // auto-fit: Cinzel Black caps ~0.86 em per character incl. letter spacing; keep within 940 px
-  const fit = Math.min(1, 940 / (text.length * size * 0.86));
+  // auto-fit: Cinzel Black caps ~0.86 em per character incl. letter spacing; keep within maxW px
+  const fit = Math.min(1, maxW / (text.length * size * 0.86));
   return (
     <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s * fit})`} data-label={label ?? text}>
       <text textAnchor={anchor} fontFamily={SERIF} fontWeight={900} fontSize={size} fill="none" stroke={glow} strokeWidth={size * 0.32} opacity={0.18} strokeLinejoin="round" letterSpacing={size * 0.04}>

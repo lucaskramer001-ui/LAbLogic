@@ -5,8 +5,18 @@
   @hollowhour.tv, @thehollowhour). **Tagline:** REAL RECORDS. UNREAL STORIES.
 - **Concept:** short, true, unsettling stories - dark history, legends, experiments on humans, hoaxes - told by a
   calm cold narrator over papercut shadow-puppet animation. Every Short loops.
-- **Wordmark:** "HOLLOW HOUR" in Cinzel Black, bone, ink outline, two thin ember rules and an ember crescent moon
-  between them (`Wordmark` in `video/src/hollow/kit.tsx`).
+- **Brand book (v1, 2026-11-09):** https://claude.ai/artifact/FrxujGo7uTbSJ78sV6VPtD - niche analysis (MrBallen, Mr.
+  Nightmare, Scary Interesting, Lazy Masquerade, Wendigoon, Bedtime Stories/LEMMiNO/Nexpo, faceless AI Shorts accounts),
+  seven findings -> decisions, all assets.
+- **Logo:** "HOLLOW HOUR" in Cinzel Black, bone, ink outline + hard drop; the O of HOUR is the **moon mark** (full moon,
+  ember ring, the Keeper inside). Horizontal `LogoH` and stacked `LogoStack` in `video/src/hollow/Brand.tsx`; the small
+  in-video `Wordmark` in kit.tsx is the older simple version.
+- **Mascot: the Keeper** - hooded faceless figure with a lantern who "keeps the records" (`Keeper`, `Mark` in
+  Brand.tsx). Avatar, logo O, end card; can walk into first/last shots as a silent host.
+- **Record numbers:** every Short is RECORD 001, 002 ... (red stamp on the cover) to build a binge/collect habit.
+- **Assets** (full res, rendered from Brand.tsx Stills HollowLogo, HollowLogoStacked, HollowAvatar, HollowBanner,
+  HollowCoverTemplate, HollowThumbTemplate, HollowEndCard): `publish/brand/hollow-hour/`.
+  Render: `npx remotion still build/bundle <Id> out/brand/<Id>.png --image-format=png --browser-executable=<chromium>`.
 
 ## Look: papercut shadow-puppet theatre
 - Characters are pure ink silhouettes (`Puppet`: woman, man, doctor, fiddler, drummer, saint, official; poses stand,

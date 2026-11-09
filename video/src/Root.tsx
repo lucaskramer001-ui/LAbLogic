@@ -11,6 +11,7 @@ import {SeawaterShort, DURATION_FRAMES as SEA_FRAMES} from './seawater/Main';
 import {MoneyShort, MoneyCover, DURATION_FRAMES as MONEY_FRAMES} from './money/Main';
 import {MoneyLong, DURATION_FRAMES as MONEYL_FRAMES} from './moneylong/Main';
 import {DanceShort, DanceCover, DURATION_FRAMES as DANCE_FRAMES} from './dance/Main';
+import {HollowAvatar, HollowBanner, HollowCoverTemplate, HollowEndCard, HollowLogo, HollowLogoStacked, HollowThumbTemplate} from './hollow/Brand';
 import {BlackBoxShort, BlackBoxCover, DURATION_FRAMES as BB_FRAMES} from './blackbox/Main';
 
 export const Root = () => (
@@ -35,5 +36,12 @@ export const Root = () => (
     <Still id="BlackBoxCover" component={BlackBoxCover} width={1080} height={1920} />
     <Composition id="Dance" component={DanceShort} durationInFrames={DANCE_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="DanceCover" component={DanceCover} width={1080} height={1920} />
+    <Still id="HollowLogo" component={HollowLogo} width={2000} height={520} />
+    <Still id="HollowLogoStacked" component={HollowLogoStacked} width={1200} height={900} />
+    <Still id="HollowAvatar" component={HollowAvatar} width={1080} height={1080} />
+    <Still id="HollowBanner" component={HollowBanner} width={2560} height={1440} />
+    <Still id="HollowCoverTemplate" component={HollowCoverTemplate} width={1080} height={1920} />
+    <Still id="HollowThumbTemplate" component={HollowThumbTemplate} width={1280} height={720} />
+    <Still id="HollowEndCard" component={HollowEndCard} width={1080} height={1920} />
   </>
 );
