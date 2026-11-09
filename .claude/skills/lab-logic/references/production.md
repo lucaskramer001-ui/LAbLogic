@@ -118,3 +118,15 @@ poses each time; it rewrites `sprites.ts`) → check on a pink sheet. Sprites ar
 - The layout probe skips anything under `[data-skip]` (chapter cards while sliding).
 - To fix one scene after a long render: render only its frames (`--frames=A-B --muted`), splice with ffmpeg trim +
   concat, copy the normalized audio from the existing final, check the frame count matches.
+
+## Music and richer sound (added 2026-11-09 for the black box long-form; user: "feels a little empty audio wise")
+- Music comes from the second ElevenLabs connector (`mcp__ElevenLabsMsic__*`): `creative_generate_in_flow`,
+  node_type `music`, model `eleven_music_v2_5`, 1 generation, prompt "Instrumental ... no vocals ... even dynamics
+  so it can loop ... 3 minutes" -> 180 s track for ~900 credits. Make two moods per long-form (curious + tense).
+- Sound effects from the same connector (`sfx`, `eleven_text_to_sound_v2`, ~17 credits); most come back ~1 s.
+- Mixing without re-rendering: `video/images/blackbox-long/scripts/mix.py` takes the finished video's audio,
+  adds the music bed (chapter-based crossfades, ducked -12 dB under the voice, -6 dB in pauses > 0.7 s, -4 dB on
+  the end card, fades) and the new sfx cues (times from words.json via ph()), then loudnorm -14 LUFS and mux
+  with `-c:v copy`. Keep the pre-music file as `*.nomusic.mp4`.
+- DON'T transcribe music to check for vocals: the estimate said ~60 credits but each 3-min track cost 990 credits.
+  The tracks were instrumental anyway; trust the "no vocals" prompt or ask the user to listen.

@@ -107,4 +107,4 @@ Add a row for every new episode (and every topic the user mentions as already do
   ~3,900 m, readable; MH370 (2014) recorders never found; deployable/floating recorders; Stapp 46.2 g (1954);
   16 g dynamic seat tests (14 CFR 25.562, 1988); 90-second evacuation (14 CFR 25.803).
 - Thumbnails BlackBoxThumbA "SURVIVES / 3,400 G" (think), B "FOUND / 3,900 M DOWN" (point), C "TOO HEAVY / TO FLY?!"
-  (facepalm). Costs ~4,920 ElevenLabs credits.
+  (facepalm). Costs ~4,920 ElevenLabs credits voice; music + sfx pass ~2,070 credits + 1,980 for an unneeded vocal check.
