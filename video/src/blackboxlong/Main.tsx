@@ -826,7 +826,7 @@ const AliveScene: React.FC<{t: number}> = ({t}) => {
         {t > evacT - 1.6 && (
           <g transform={`translate(1450 560) scale(${pop(t, evacT - 1.6)})`}>
             <circle r={230} fill="#fff" stroke={C.ink} strokeWidth={INK_W} />
-            <path d={`M 0 0 L 0 -200 A 200 200 0 ${secs > 45 ? 1 : 0} 1 ${200 * Math.sin(((90 - secs) / 90) * Math.PI * 2)} ${-200 * Math.cos(((90 - secs) / 90) * Math.PI * 2)} Z`} fill={C.green} opacity={0.8} />
+            <path d={`M 0 0 L 0 -200 A 200 200 0 ${secs < 45 ? 1 : 0} 1 ${200 * Math.sin(((90 - secs) / 90) * Math.PI * 2)} ${-200 * Math.cos(((90 - secs) / 90) * Math.PI * 2)} Z`} fill={C.green} opacity={0.8} />
             <Txt x={0} y={30} text={`${secs}`} size={130} anchor="middle" />
           </g>
         )}
