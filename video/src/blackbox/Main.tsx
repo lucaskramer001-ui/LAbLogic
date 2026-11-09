@@ -14,11 +14,11 @@ import {LayoutProbe} from '../iceberglong/kit';
 export const DURATION_FRAMES = Math.ceil(END * FPS);
 const W = 1080;
 const H = 1920;
-const ORANGE = '#FF7A1A';
-const ORANGE_D = '#D85E0C';
-const STEEL = '#AEB8C1';
-const INSUL = '#F4E8C1';
-const CHIP = '#3FA35B';
+export const ORANGE = '#FF7A1A';
+export const ORANGE_D = '#D85E0C';
+export const STEEL = '#AEB8C1';
+export const INSUL = '#F4E8C1';
+export const CHIP = '#3FA35B';
 
 const useFonts = () => {
   const [handle] = useState(() => delayRender('fonts'));
@@ -94,7 +94,7 @@ export const BlackBox: React.FC<{x: number; y: number; s?: number; t: number; mo
 };
 
 // Airliner, side view, nose to the right (centre x, y), ~760 wide at s = 1. `armor` 0..1 thickens and darkens it.
-const Plane: React.FC<{x: number; y: number; s?: number; t: number; armor?: number; rot?: number; mood?: React.ComponentProps<typeof Face>['mood']; color?: string}> = ({
+export const Plane: React.FC<{x: number; y: number; s?: number; t: number; armor?: number; rot?: number; mood?: React.ComponentProps<typeof Face>['mood']; color?: string}> = ({
   x,
   y,
   s = 1,
@@ -121,7 +121,7 @@ const Plane: React.FC<{x: number; y: number; s?: number; t: number; armor?: numb
   );
 };
 
-const Flames: React.FC<{x: number; y: number; t: number; s?: number}> = ({x, y, t, s = 1}) => (
+export const Flames: React.FC<{x: number; y: number; t: number; s?: number}> = ({x, y, t, s = 1}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     {[-1, 0, 1].map((i) => {
       const h = 170 + 40 * Math.sin(t * 9 + i * 2);
@@ -140,7 +140,7 @@ const Flames: React.FC<{x: number; y: number; t: number; s?: number}> = ({x, y, 
 );
 
 // Heavy weight block (bottom centre x, y).
-const Weight: React.FC<{x: number; y: number; s?: number; label?: string}> = ({x, y, s = 1, label = '2+ T'}) => (
+export const Weight: React.FC<{x: number; y: number; s?: number; label?: string}> = ({x, y, s = 1, label = '2+ T'}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     <path d="M -150 0 L -120 -200 L 120 -200 L 150 0 Z" fill="#5B6670" stroke={C.ink} strokeWidth={INK_W} strokeLinejoin="round" />
     <rect x={-40} y={-250} width={80} height={56} rx={14} fill="none" stroke={C.ink} strokeWidth={14} />
@@ -151,7 +151,7 @@ const Weight: React.FC<{x: number; y: number; s?: number; label?: string}> = ({x
 );
 
 // Plane debris piece.
-const Debris: React.FC<{x: number; y: number; s?: number; rot?: number; kind: number}> = ({x, y, s = 1, rot = 0, kind}) => (
+export const Debris: React.FC<{x: number; y: number; s?: number; rot?: number; kind: number}> = ({x, y, s = 1, rot = 0, kind}) => (
   <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
     {kind === 0 && <path d="M -120 0 L -100 -70 L 60 -90 L 110 -20 L 80 10 Z" fill={C.paper} stroke={C.ink} strokeWidth={INK_W} strokeLinejoin="round" />}
     {kind === 1 && <path d="M -60 0 L -90 -140 L -20 -140 L 40 0 Z" fill={C.teal} stroke={C.ink} strokeWidth={INK_W} strokeLinejoin="round" />}

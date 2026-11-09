@@ -1,0 +1,33 @@
+And that armor is tested brutally.
+
+It has to survive an impact of three thousand four hundred g. A heavy weight with a steel spike is dropped onto it from three meters. It's crushed under more than two tonnes. It sits in a fire at eleven hundred degrees Celsius for an hour, then bakes at two hundred and sixty degrees for ten more hours. And it has to survive the water pressure six kilometers down.
+
+If it ends up in the sea, a beacon on the side starts pinging, for at least thirty days.
+
+That toughness has paid off. In 2009, Air France flight 447 crashed into the Atlantic Ocean. The recorders lay on the sea floor for almost two years, about three thousand nine hundred meters down. When they were finally found in 2011, investigators could still read the data.
+
+Reading a recorder is careful work. In the lab, investigators open the armor, take out the memory, clean it, and copy everything before anyone tries to analyze it. Then they rebuild the last minutes of the flight, second by second, and match the numbers to the voices in the cockpit.
+
+But black boxes aren't perfect. In 2014, Malaysia Airlines flight 370 disappeared over the Indian Ocean. Its recorders have never been found. That's one reason engineers are now working on recorders that break away from the plane and float, and on sending more flight data out while the plane is still in the air.
+
+So why don't we just build the whole plane that way?
+
+Because the armor only works because the thing inside is tiny. A few chips need a few kilograms of protection. A plane is the opposite: a huge, mostly empty tube full of people, bags and fuel. Every part of it is designed to be as light as possible, because every extra kilogram has to be lifted into the sky.
+
+Wrap all of it in armor that thick, and it gets far too heavy to ever take off.
+
+And even if it could fly, it wouldn't save the people inside.
+
+The black box survives three thousand four hundred g. In 1954, an Air Force doctor named John Paul Stapp rode a rocket sled that stopped in about a second and a half. He took about forty-six g, one of the highest forces a person has survived on purpose. Three thousand four hundred g is far beyond anything a human body can take.
+
+So what does keep people alive?
+
+Not armor. Planning for the crashes you can survive. Since the late 1980s, seats in newly designed airliners have to pass crash tests at sixteen g. And before a new airliner is approved, the maker has to show that a full plane can be emptied in ninety seconds.
+
+Rules like these are shaped by what investigators learn from crashes. And the black box is one of their best witnesses.
+
+So why don't we just build the whole plane out of the black box?
+
+Because the black box isn't a material. It's a tiny, heavily armored memory. And its job isn't to survive the crash for us.
+
+The black box doesn't make crashes survivable. It makes them understandable, so the next flight is safer.

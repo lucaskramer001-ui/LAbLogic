@@ -1,0 +1,23 @@
+After a plane crash, the wreckage can be scattered across a field, a mountainside, or the bottom of the ocean. And investigators go looking for one thing first: the black box.
+
+It's built to survive almost anything. Fire, impact, deep water. So here's the obvious fix. If the black box survives the crash, why don't we just build the whole plane out of it?
+
+It sounds like common sense. But the answer says a lot about how planes are built, what the black box really is, and what actually keeps people alive.
+
+Let's start with the name. The black box isn't black. It's bright orange, often with reflective stripes, so searchers can spot it in the wreckage.
+
+The idea came from an Australian scientist named David Warren. In the 1950s he helped investigate a crash of the Comet, the world's first jet airliner. Nobody knew what had happened in the cockpit. So he imagined a recorder that would keep the last moments of every flight.
+
+He built his first prototype in 1956. It took years before anyone took it seriously. Today, flight recorders are required on airliners all over the world.
+
+And there isn't just one box. There are two.
+
+The flight data recorder stores numbers: speed, altitude, engine power, the position of the controls, many times every second.
+
+The cockpit voice recorder stores sound: the pilots' voices, alarms, switches, even the noise of the engines. For years it only kept the last two hours. A new US rule requires twenty-five hours on newly built airliners, and Europe already requires twenty-five hours on large planes.
+
+Both sit near the back of the plane, in the tail. In many crashes, the tail is the part that takes the least damage.
+
+Now, what's inside? Not some magic material.
+
+Most of the box is ordinary electronics. The part that has to survive is small: a few memory chips. They sit inside thick layers of insulation, wrapped in a shell of titanium or stainless steel. One maker's armored memory unit weighs about two kilograms, just to protect a handful of chips.

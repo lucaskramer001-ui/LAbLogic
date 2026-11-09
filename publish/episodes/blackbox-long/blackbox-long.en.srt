@@ -1,0 +1,465 @@
+1
+00:00:00,400 --> 00:00:04,540
+After a plane crash, the wreckage can be
+scattered across a field,
+
+2
+00:00:04,560 --> 00:00:07,270
+a mountainside, or the
+bottom of the ocean.
+
+3
+00:00:07,400 --> 00:00:12,360
+And investigators go looking for one
+thing first: the black box.
+
+4
+00:00:12,420 --> 00:00:15,070
+It's built to survive almost anything.
+
+5
+00:00:15,120 --> 00:00:17,670
+Fire, impact, deep water.
+
+6
+00:00:17,980 --> 00:00:19,810
+So here's the obvious fix.
+
+7
+00:00:19,900 --> 00:00:24,040
+If the black box survives the crash, why
+don't we just build the whole plane
+
+8
+00:00:24,060 --> 00:00:24,610
+out of it?
+
+9
+00:00:24,780 --> 00:00:26,370
+It sounds like common sense.
+
+10
+00:00:26,660 --> 00:00:29,920
+But the answer says a lot about
+how planes are built,
+
+11
+00:00:29,940 --> 00:00:34,330
+what the black box really is, and what
+actually keeps people alive.
+
+12
+00:00:34,460 --> 00:00:35,730
+Let's start with the name.
+
+13
+00:00:35,820 --> 00:00:37,930
+The black box isn't black.
+
+14
+00:00:38,020 --> 00:00:41,280
+It's bright orange, often with
+reflective stripes,
+
+15
+00:00:41,300 --> 00:00:43,370
+so searchers can spot it in the wreckage.
+
+16
+00:00:43,640 --> 00:00:47,520
+The idea came from an Australian
+scientist named David Warren.
+
+17
+00:00:47,580 --> 00:00:51,560
+In the 1950s he helped investigate
+a crash of the Comet,
+
+18
+00:00:51,580 --> 00:00:53,570
+the world's first jet airliner.
+
+19
+00:00:53,700 --> 00:00:56,060
+Nobody knew what had happened
+in the cockpit.
+
+20
+00:00:56,180 --> 00:01:00,900
+So he imagined a recorder that would keep
+the last moments of every flight.
+
+21
+00:01:00,920 --> 00:01:04,480
+He built his first prototype in 1956.
+
+22
+00:01:04,500 --> 00:01:07,590
+It took years before anyone
+took it seriously.
+
+23
+00:01:07,640 --> 00:01:12,020
+Today, flight recorders are required on
+airliners all over the world.
+
+24
+00:01:12,040 --> 00:01:13,900
+And there isn't just one box.
+
+25
+00:01:13,920 --> 00:01:15,000
+There are two.
+
+26
+00:01:15,020 --> 00:01:18,610
+The flight data recorder
+stores numbers: speed,
+
+27
+00:01:18,820 --> 00:01:22,280
+altitude, engine power, the
+position of the controls,
+
+28
+00:01:22,300 --> 00:01:24,240
+many times every second.
+
+29
+00:01:24,260 --> 00:01:28,510
+The cockpit voice recorder stores
+sound: the pilots' voices,
+
+30
+00:01:28,600 --> 00:01:32,080
+alarms, switches, even the
+noise of the engines.
+
+31
+00:01:32,100 --> 00:01:35,380
+For years it only kept the last two hours.
+
+32
+00:01:35,400 --> 00:01:39,940
+A new US rule requires twenty-five hours
+on newly built airliners,
+
+33
+00:01:39,960 --> 00:01:43,780
+and Europe already requires
+twenty-five hours on large planes.
+
+34
+00:01:43,800 --> 00:01:46,820
+Both sit near the back of the
+plane, in the tail.
+
+35
+00:01:46,840 --> 00:01:51,190
+In many crashes, the tail is the part
+that takes the least damage.
+
+36
+00:01:51,280 --> 00:01:52,960
+Now, what's inside?
+
+37
+00:01:52,980 --> 00:01:55,070
+Not some magic material.
+
+38
+00:01:55,160 --> 00:01:57,900
+Most of the box is ordinary electronics.
+
+39
+00:01:57,920 --> 00:02:02,210
+The part that has to survive is
+small: a few memory chips.
+
+40
+00:02:02,300 --> 00:02:05,080
+They sit inside thick layers
+of insulation,
+
+41
+00:02:05,100 --> 00:02:08,180
+wrapped in a shell of titanium
+or stainless steel.
+
+42
+00:02:08,200 --> 00:02:12,020
+One maker's armored memory unit
+weighs about two kilograms,
+
+43
+00:02:12,040 --> 00:02:14,350
+just to protect a handful of chips.
+
+44
+00:02:14,380 --> 00:02:17,200
+And that armor is tested brutally.
+
+45
+00:02:17,220 --> 00:02:21,320
+It has to survive an impact of three
+thousand four hundred g.
+
+46
+00:02:21,340 --> 00:02:26,080
+A heavy weight with a steel spike is
+dropped onto it from three meters.
+
+47
+00:02:26,100 --> 00:02:28,920
+It's crushed under more than two tonnes.
+
+48
+00:02:28,940 --> 00:02:33,240
+It sits in a fire at eleven hundred
+degrees Celsius for an hour,
+
+49
+00:02:33,260 --> 00:02:37,480
+then bakes at two hundred and sixty
+degrees for ten more hours.
+
+50
+00:02:37,500 --> 00:02:41,860
+And it has to survive the water
+pressure six kilometers down.
+
+51
+00:02:41,880 --> 00:02:45,540
+If it ends up in the sea, a beacon on
+the side starts pinging,
+
+52
+00:02:45,560 --> 00:02:47,940
+for at least thirty days.
+
+53
+00:02:47,960 --> 00:02:50,080
+That toughness has paid off.
+
+54
+00:02:50,100 --> 00:02:55,380
+In 2009, Air France flight 447 crashed
+into the Atlantic Ocean.
+
+55
+00:02:55,400 --> 00:02:59,100
+The recorders lay on the sea floor
+for almost two years,
+
+56
+00:02:59,120 --> 00:03:01,953
+about three thousand nine
+hundred meters down.
+
+57
+00:03:01,973 --> 00:03:06,220
+When they were finally found in 2011,
+investigators could still read the
+
+58
+00:03:06,240 --> 00:03:07,080
+data.
+
+59
+00:03:07,100 --> 00:03:09,480
+Reading a recorder is careful work.
+
+60
+00:03:09,500 --> 00:03:12,200
+In the lab, investigators open the armor,
+
+61
+00:03:12,220 --> 00:03:16,840
+take out the memory, clean it, and copy
+everything before anyone tries to
+
+62
+00:03:16,860 --> 00:03:17,860
+analyze it.
+
+63
+00:03:17,880 --> 00:03:20,660
+Then they rebuild the last
+minutes of the flight,
+
+64
+00:03:20,680 --> 00:03:25,047
+second by second, and match the numbers
+to the voices in the cockpit.
+
+65
+00:03:25,067 --> 00:03:27,287
+But black boxes aren't perfect.
+
+66
+00:03:27,307 --> 00:03:32,820
+In 2014, Malaysia Airlines flight 370
+disappeared over the Indian Ocean.
+
+67
+00:03:32,840 --> 00:03:35,240
+Its recorders have never been found.
+
+68
+00:03:35,260 --> 00:03:39,080
+That's one reason engineers are now working
+on recorders that break away
+
+69
+00:03:39,100 --> 00:03:43,280
+from the plane and float, and on sending
+more flight data out while the
+
+70
+00:03:43,300 --> 00:03:45,080
+plane is still in the air.
+
+71
+00:03:45,100 --> 00:03:48,133
+So why don't we just build the
+whole plane that way?
+
+72
+00:03:48,153 --> 00:03:52,427
+Because the armor only works because
+the thing inside is tiny.
+
+73
+00:03:52,447 --> 00:03:55,627
+A few chips need a few
+kilograms of protection.
+
+74
+00:03:55,647 --> 00:04:00,720
+A plane is the opposite: a huge, mostly
+empty tube full of people,
+
+75
+00:04:00,740 --> 00:04:02,200
+bags and fuel.
+
+76
+00:04:02,220 --> 00:04:05,693
+Every part of it is designed to be
+as light as possible,
+
+77
+00:04:05,713 --> 00:04:09,573
+because every extra kilogram has to
+be lifted into the sky.
+
+78
+00:04:09,593 --> 00:04:13,840
+Wrap all of it in armor that thick, and it
+gets far too heavy to ever take
+
+79
+00:04:13,860 --> 00:04:14,440
+off.
+
+80
+00:04:14,460 --> 00:04:18,400
+And even if it could fly, it wouldn't
+save the people inside.
+
+81
+00:04:18,420 --> 00:04:22,053
+The black box survives three
+thousand four hundred g.
+
+82
+00:04:22,073 --> 00:04:27,600
+In 1954, an Air Force doctor named John Paul
+Stapp rode a rocket sled that
+
+83
+00:04:27,620 --> 00:04:29,907
+stopped in about a second and a half.
+
+84
+00:04:29,927 --> 00:04:34,660
+He took about forty-six g, one of the
+highest forces a person has survived
+
+85
+00:04:34,680 --> 00:04:36,140
+on purpose.
+
+86
+00:04:36,160 --> 00:04:41,300
+Three thousand four hundred g is far beyond
+anything a human body can take.
+
+87
+00:04:41,320 --> 00:04:43,820
+So what does keep people alive?
+
+88
+00:04:43,840 --> 00:04:45,020
+Not armor.
+
+89
+00:04:45,040 --> 00:04:47,780
+Planning for the crashes you can survive.
+
+90
+00:04:47,800 --> 00:04:52,260
+Since the late 1980s, seats in newly
+designed airliners have to pass crash
+
+91
+00:04:52,280 --> 00:04:54,100
+tests at sixteen g.
+
+92
+00:04:54,120 --> 00:04:58,260
+And before a new airliner is approved, the
+maker has to show that a full
+
+93
+00:04:58,280 --> 00:05:01,170
+plane can be emptied in ninety seconds.
+
+94
+00:05:01,300 --> 00:05:05,210
+Rules like these are shaped by what
+investigators learn from crashes.
+
+95
+00:05:05,480 --> 00:05:08,630
+And the black box is one of
+their best witnesses.
+
+96
+00:05:08,760 --> 00:05:12,270
+So why don't we just build the whole
+plane out of the black box?
+
+97
+00:05:12,360 --> 00:05:14,880
+Because the black box isn't a material.
+
+98
+00:05:15,020 --> 00:05:17,800
+It's a tiny, heavily armored memory.
+
+99
+00:05:17,920 --> 00:05:20,950
+And its job isn't to survive
+the crash for us.
+
+100
+00:05:21,180 --> 00:05:24,120
+The black box doesn't make
+crashes survivable.
+
+101
+00:05:24,280 --> 00:05:28,270
+It makes them understandable, so the
+next flight is safer.
+

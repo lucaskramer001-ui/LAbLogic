@@ -1,0 +1,32 @@
+{
+  "slug": "blackbox-long",
+  "note": "Long-form of the black box Short. YouTube uploads private; set publish_at_et (US Eastern) so YouTube publishes it.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/blackboxlong/blackbox-long-1080p.mp4",
+      "title": "Why Don't We Just Build Planes Out of the Black Box?",
+      "description_file": "publish/episodes/blackbox-long/youtube-description.md",
+      "comment_file": "publish/episodes/blackbox-long/pinned-comment.md",
+      "captions": "publish/episodes/blackbox-long/blackbox-long.en.srt",
+      "thumbnail": "publish/episodes/blackbox-long/BlackBoxThumbA.png",
+      "tags": [
+        "black box",
+        "flight recorder",
+        "airplane black box",
+        "why don't we make planes out of the black box",
+        "what is a black box made of",
+        "why is the black box orange",
+        "flight data recorder",
+        "cockpit voice recorder",
+        "David Warren black box",
+        "Air France 447 black box",
+        "MH370 black box",
+        "John Paul Stapp",
+        "aviation safety",
+        "why don't we just",
+        "Lab Logic"
+      ]
+    }
+  ]
+}

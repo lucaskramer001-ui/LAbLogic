@@ -187,7 +187,7 @@ export const LayoutProbe: React.FC<{root: React.RefObject<HTMLDivElement | null>
     };
     const items: Array<{k: string; t: string; b: number[]; inner?: number[]}> = [];
     el.querySelectorAll('[data-label]').forEach((g) => {
-      if (!visible(g)) return;
+      if (!visible(g) || g.closest('[data-skip]')) return;
       const b = box(g);
       if (b[2] < 4 || b[3] < 4) return;
       const txt = g.querySelector('text');
@@ -195,7 +195,7 @@ export const LayoutProbe: React.FC<{root: React.RefObject<HTMLDivElement | null>
       items.push({k: 'label', t: g.getAttribute('data-label') || '', b, inner: txt && rect ? [...box(txt), ...box(rect)] : undefined});
     });
     el.querySelectorAll('text').forEach((tx) => {
-      if (tx.closest('[data-label]') || !visible(tx)) return;
+      if (tx.closest('[data-label]') || tx.closest('[data-skip]') || !visible(tx)) return;
       const b = box(tx);
       if (b[2] < 4 || !tx.textContent) return;
       items.push({k: 'text', t: tx.textContent, b});

@@ -3,6 +3,7 @@ import {SunThumbA, SunThumbB, SunThumbC} from './thumb/SunThumbs';
 import {WoodpeckerThumb} from './thumb/WoodpeckerThumb';
 import {IcebergThumbA, IcebergThumbB} from './thumb/IcebergThumbs';
 import {MoneyThumbA, MoneyThumbB, MoneyThumbC} from './thumb/MoneyThumbs';
+import {BlackBoxThumbA, BlackBoxThumbB, BlackBoxThumbC} from './thumb/BlackBoxThumbs';
 import {IcebergShort, DURATION_FRAMES} from './iceberg/Main';
 import {FPS} from './iceberg/timing';
 import {TrashSun, DURATION_FRAMES as SUN_FRAMES} from './sun/Main';
@@ -11,6 +12,7 @@ import {SeawaterShort, DURATION_FRAMES as SEA_FRAMES} from './seawater/Main';
 import {MoneyShort, MoneyCover, DURATION_FRAMES as MONEY_FRAMES} from './money/Main';
 import {MoneyLong, DURATION_FRAMES as MONEYL_FRAMES} from './moneylong/Main';
 import {BlackBoxShort, BlackBoxCover, DURATION_FRAMES as BB_FRAMES} from './blackbox/Main';
+import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
   <>
@@ -32,5 +34,9 @@ export const Root = () => (
     <Still id="MoneyThumbC" component={MoneyThumbC} width={1280} height={720} />
     <Composition id="BlackBox" component={BlackBoxShort} durationInFrames={BB_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="BlackBoxCover" component={BlackBoxCover} width={1080} height={1920} />
+    <Composition id="BlackBoxLong" component={BlackBoxLong} durationInFrames={BBL_FRAMES} fps={60} width={1920} height={1080} />
+    <Still id="BlackBoxThumbA" component={BlackBoxThumbA} width={1280} height={720} />
+    <Still id="BlackBoxThumbB" component={BlackBoxThumbB} width={1280} height={720} />
+    <Still id="BlackBoxThumbC" component={BlackBoxThumbC} width={1280} height={720} />
   </>
 );
