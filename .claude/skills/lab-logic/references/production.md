@@ -108,3 +108,13 @@ poses each time; it rewrites `sprites.ts`) → check on a pink sheet. Sprites ar
 - Captions: `python3 video/scripts/srt.py <words.json> 0.4 <out.srt>`.
 - Slam-in stamps start at 1.3x, not 2.2x, or the layout check reports them as cut at the frame edge.
 - `layout_report.py` ignores two plain numbers overlapping (calendar page flips are intended).
+
+## "Pro" look for long-forms (user asked for more engaging, more professional animation, 2026-11-09)
+- Use `video/src/pro/kit.tsx`: `Wipe` at every chapter start, `ChapterCard` (CHAPTERS list in scenes.ts),
+  `cam(t, key)` = punch + `drift()` on every Stage, `Clouds` on sky scenes, `countUp()` for every number that is
+  spoken, `bob()` on characters, `Shadow` under floating objects. Keep the drift gentle (s1 1.025, dx 16) or labels
+  near the edges get cut.
+- Labels for scenes with a moving camera go in a screen-space Layer AFTER the Stage (not inside it).
+- The layout probe skips anything under `[data-skip]` (chapter cards while sliding).
+- To fix one scene after a long render: render only its frames (`--frames=A-B --muted`), splice with ffmpeg trim +
+  concat, copy the normalized audio from the existing final, check the frame count matches.
