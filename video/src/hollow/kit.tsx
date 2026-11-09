@@ -538,10 +538,10 @@ export const Overlay: React.FC<{t: number; wash?: string; washO?: number; dark?:
 export const Watermark: React.FC<{y?: number; o?: number}> = ({y = 1668, o = 0.62}) => (
   <svg width={W} height={H} style={{position: 'absolute', left: 0, top: 0, pointerEvents: 'none'}} opacity={o}>
     <g transform={`translate(540 ${y})`} data-label="watermark">
-      <line x1={-215} x2={-168} y1={-9} y2={-9} stroke={HC.ember} strokeWidth={1.5} opacity={0.8} />
-      <line x1={150} x2={197} y1={-9} y2={-9} stroke={HC.ember} strokeWidth={1.5} opacity={0.8} />
-      <circle cx={-150} cy={-9} r={7} fill={HC.bone} />
-      <circle cx={-147} cy={-11} r={6} fill={HC.void} />
+      <line x1={-250} x2={-200} y1={-9} y2={-9} stroke={HC.ember} strokeWidth={1.5} opacity={0.8} />
+      <line x1={175} x2={225} y1={-9} y2={-9} stroke={HC.ember} strokeWidth={1.5} opacity={0.8} />
+      <circle cx={-180} cy={-9} r={7} fill={HC.bone} />
+      <circle cx={-177} cy={-11} r={6} fill={HC.void} />
       <text x={0} y={0} textAnchor="middle" fontFamily={SERIF} fontWeight={700} fontSize={27} letterSpacing={6} fill={HC.bone} style={{filter: 'drop-shadow(0 0 6px rgba(0,0,0,0.95))'}}>
         HOLLOW HOUR
       </text>
