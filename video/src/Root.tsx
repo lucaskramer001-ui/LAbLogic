@@ -13,6 +13,7 @@ import {MoneyShort, MoneyCover, DURATION_FRAMES as MONEY_FRAMES} from './money/M
 import {MoneyLong, DURATION_FRAMES as MONEYL_FRAMES} from './moneylong/Main';
 import {BlackBoxShort, BlackBoxCover, DURATION_FRAMES as BB_FRAMES} from './blackbox/Main';
 import {LightningShort, LightningCover, DURATION_FRAMES as LIGHTNING_FRAMES} from './lightning/Main';
+import {LightningCoverA, LightningCoverB, LightningCoverC} from './lightning/Covers';
 import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
@@ -37,6 +38,9 @@ export const Root = () => (
     <Still id="BlackBoxCover" component={BlackBoxCover} width={1080} height={1920} />
     <Composition id="Lightning" component={LightningShort} durationInFrames={LIGHTNING_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="LightningCover" component={LightningCover} width={1080} height={1920} />
+    <Still id="LightningCoverA" component={LightningCoverA} width={1080} height={1920} />
+    <Still id="LightningCoverB" component={LightningCoverB} width={1080} height={1920} />
+    <Still id="LightningCoverC" component={LightningCoverC} width={1080} height={1920} />
     <Composition id="BlackBoxLong" component={BlackBoxLong} durationInFrames={BBL_FRAMES} fps={60} width={1920} height={1080} />
     <Still id="BlackBoxThumbA" component={BlackBoxThumbA} width={1280} height={720} />
     <Still id="BlackBoxThumbB" component={BlackBoxThumbB} width={1280} height={720} />

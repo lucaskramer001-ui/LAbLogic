@@ -8,6 +8,7 @@ import {clamp, easeOutBack, easeOutCubic, lerp, pop, prog, rnd, shake} from '../
 import {House, Stamp} from '../sun/space';
 import {BigSci} from '../thumb/SunThumbs';
 import {LayoutProbe} from '../iceberglong/kit';
+import {LightningCoverA} from './Covers';
 
 // "Why don't we just catch lightning for electricity?" - Short, 1080x1920 (rendered 4K with --scale=2).
 
@@ -223,37 +224,8 @@ const S = {
   end: VO_END + 0.3,
 };
 
-// Frame 0 = MrBeast-style cover (key content inside rows 240-1680). Also the Still "LightningCover".
-export const LightningCover: React.FC<{t?: number}> = ({t = 0}) => (
-  <AbsoluteFill style={{backgroundColor: C.sky}}>
-    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
-      <rect width={W} height={H} fill={C.sky} />
-      {Array.from({length: 18}).map((_, i) => {
-        const a0 = (i / 18) * Math.PI * 2;
-        const a1 = a0 + Math.PI / 18;
-        const R = 3000;
-        const cx = 700;
-        const cy = 1250;
-        return <path key={i} d={`M ${cx} ${cy} L ${cx + R * Math.cos(a0)} ${cy + R * Math.sin(a0)} L ${cx + R * Math.cos(a1)} ${cy + R * Math.sin(a1)} Z`} fill={C.skyL} />;
-      })}
-      <Tower x={760} y={1660} s={0.7} mood="smug" />
-      <Bolt x={930} y={830} s={0.42} rot={14} mood="smug" />
-      {[0, 1, 2].map((i) => (
-        <LitHouse key={i} x={560 + i * 130} y={1660} s={1.0} lit={1} />
-      ))}
-      <ellipse cx={690} cy={1590} rx={250} ry={120} fill="none" stroke={C.ink} strokeWidth={22} />
-      <ellipse cx={690} cy={1590} rx={250} ry={120} fill="none" stroke={C.red} strokeWidth={12} />
-    </svg>
-    <BigSci pose="calc" x={215} y={1260} headR={108} />
-    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
-      <g transform="rotate(-4 540 640)">
-        <BigText x={540} y={560} text="A YEAR OF LIGHTNING" size={84} />
-        <BigText x={540} y={800} text="= 3 HOMES?!" size={138} fill={C.yellow} />
-      </g>
-    </svg>
-    <Img src={staticFile('iceberg/wordmark.png')} style={{position: 'absolute', left: 540 - 210, top: 290, width: 420}} />
-  </AbsoluteFill>
-);
+// Frame 0 = MrBeast-style cover A (see Covers.tsx; B and C are alternatives). Also the Still "LightningCover".
+export const LightningCover: React.FC<{t?: number}> = (p) => <LightningCoverA {...p} />;
 const CoverScene: React.FC<{t: number}> = ({t}) => <LightningCover t={t} />;
 
 // A whole year of strikes on the Empire State Building -> only about three homes. But why?

@@ -1,3 +1,3 @@
-Why don't we just catch lightning for electricity? ⚡ A bolt carries about 300 million volts, but it's over in a fraction of a second and much of the energy turns into heat, light and thunder. Catch every bolt that hits the Empire State Building in a year and you'd run about 3 homes. Sources: NWS, EIA, UNSW.
+300 MILLION VOLTS. Completely free. Hitting the ground somewhere on Earth right now. ⚡ So why isn't anyone plugging lightning into the grid? We added up every bolt that hits the Empire State Building in a whole year… and the answer is painfully small 😳
 
-#science #lightning #physics #electricity #lablogic
+#lightning #science #physics #electricity #freeenergy #sciencefacts #lablogic

@@ -63,3 +63,13 @@ thumbnail used in episodes.md. A dedicated new reaction pose (eyes bulging, poin
 good next Higgsfield generation when credits allow (the plan ran out on 2026-11-04).
 Money long-form options: A "FOR ONE / LOAF?!" (cash), B "100 TRILLION / DOLLAR NOTE?!" (hot), C "PRICES x2 /
 EVERY DAY?!" (nervous, price tags $1 -> $128).
+
+### Push it further (user, 2026-11-10: "more MrBeast type look", first lightning cover was too tame/vague)
+- Fill the frame: main character ~1.4x bigger than feels natural (lightning bolt s 1.42, ~900 px tall), scientist
+  headR ~135 (not 108), glow circle + impact burst behind the action, high-contrast rays (night: #24324F / #3A5285).
+- Headline = a punchy claim with a stake, not a summary: "300 MILLION VOLTS / WASTED?!" beat "A YEAR OF LIGHTNING /
+  = 3 HOMES?!". Second line as big as fits (auto-fit 1000 px, up to ~260 px).
+- Strongest reaction pose for the hero cover (shocked here; dizzy/cash/hot used on the last covers).
+- Covers live in `video/src/lightning/Covers.tsx` (A/B/C Stills, A re-used as frame 0). To swap frame 0 after the
+  final render: render `--frames=0-<hook frame>` muted at --scale=2, concat with the old video from the next frame,
+  copy the audio, check the frame count.

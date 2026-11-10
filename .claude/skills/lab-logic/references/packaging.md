@@ -80,3 +80,8 @@ Long-form: upload the SRT in YouTube Studio → Subtitles → Upload file → Wi
 - 2026-11-04: Meta blocked the "Lab Logic Publisher" app ("API access blocked", OAuthException code 200, on every
   call, token included). The money Reel was posted by hand. Until the user clears the block in the Meta developer
   dashboard, Instagram is manual like TikTok; record manual posts in publish/state.json so nothing posts twice.
+
+### Social captions: be specific and a bit clickbaity (user, 2026-11-10)
+- The first lightning caption was "too vague". Lead with the shocking number in caps, a tension line ("So why
+  isn't anyone plugging lightning into the grid?"), tease the answer without giving it ("the answer is painfully
+  small 😳"). Stay true: no invented claims. Give 2-3 options in `publish/episodes/<slug>/caption-options.md`.
