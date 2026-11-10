@@ -37,6 +37,12 @@ source links.
 - Prefer topics with one clear visual mechanism (orbit speed, 90% underwater, melt in warm water...).
 - Research several candidates, pick the strongest; the central fact must come from a primary source.
 
+## Hook (user asked for this, 2026-11-10)
+- Run the hook through the `youtube-agent:yt-script` skill: write 5+ hooks in the channel voice, score them with
+  its `hookscore.py`, show the top two with their scores, recommend one. The scorer rewards "you" in the first six
+  words, a concrete number, a cost/stake word (cost, never, fail, lose) and ending on an open question; it is a
+  rough filter, not a promise. Keep the channel rules (no "did you know", no hype, no CTA).
+
 ## Writing rules (Short, 60-70 s)
 - 190-230 words. Tim Riley speaks ~165 wpm raw; after trimming pauses (cap 0.26 s) and `atempo=1.1` a 228-word
   script became 68.6 s. Plan the length with that in mind.

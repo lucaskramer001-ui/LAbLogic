@@ -13,6 +13,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just drink the ocean? (seawater) | Short (user's 23 s, recreated in 4K) | posted 2026-11-03 YouTube + Instagram |
 | Why don't we just build planes out of the black box? | Short + long-form | Short made 2026-11-07, long-form 2026-11-09 |
 | Why don't we just print more money? | Short + long-form | Short scheduled 2026-11-04 18:00 ET; long-form made |
+| Why don't we just catch lightning for electricity? | Short | made 2026-11-10 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -108,3 +109,16 @@ Add a row for every new episode (and every topic the user mentions as already do
   16 g dynamic seat tests (14 CFR 25.562, 1988); 90-second evacuation (14 CFR 25.803).
 - Thumbnails BlackBoxThumbA "SURVIVES / 3,400 G" (think), B "FOUND / 3,900 M DOWN" (point), C "TOO HEAVY / TO FLY?!"
   (facepalm). Costs ~4,920 ElevenLabs credits voice; music + sfx pass ~2,070 credits + 1,980 for an unneeded vocal check.
+
+## Lightning Short - "Why Don't We Just Catch Lightning for Electricity?" (~70 s)
+- Hook chosen with the `youtube-agent:yt-script` scorer (hook A, 62 WORKABLE): "You could catch every bolt of lightning
+  that hits the Empire State Building for a whole year, and you'd still power only about three homes. But why?"
+- 228 words, Tim Riley, 82.1 s raw -> 68.6 s (pauses 0.26, atempo 1.1). Composition `Lightning`, cover Still
+  `LightningCover` ("A YEAR OF LIGHTNING / = 3 HOMES?!", calc pose), code `video/src/lightning/` (Bolt with face,
+  Tower = Empire State-style, Battery with face, Stopwatch, PowerPlant, LitHouse, StormSky, Strike).
+- Facts (search snippets only; weather.gov and engineering.mit.edu blocked): NWS 300 million V / 30,000 A, air to
+  ~50,000 F; NWS Upton: Empire State Building ~23 strikes/yr (NYC.gov says 25); flash ~0.2 s, strokes a few ms
+  (Britannica); ~5 billion J per bolt is a GENEROUS estimate (HowStuffWorks, UNSW; Leicester student paper 7.5e7 J);
+  EIA 2024 865 kWh/month per home. 5e9 J = 1,389 kWh = 1.6 months; x 23 = ~3.1 homes/yr.
+- New sfx in `public/lightning/sfx/` (zap, thunder, rain bed 9 s, ding, spark). Costs: 1,282 ElevenLabs credits voice
+  + 85 sfx, no Higgsfield.

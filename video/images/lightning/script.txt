@@ -1,0 +1,9 @@
+You could catch every bolt of lightning that hits the Empire State Building for a whole year, and you'd still power only about three homes. But why? A single bolt carries around three hundred million volts and about thirty thousand amps. That sounds like a power plant falling out of the sky. So here's the obvious fix. Build tall towers, catch the strikes, and store the electricity.
+
+The first problem is time. A lightning flash is over in about a fifth of a second, and each stroke inside it lasts just a few thousandths of a second. To keep that energy, you'd have to soak it all up almost instantly, then let it out slowly. Batteries can't take in power that fast, and whatever does has to survive the hit.
+
+The second problem is where the energy goes. Much of it heats the air to about fifty thousand degrees Fahrenheit. More goes into a flash of light and a crack of thunder.
+
+And even generous estimates are smaller than they sound. About five billion joules per bolt is roughly fourteen hundred kilowatt-hours. That's under two months of electricity for an average American home. The Empire State Building gets hit about twenty-three times a year. Add it all up, and you get about three homes.
+
+Lightning looks like a power plant. It's really a very loud, very short spark.
