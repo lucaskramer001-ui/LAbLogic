@@ -1,4 +1,4 @@
-Lightning carries around 300 million volts and 30,000 amps, so why don't we just catch it and use it for electricity? Can we harness lightning as a power source at all? Because a flash is over in about a fifth of a second, and much of its energy goes into heating the air to about 50,000 °F, into light and into thunder.
+Lightning carries around 300 million volts and 30,000 amps, so why don't we just catch it and use it for electricity? Can we harness lightning as a power source at all? Not really: a flash is over in about a fifth of a second, and much of its energy goes into heating the air to about 50,000 °F, into light and into thunder.
 
 Even generous estimates of about 5 billion joules per bolt come to roughly 1,400 kWh, under two months of electricity for an average American home. The Empire State Building is hit about 23 times a year, so catching every one of those bolts would run about three homes. Estimates of the energy in a bolt vary a lot, and many are far lower.
 
