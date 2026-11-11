@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {
   AbsoluteFill,
+  Audio,
   Easing,
   Img,
   continueRender,
@@ -13,7 +14,7 @@ import {
   useVideoConfig,
 } from 'remotion';
 
-// Music Store Köln - "Abonnieren & Like" overlay for YouTube videos.
+// Music Store - "Abonnieren & Like" overlay for YouTube videos.
 // 1920x1080 @ 60 fps, 6 s. Rendered with transparent background (ProRes 4444 / WebM alpha),
 // on green screen, or on a dark preview background.
 
@@ -244,6 +245,7 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'}>
 
   return (
     <AbsoluteFill style={{background}}>
+      <Audio src={staticFile('subscribe/sfx.wav')} />
       {/* pill */}
       <div
         style={{
@@ -275,7 +277,7 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'}>
         {/* channel text */}
         <div style={{position: 'absolute', left: 100, top: 26, width: 340, ...item(0)}}>
           <div style={{fontFamily: FONT, fontWeight: 800, fontSize: 32, color: INK, letterSpacing: -0.5, lineHeight: 1.1}}>
-            Music Store Köln
+            Music Store
           </div>
           <div style={{fontFamily: FONT, fontWeight: 600, fontSize: 19, color: '#6B6B6B', marginTop: 6}}>
             Abonnieren &amp; Like da lassen!
