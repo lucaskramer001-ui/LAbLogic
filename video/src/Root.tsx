@@ -55,5 +55,11 @@ export const Root = () => (
     <Composition id="MSKSubscribeReels" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'transparent' as const, layout: 'reels' as const}} />
     <Composition id="MSKSubscribeReelsGreen" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'green' as const, layout: 'reels' as const}} />
     <Composition id="MSKSubscribeReelsPreview" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'preview' as const, layout: 'reels' as const}} />
+    <Composition id="STSubscribe" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1920} height={1080} defaultProps={{bg: 'transparent' as const, layout: 'landscape' as const, brand: 'sticks' as const}} />
+    <Composition id="STSubscribeGreen" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1920} height={1080} defaultProps={{bg: 'green' as const, layout: 'landscape' as const, brand: 'sticks' as const}} />
+    <Composition id="STSubscribePreview" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1920} height={1080} defaultProps={{bg: 'preview' as const, layout: 'landscape' as const, brand: 'sticks' as const}} />
+    <Composition id="STSubscribeShorts" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'transparent' as const, layout: 'shorts' as const, brand: 'sticks' as const}} />
+    <Composition id="STSubscribeShortsGreen" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'green' as const, layout: 'shorts' as const, brand: 'sticks' as const}} />
+    <Composition id="STSubscribeShortsPreview" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'preview' as const, layout: 'shorts' as const, brand: 'sticks' as const}} />
   </>
 );

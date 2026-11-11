@@ -153,10 +153,19 @@ const PLACEMENT: Record<Layout, {s: number; cx: number; cy: number}> = {
   reels: {s: 0.82, cx: 470, cy: 1240},
 };
 
-export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; layout?: Layout}> = ({
+// Channels that use this overlay
+type Brand = 'msk' | 'sticks';
+const BRANDS: Record<Brand, {name: string; logo: string}> = {
+  msk: {name: 'Music Store', logo: 'subscribe/msk-logo.png'},
+  sticks: {name: 'Sticks & Tricks', logo: 'subscribe/sticks-logo.png'},
+};
+
+export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; layout?: Layout; brand?: Brand}> = ({
   bg = 'transparent',
   layout = 'landscape',
+  brand = 'msk',
 }) => {
+  const B = BRANDS[brand];
   const place = PLACEMENT[layout];
   const portrait = layout !== 'landscape';
   // Instagram has no "subscribe" - you follow an account there
@@ -321,7 +330,7 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; 
         {/* channel text */}
         <div style={{position: 'absolute', left: 100, top: 26, width: 340, ...item(0)}}>
           <div style={{fontFamily: FONT, fontWeight: 800, fontSize: 32, color: INK, letterSpacing: -0.5, lineHeight: 1.1}}>
-            Music Store
+            {B.name}
           </div>
           <div style={{fontFamily: FONT, fontWeight: 600, fontSize: 19, color: '#6B6B6B', marginTop: 6}}>
             {txt.line}
@@ -389,7 +398,7 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; 
           background: RED_DARK,
         }}
       >
-        <Img src={staticFile('subscribe/msk-logo.png')} style={{width: '100%', height: '100%', display: 'block'}} />
+        <Img src={staticFile(B.logo)} style={{width: '100%', height: '100%', display: 'block'}} />
       </div>
 
       {/* cursor */}
