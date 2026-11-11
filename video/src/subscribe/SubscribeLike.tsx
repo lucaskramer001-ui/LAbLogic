@@ -78,6 +78,15 @@ const ThumbIcon: React.FC<{fill: string; size: number}> = ({fill, size}) => (
   </svg>
 );
 
+const FollowIcon: React.FC<{fill: string; size: number}> = ({fill, size}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24">
+    <path
+      fill={fill}
+      d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+  </svg>
+);
+
 const BellIcon: React.FC<{fill: string; size: number}> = ({fill, size}) => (
   <svg width={size} height={size} viewBox="0 0 24 24">
     <path
@@ -150,6 +159,12 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; 
 }) => {
   const place = PLACEMENT[layout];
   const portrait = layout !== 'landscape';
+  // Instagram has no "subscribe" - you follow an account there
+  const txt =
+    layout === 'reels'
+      ? {sub: 'Folgen', done: 'Gefolgt', line: 'Folgen & Like da lassen!'}
+      : {sub: 'Abonnieren', done: 'Abonniert', line: 'Abonnieren & Like da lassen!'};
+  const SubIcon = layout === 'reels' ? FollowIcon : BellIcon;
   useFonts();
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
@@ -309,7 +324,7 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; 
             Music Store
           </div>
           <div style={{fontFamily: FONT, fontWeight: 600, fontSize: 19, color: '#6B6B6B', marginTop: 6}}>
-            Abonnieren &amp; Like da lassen!
+            {txt.line}
           </div>
         </div>
 
@@ -337,11 +352,11 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; 
             }}
           >
             <div style={{transform: `rotate(${bellRot}deg)`, transformOrigin: '50% 10%', display: 'flex'}}>
-              <BellIcon size={28} fill={subFg} />
+              <SubIcon size={28} fill={subFg} />
             </div>
-            <div style={{position: 'relative', height: 34, width: 166, overflow: 'hidden'}}>
-              <div style={{position: 'absolute', left: 0, right: 0, textAlign: 'center', top: -subP * 34, lineHeight: '34px'}}>Abonnieren</div>
-              <div style={{position: 'absolute', left: 0, right: 0, textAlign: 'center', top: 34 - subP * 34, lineHeight: '34px'}}>Abonniert</div>
+            <div style={{position: 'relative', height: 34, width: layout === 'reels' ? 112 : 166, overflow: 'hidden'}}>
+              <div style={{position: 'absolute', left: 0, right: 0, textAlign: 'center', top: -subP * 34, lineHeight: '34px'}}>{txt.sub}</div>
+              <div style={{position: 'absolute', left: 0, right: 0, textAlign: 'center', top: 34 - subP * 34, lineHeight: '34px'}}>{txt.done}</div>
             </div>
           </div>
         </div>
