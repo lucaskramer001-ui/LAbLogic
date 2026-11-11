@@ -14,6 +14,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just build planes out of the black box? | Short + long-form | Short made 2026-11-07, long-form 2026-11-09 |
 | Why don't we just print more money? | Short + long-form | Short scheduled 2026-11-04 18:00 ET; long-form made |
 | Why don't we just catch lightning for electricity? | Short | made 2026-11-10 |
+| Why don't we just stream the black box live? | Short (cross-promo for the black box long-form) | made 2026-11-11 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -130,3 +131,18 @@ drink the ocean 1,389 | print more money 8 (scheduled upload) | black box 1,411 
 Long-forms (views): woodpecker "12,000 Head Hits a Day!" 41 | trash into the Sun 44 | icebergs 26 |
 print money "to end poverty" 12 | black box 1. Shorts reach ~1.3-3k each; long-forms barely get found -> cross-promote
 long-forms from new Shorts (Shorts "Related video" link + pinned comment).
+
+## Black box streaming Short - "Why Don't We Just Stream the Black Box Live?" (~70.7 s) - first cross-promo Short
+- Picked from the channel snapshot: long-forms get almost no views, so this Short links the black box long-form
+  (https://youtu.be/RTJLi1DO8S0) in the description + pinned comment; set it as the Short's "Related video" in Studio.
+- Hook (yt-script scorer 68): "You can text from thirty-five thousand feet, but in 2014 a whole airliner vanished, and
+  its black boxes were never found. So why don't we just stream them?" 229 words, 85.8 s raw -> 69.0 s (pauses 0.26,
+  atempo 1.13 - 1.1 gave 70.9 s). Composition `BBStream`, cover `BBStreamCover` ("STREAM THE BLACK BOX? / $300M /
+  A YEAR?!", nervous pose), code `video/src/bbstream/` (reuses BlackBox + Plane from video/src/blackbox/Main.tsx;
+  new Satellite, Station, DataFlow, Ping, Phone, Car with dash cam, Bubble). SFX cues take an optional `len` so beds
+  stop with their scene (ocean only under the hook).
+- Facts (search snippets): 2002 L-3 estimate ~$300M/yr for one big US airline (secondhand via Bloomberg/FlyerTalk -
+  said as "one industry estimate"); cost = main obstacle (PBS NOVA, NBC); ocean coverage/bandwidth (ITU); pilots'
+  privacy (CORDIS); IATA 2024 one accident per 880,000 flights; GADSS 15-min tracking since Nov 2018; ADT 1/min in
+  distress for new >27 t aircraft (ICAO 2024).
+- Costs: 1,315 ElevenLabs credits voice + 85 sfx.

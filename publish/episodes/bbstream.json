@@ -1,0 +1,31 @@
+{
+  "slug": "bbstream",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Cross-promotes the black box long-form (https://youtu.be/RTJLi1DO8S0): set it as the Short's 'Related video' in YouTube Studio (not available in the API). Instagram and TikTok: upload by hand.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/bbstream/bbstream-4K.mp4",
+      "title": "Why Don't We Just Stream the Black Box Live?",
+      "description_file": "publish/episodes/bbstream/youtube-description.md",
+      "comment_file": "publish/episodes/bbstream/pinned-comment.md",
+      "thumbnail": "publish/episodes/bbstream/cover.jpg",
+      "tags": [
+        "black box",
+        "why don't planes stream black box data",
+        "live streaming flight data",
+        "black box in the cloud",
+        "why can't black boxes transmit data",
+        "MH370 black box",
+        "Air France 447",
+        "flight data recorder",
+        "flight tracking",
+        "satellite data cost",
+        "aviation safety",
+        "plane crash investigation",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}
