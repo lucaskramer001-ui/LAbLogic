@@ -14,6 +14,7 @@ import {MoneyLong, DURATION_FRAMES as MONEYL_FRAMES} from './moneylong/Main';
 import {BlackBoxShort, BlackBoxCover, DURATION_FRAMES as BB_FRAMES} from './blackbox/Main';
 import {LightningShort, LightningCover, DURATION_FRAMES as LIGHTNING_FRAMES} from './lightning/Main';
 import {LightningCoverA, LightningCoverB, LightningCoverC} from './lightning/Covers';
+import {SubscribeLike, SUB_FPS, SUB_FRAMES} from './subscribe/SubscribeLike';
 import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
@@ -45,5 +46,8 @@ export const Root = () => (
     <Still id="BlackBoxThumbA" component={BlackBoxThumbA} width={1280} height={720} />
     <Still id="BlackBoxThumbB" component={BlackBoxThumbB} width={1280} height={720} />
     <Still id="BlackBoxThumbC" component={BlackBoxThumbC} width={1280} height={720} />
+    <Composition id="MSKSubscribe" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1920} height={1080} defaultProps={{bg: 'transparent' as const}} />
+    <Composition id="MSKSubscribeGreen" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1920} height={1080} defaultProps={{bg: 'green' as const}} />
+    <Composition id="MSKSubscribePreview" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1920} height={1080} defaultProps={{bg: 'preview' as const}} />
   </>
 );
