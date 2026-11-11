@@ -122,3 +122,11 @@ Add a row for every new episode (and every topic the user mentions as already do
   EIA 2024 865 kWh/month per home. 5e9 J = 1,389 kWh = 1.6 months; x 23 = ~3.1 homes/yr.
 - New sfx in `public/lightning/sfx/` (zap, thunder, rain bed 9 s, ding, spark). Costs: 1,282 ElevenLabs credits voice
   + 85 sfx, no Higgsfield.
+
+## Channel snapshot 2026-11-11 (YouTube RSS: https://www.youtube.com/feeds/videos.xml?channel_id=UCk-qhhhrSOOLCZotQlr2q2w)
+youtube.com is reachable again (feed + watch pages); channel id UCk-qhhhrSOOLCZotQlr2q2w.
+Shorts (views): woodpecker concussions 1,379 | trash into the Sun 2,958 | tow an iceberg 3,087 | nuke a hurricane 1,405 |
+drink the ocean 1,389 | print more money 8 (scheduled upload) | black box 1,411 | catch lightning 1,335 (posted by the user 11-10).
+Long-forms (views): woodpecker "12,000 Head Hits a Day!" 41 | trash into the Sun 44 | icebergs 26 |
+print money "to end poverty" 12 | black box 1. Shorts reach ~1.3-3k each; long-forms barely get found -> cross-promote
+long-forms from new Shorts (Shorts "Related video" link + pinned comment).
