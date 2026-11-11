@@ -1,0 +1,13 @@
+You can text from thirty-five thousand feet, but in 2014 a whole airliner vanished, and its black boxes were never found. So why don't we just stream them? Every airliner already records hundreds of numbers about its flight. So here's the obvious fix. Send all of it to the ground, live. If a plane goes down, the data is already safe.
+
+The first problem is money. Over oceans, the only link is a satellite, and satellite time is expensive. In 2002, one industry estimate said a single big American airline would pay about three hundred million dollars a year to stream all its flight data.
+
+The second problem is that almost none of that data would ever be needed. In 2024, there was about one accident for every eight hundred eighty thousand flights. You'd be paying to stream millions of boring flights.
+
+And pilots aren't keen on their cockpit conversations being broadcast all the time.
+
+So aviation went for a cheaper middle ground. Since 2018, airliners have to report their position at least every fifteen minutes. And newer big jets have to send their position every minute when they're in trouble.
+
+The black box stays, because it still works when every signal is gone.
+
+Streaming every flight is like filming every car trip in case of a crash. It's cheaper to start recording when the car starts to skid.
