@@ -6,7 +6,7 @@ Two problems:
 💸 Satellites over the ocean cost a fortune
 😴 Almost all of that data would never be needed
 
-The fix aviation chose instead is surprisingly simple 👇
+The fix aviation chose instead is surprisingly simple. Watch to the end 📡
 Full black box story on our YouTube (link in bio)
 
 #aviation #blackbox #science #planes #lablogic
