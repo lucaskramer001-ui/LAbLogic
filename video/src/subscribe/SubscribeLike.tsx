@@ -132,7 +132,24 @@ const Burst: React.FC<{frame: number; at: number; color: string}> = ({frame, at,
   );
 };
 
-export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'}> = ({bg = 'transparent'}) => {
+// Placement of the 1920x1080 bar inside the output frame. Portrait versions shrink the bar and keep it
+// inside each platform's safe zone (clear of the right-hand action buttons and the caption area at the bottom).
+type Layout = 'landscape' | 'shorts' | 'reels';
+const GROUP_CX = 958; // horizontal centre of logo + pill in bar coordinates
+const PLACEMENT: Record<Layout, {s: number; cx: number; cy: number}> = {
+  landscape: {s: 1, cx: GROUP_CX, cy: CY},
+  // YouTube Shorts: action column on the right from ~y 1000, title/channel block below ~y 1500
+  shorts: {s: 0.82, cx: 470, cy: 1300},
+  // Instagram Reels: icons on the right from ~y 1100, caption below ~y 1560, profile grid shows y 285-1635 only
+  reels: {s: 0.82, cx: 470, cy: 1240},
+};
+
+export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; layout?: Layout}> = ({
+  bg = 'transparent',
+  layout = 'landscape',
+}) => {
+  const place = PLACEMENT[layout];
+  const portrait = layout !== 'landscape';
   useFonts();
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
@@ -186,8 +203,9 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'}>
   // ---- cursor path ----
   const likeC = {x: LX + LIKE.x + LIKE.w / 2 + 8, y: CY + 14};
   const subC = {x: LX + SUB.x + SUB.w / 2 + 14, y: CY + 14};
-  const start = {x: 1560, y: 1180};
-  const endP = {x: 1640, y: 1200};
+  // cursor enters from / leaves to below the frame edge
+  const start = portrait ? {x: 1250, y: 1720} : {x: 1560, y: 1180};
+  const endP = portrait ? {x: 1360, y: 1760} : {x: 1640, y: 1200};
   const seg = (a: number, b: number) => interpolate(frame, [a, b], [0, 1], {...clamp, easing: easeInOut});
   const m1 = seg(T.cursorIn, T.likeClick - 6);
   const m2 = seg(T.likeClick + 14, T.subClick - 6);
@@ -246,6 +264,17 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'}>
   return (
     <AbsoluteFill style={{background}}>
       <Audio src={staticFile('subscribe/sfx.wav')} />
+      <div
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: 1920,
+          height: 1080,
+          transformOrigin: '0 0',
+          transform: `translate(${place.cx - GROUP_CX * place.s}px, ${place.cy - CY * place.s}px) scale(${place.s})`,
+        }}
+      >
       {/* pill */}
       <div
         style={{
@@ -361,6 +390,7 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'}>
         }}
       >
         <Cursor />
+      </div>
       </div>
     </AbsoluteFill>
   );

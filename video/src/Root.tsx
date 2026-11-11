@@ -49,5 +49,11 @@ export const Root = () => (
     <Composition id="MSKSubscribe" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1920} height={1080} defaultProps={{bg: 'transparent' as const}} />
     <Composition id="MSKSubscribeGreen" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1920} height={1080} defaultProps={{bg: 'green' as const}} />
     <Composition id="MSKSubscribePreview" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1920} height={1080} defaultProps={{bg: 'preview' as const}} />
+    <Composition id="MSKSubscribeShorts" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'transparent' as const, layout: 'shorts' as const}} />
+    <Composition id="MSKSubscribeShortsGreen" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'green' as const, layout: 'shorts' as const}} />
+    <Composition id="MSKSubscribeShortsPreview" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'preview' as const, layout: 'shorts' as const}} />
+    <Composition id="MSKSubscribeReels" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'transparent' as const, layout: 'reels' as const}} />
+    <Composition id="MSKSubscribeReelsGreen" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'green' as const, layout: 'reels' as const}} />
+    <Composition id="MSKSubscribeReelsPreview" component={SubscribeLike} durationInFrames={SUB_FRAMES} fps={SUB_FPS} width={1080} height={1920} defaultProps={{bg: 'preview' as const, layout: 'reels' as const}} />
   </>
 );
