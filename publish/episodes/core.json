@@ -1,0 +1,31 @@
+{
+  "slug": "core",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/core/core-4K.mp4",
+      "title": "Why Don't We Just Drill to Earth's Core for Energy?",
+      "description_file": "publish/episodes/core/youtube-description.md",
+      "comment_file": "publish/episodes/core/pinned-comment.md",
+      "thumbnail": "publish/episodes/core/cover.jpg",
+      "tags": [
+        "Earth's core",
+        "drill to the center of the Earth",
+        "why can't we drill to the Earth's core",
+        "Kola Superdeep Borehole",
+        "deepest hole in the world",
+        "how hot is the Earth's core",
+        "geothermal energy",
+        "Iceland magma drilling",
+        "IDDP",
+        "free energy",
+        "geology facts",
+        "earth science",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

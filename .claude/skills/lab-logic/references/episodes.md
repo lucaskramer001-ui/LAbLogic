@@ -15,6 +15,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just print more money? | Short + long-form | Short scheduled 2026-11-04 18:00 ET; long-form made |
 | Why don't we just catch lightning for electricity? | Short | made 2026-11-10 |
 | Why don't we just stream the black box live? | Short (cross-promo for the black box long-form) | made 2026-11-11 |
+| Why don't we just drill to Earth's core for energy? | Short | made 2026-11-12 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -146,3 +147,16 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   privacy (CORDIS); IATA 2024 one accident per 880,000 flights; GADSS 15-min tracking since Nov 2018; ADT 1/min in
   distress for new >27 t aircraft (ICAO 2024).
 - Costs: 1,315 ElevenLabs credits voice + 85 sfx.
+
+## Earth core Short - "Why Don't We Just Drill to Earth's Core for Energy?" (~69.8 s)
+- User asked for an attention-grabbing topic with a hook in the first 2 s. Hook (scorer 69): "You're standing on a
+  five-thousand-degree furnace. Drill down, and you'd never pay for power again. So why don't we?" - "furnace" lands at
+  2.06 s; visuals: cover 0.3 s, hard cut to the cut-open Earth with a smug glowing core, "5,000°C" slams at ~1.0 s with
+  a boom + shake. 222 words, 80.7 s raw -> 68.0 s (0.26, atempo 1.1). Composition `Core`, cover `CoreCover`
+  ("DEEPEST HOLE EVER: / 0.2%?!", hot pose), code `video/src/core/` (EarthCut, Rig, Bit with face, Turbine, Magma,
+  Ground cross-section, magnifier on the 0.2% bar).
+- Facts (search snippets): inner core ~5,200 C (Nat Geo; some estimates ~6,000 C); Kola 12,262 m, ~180 C vs ~100 C
+  expected, stopped 1992 (heat + end of USSR/funding); core starts ~2,900 km; IDDP-1 Krafla hit magma at 2,104 m in
+  2009, steam >450 C. 0.2% = 12.26/6,371 km (own math).
+- Captions: the shared Captions.tsx stripped dots and digits ("0.2" -> "02"); core/Captions.tsx keeps digits/dots.
+- Costs: 1,263 ElevenLabs credits voice + 85 sfx.
