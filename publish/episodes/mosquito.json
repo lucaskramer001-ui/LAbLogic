@@ -1,0 +1,30 @@
+{
+  "slug": "mosquito",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/mosquito/mosquito-4K.mp4",
+      "title": "Why Don't We Just Kill All the Mosquitoes?",
+      "description_file": "publish/episodes/mosquito/youtube-description.md",
+      "comment_file": "publish/episodes/mosquito/pinned-comment.md",
+      "thumbnail": "publish/episodes/mosquito/cover.jpg",
+      "tags": [
+        "mosquitoes",
+        "why don't we kill all mosquitoes",
+        "what if mosquitoes went extinct",
+        "deadliest animal on earth",
+        "malaria",
+        "gene drive",
+        "gene drive mosquitoes",
+        "Anopheles",
+        "mosquito facts",
+        "can we get rid of mosquitoes",
+        "biology facts",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

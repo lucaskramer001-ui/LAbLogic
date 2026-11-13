@@ -16,6 +16,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just catch lightning for electricity? | Short | made 2026-11-10 |
 | Why don't we just stream the black box live? | Short (cross-promo for the black box long-form) | made 2026-11-11 |
 | Why don't we just drill to Earth's core for energy? | Short | made 2026-11-12 |
+| Why don't we just kill all the mosquitoes? | Short | made 2026-11-13 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -160,3 +161,15 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   2009, steam >450 C. 0.2% = 12.26/6,371 km (own math).
 - Captions: the shared Captions.tsx stripped dots and digits ("0.2" -> "02"); core/Captions.tsx keeps digits/dots.
 - Costs: 1,263 ElevenLabs credits voice + 85 sfx.
+
+## Mosquito Short - "Why Don't We Just Kill All the Mosquitoes?" (~68.7 s)
+- Hook (scorer 68): "You've been bitten by the deadliest animal on Earth. Malaria alone left about 597,000 people dead in
+  2023." "Deadliest animal" at 1.3 s with a boom + "DEADLIEST / ANIMAL ON EARTH" slam, slap on "Earth".
+  204 words, 81.4 s raw -> 67.0 s. Composition `Mosquito`, cover `MosquitoCover` ("THE DEADLIEST ANIMAL / IS THIS?!",
+  shocked pose, circled mosquito), code `video/src/mosquito/` (Mosquito character with tints: deadly red, gene-drive
+  blue, harmless green; SprayCan, Fish, Larva, Bird, Cage, Helix).
+- Facts (search snippets): WHO WMR 2024 - 597,000 malaria deaths, 263 M cases in 2023; CDC "world's deadliest animal";
+  CDC ~3,500 species, ~430 Anopheles of which 30-40 transmit malaria; only females bite; Nature 2010 (Fang) Arctic birds
+  could drop >50% per one entomologist, others disagree; Imperial 2018 (Kyrou, Nature Biotech) doublesex gene drive ->
+  no females, cage collapse in 7-11 generations; large-cage study collapse within a year; no wild release yet.
+- Costs: 1,207 ElevenLabs credits voice + 85 sfx.
