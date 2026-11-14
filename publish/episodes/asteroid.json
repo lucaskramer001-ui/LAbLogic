@@ -1,0 +1,31 @@
+{
+  "slug": "asteroid",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/asteroid/asteroid-4K.mp4",
+      "title": "Why Don't We Just Nuke a Killer Asteroid?",
+      "description_file": "publish/episodes/asteroid/youtube-description.md",
+      "comment_file": "publish/episodes/asteroid/pinned-comment.md",
+      "thumbnail": "publish/episodes/asteroid/cover.jpg",
+      "tags": [
+        "asteroid",
+        "why don't we nuke asteroids",
+        "can we stop an asteroid",
+        "NASA DART",
+        "DART mission",
+        "Dimorphos",
+        "planetary defense",
+        "city killer asteroid",
+        "NEO Surveyor",
+        "asteroid impact",
+        "Armageddon science",
+        "space facts",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

@@ -17,6 +17,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just stream the black box live? | Short (cross-promo for the black box long-form) | made 2026-11-11 |
 | Why don't we just drill to Earth's core for energy? | Short | made 2026-11-12 |
 | Why don't we just kill all the mosquitoes? | Short | made 2026-11-13 |
+| Why don't we just nuke a killer asteroid? | Short | made 2026-11-14 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -173,3 +174,14 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   could drop >50% per one entomologist, others disagree; Imperial 2018 (Kyrou, Nature Biotech) doublesex gene drive ->
   no females, cage collapse in 7-11 generations; large-cage study collapse within a year; no wild release yet.
 - Costs: 1,207 ElevenLabs credits voice + 85 sfx.
+
+## Asteroid Short - "Why Don't We Just Nuke a Killer Asteroid?" (~67 s)
+- Hook (scorer 65, curiosity 93): "Your city could be wiped out by one of fifteen thousand asteroids nobody has found yet.
+  So why don't we just nuke them before they hit?" - "wiped out" at ~1.0 s with a red alarm flash + shake while a fiery
+  smug asteroid dives at a skyline. 207 words, 78.5 s raw -> 65.3 s. Composition `Asteroid`, cover `AsteroidCover`
+  ("15,000 CITY KILLERS / STILL LOST?!", point pose), code `video/src/asteroid/` (Asteroid with fire trail, City skyline,
+  Dart spacecraft, Telescope, Boom). Cover held 0.3 s (frame 0 only for 3 frames looked like a glitch).
+- Facts (search snippets): DART 26 Sep 2022, >14,000 mph, orbit -32 min (+/-2), success threshold 73 s; nuclear
+  disruption = last resort (LLNL), fragments/rubble piles (LPL Arizona critique); NASA Feb 2026: ~40% of 140 m+ NEOs
+  found, ~15,000 unaccounted; NEO Surveyor being built (launch 2027-2028).
+- Costs: 1,146 ElevenLabs credits voice + 85 sfx.

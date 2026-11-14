@@ -17,6 +17,7 @@ import {LightningCoverA, LightningCoverB, LightningCoverC} from './lightning/Cov
 import {BBStreamShort, BBStreamCover, DURATION_FRAMES as BBSTREAM_FRAMES} from './bbstream/Main';
 import {CoreShort, CoreCover, DURATION_FRAMES as CORE_FRAMES} from './core/Main';
 import {MosquitoShort, MosquitoCover, DURATION_FRAMES as MOSQUITO_FRAMES} from './mosquito/Main';
+import {AsteroidShort, AsteroidCover, DURATION_FRAMES as ASTEROID_FRAMES} from './asteroid/Main';
 import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
@@ -50,6 +51,8 @@ export const Root = () => (
     <Still id="CoreCover" component={CoreCover} width={1080} height={1920} />
     <Composition id="Mosquito" component={MosquitoShort} durationInFrames={MOSQUITO_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="MosquitoCover" component={MosquitoCover} width={1080} height={1920} />
+    <Composition id="Asteroid" component={AsteroidShort} durationInFrames={ASTEROID_FRAMES} fps={60} width={1080} height={1920} />
+    <Still id="AsteroidCover" component={AsteroidCover} width={1080} height={1920} />
     <Composition id="BlackBoxLong" component={BlackBoxLong} durationInFrames={BBL_FRAMES} fps={60} width={1920} height={1080} />
     <Still id="BlackBoxThumbA" component={BlackBoxThumbA} width={1280} height={720} />
     <Still id="BlackBoxThumbB" component={BlackBoxThumbB} width={1280} height={720} />
