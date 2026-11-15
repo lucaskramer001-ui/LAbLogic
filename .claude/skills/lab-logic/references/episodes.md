@@ -18,6 +18,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just drill to Earth's core for energy? | Short | made 2026-11-12 |
 | Why don't we just kill all the mosquitoes? | Short | made 2026-11-13 |
 | Why don't we just nuke a killer asteroid? | Short | made 2026-11-14 |
+| Why don't we just stop sleeping? | Short | made 2026-11-15 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -185,3 +186,14 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   disruption = last resort (LLNL), fragments/rubble piles (LPL Arizona critique); NASA Feb 2026: ~40% of 140 m+ NEOs
   found, ~15,000 unaccounted; NEO Surveyor being built (launch 2027-2028).
 - Costs: 1,146 ElevenLabs credits voice + 85 sfx.
+
+## Sleep Short - "Why Don't We Just Stop Sleeping?" (~68 s)
+- Hook (scorer 72, first STRONG): "You waste about eight hours a day asleep. One teenager stayed awake for eleven days
+  straight. So why don't we just stop?" - "eight hours" at 0.9 s with an alarm ring on a smug clock. 201 words, 83.8 s
+  raw -> 66.3 s (atempo 1.13). Composition `Sleep`, cover `SleepCover` ("AWAKE FOR / 11 DAYS?!", dizzy pose, bloodshot
+  eye), code `video/src/sleep/` (Clock, Bed, Eye with veins, Brain, Rat; Randy shown as an eyeball - scientist stays the
+  only human). Cover held 0.3 s.
+- Facts (search snippets): Randy Gardner 1964, 17, 264 h (NPR; hallucinations per observer John Ross, Dement disagreed);
+  Guinness stopped accepting the record; NIOSH/OSHA 17 h ~ 0.05% BAC, 24 h ~ 0.10% (US limit 0.08%); Xie 2013 (NIH) mice
+  interstitial space +60% in sleep, beta-amyloid clearance; Everson/Rechtschaffen 1989 rats TSD died/sacrificed 11-32 d.
+- Costs: 1,192 ElevenLabs credits voice + 85 sfx.

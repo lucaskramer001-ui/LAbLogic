@@ -1,0 +1,30 @@
+{
+  "slug": "sleep",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/sleep/sleep-4K.mp4",
+      "title": "Why Don't We Just Stop Sleeping?",
+      "description_file": "publish/episodes/sleep/youtube-description.md",
+      "comment_file": "publish/episodes/sleep/pinned-comment.md",
+      "thumbnail": "publish/episodes/sleep/cover.jpg",
+      "tags": [
+        "sleep",
+        "why do we need sleep",
+        "what happens if you don't sleep",
+        "can you stop sleeping",
+        "Randy Gardner",
+        "longest time without sleep",
+        "sleep deprivation",
+        "sleep deprivation effects",
+        "brain cleans itself during sleep",
+        "glymphatic system",
+        "sleep facts",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}
