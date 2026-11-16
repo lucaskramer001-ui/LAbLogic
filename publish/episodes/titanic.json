@@ -1,0 +1,30 @@
+{
+  "slug": "titanic",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/titanic/titanic-4K.mp4",
+      "title": "Why Don't We Just Raise the Titanic?",
+      "description_file": "publish/episodes/titanic/youtube-description.md",
+      "comment_file": "publish/episodes/titanic/pinned-comment.md",
+      "thumbnail": "publish/episodes/titanic/cover.jpg",
+      "tags": [
+        "Titanic",
+        "why don't we raise the Titanic",
+        "can the Titanic be raised",
+        "Titanic wreck",
+        "Titanic bacteria",
+        "Halomonas titanicae",
+        "rusticles",
+        "how deep is the Titanic",
+        "Titanic wreck today",
+        "shipwreck",
+        "history facts",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

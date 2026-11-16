@@ -19,6 +19,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just kill all the mosquitoes? | Short | made 2026-11-13 |
 | Why don't we just nuke a killer asteroid? | Short | made 2026-11-14 |
 | Why don't we just stop sleeping? | Short | made 2026-11-15 |
+| Why don't we just raise the Titanic? | Short | made 2026-11-16 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -197,3 +198,15 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   Guinness stopped accepting the record; NIOSH/OSHA 17 h ~ 0.05% BAC, 24 h ~ 0.10% (US limit 0.08%); Xie 2013 (NIH) mice
   interstitial space +60% in sleep, beta-amyloid clearance; Everson/Rechtschaffen 1989 rats TSD died/sacrificed 11-32 d.
 - Costs: 1,192 ElevenLabs credits voice + 85 sfx.
+
+## Titanic Short - "Why Don't We Just Raise the Titanic?" (~65 s)
+- Hook (scorer 67): "Your grandkids may never see the Titanic. Bacteria are eating it three thousand eight hundred meters
+  down. So why don't we just pull it up?" - "Titanic" at 1.9 s over the rusty wreck being nibbled by bacteria. 205 words,
+  72.6 s raw -> 63.5 s (atempo 1.04 - this take was slower). Composition `Titanic`, cover `TitanicCover` ("THE TITANIC
+  IS / BEING EATEN?!", nervous pose), code `video/src/titanic/` (Ship with rust + bow/stern parts, Bug, Crane, Museum,
+  Shield, Book, DeepSea).
+- Facts (search snippets): wreck ~3,800 m (12,500 ft), found 1 Sep 1985 (Ballard/Michel); bow/stern ~600 m apart, stern
+  smashed; Halomonas titanicae found in rusticles 2010 (the "gone by 2030" claim is speculative - NOT used); UNESCO 2001
+  convention protection from 2012; US-UK agreement in force Nov 2019 (licences to enter the hull); in-situ preservation
+  preferred; >1,500 died.
+- Costs: 1,077 ElevenLabs credits voice + 85 sfx.

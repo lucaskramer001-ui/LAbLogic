@@ -19,6 +19,7 @@ import {CoreShort, CoreCover, DURATION_FRAMES as CORE_FRAMES} from './core/Main'
 import {MosquitoShort, MosquitoCover, DURATION_FRAMES as MOSQUITO_FRAMES} from './mosquito/Main';
 import {AsteroidShort, AsteroidCover, DURATION_FRAMES as ASTEROID_FRAMES} from './asteroid/Main';
 import {SleepShort, SleepCover, DURATION_FRAMES as SLEEP_FRAMES} from './sleep/Main';
+import {TitanicShort, TitanicCover, DURATION_FRAMES as TITANIC_FRAMES} from './titanic/Main';
 import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
@@ -56,6 +57,8 @@ export const Root = () => (
     <Still id="AsteroidCover" component={AsteroidCover} width={1080} height={1920} />
     <Composition id="Sleep" component={SleepShort} durationInFrames={SLEEP_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="SleepCover" component={SleepCover} width={1080} height={1920} />
+    <Composition id="Titanic" component={TitanicShort} durationInFrames={TITANIC_FRAMES} fps={60} width={1080} height={1920} />
+    <Still id="TitanicCover" component={TitanicCover} width={1080} height={1920} />
     <Composition id="BlackBoxLong" component={BlackBoxLong} durationInFrames={BBL_FRAMES} fps={60} width={1920} height={1080} />
     <Still id="BlackBoxThumbA" component={BlackBoxThumbA} width={1280} height={720} />
     <Still id="BlackBoxThumbB" component={BlackBoxThumbB} width={1280} height={720} />
