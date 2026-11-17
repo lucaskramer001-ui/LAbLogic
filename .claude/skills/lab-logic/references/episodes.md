@@ -20,6 +20,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just nuke a killer asteroid? | Short | made 2026-11-14 |
 | Why don't we just stop sleeping? | Short | made 2026-11-15 |
 | Why don't we just raise the Titanic? | Short | made 2026-11-16 |
+| Why don't we just let bacteria eat all our plastic? | Short | made 2026-11-17 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -210,3 +211,15 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   convention protection from 2012; US-UK agreement in force Nov 2019 (licences to enter the hull); in-situ preservation
   preferred; >1,500 died.
 - Costs: 1,077 ElevenLabs credits voice + 85 sfx.
+
+## Plastic Short - "This Bug Eats Plastic. Why Don't We Use It?" (~65 s)
+- Hook (scorer 69, best of 5): "You will never see ninety-one percent of your plastic recycled. But one bacterium can eat
+  it. So why don't we just let it eat all of it?" - "91%" slams onto a trash heap at 1.1 s, bug bites a bottle at ~3.5 s.
+  213 words, 81.9 s raw -> 65.1 s (atempo 1.13). Composition `Plastic`, cover `PlasticCover` ("THIS BUG EATS /
+  PLASTIC!", shocked pose, giant bug biting a bottle in a red circle), code `video/src/plastic/` (Bug rod bacterium,
+  Bottle with bite clip, Bag, Wrapper, Film, Enzyme pac-man, Clock, Landfill, Co2, Factory, Flag, Pie, Crumbs).
+- Facts (search snippets): Yoshida et al. Science 2016 (Ideonella sakaiensis, PET recycling site in Japan, PETase +
+  MHETase, thin low-crystallinity film ~6 weeks at 30 C, ~75% of carbon to CO2); OECD Global Plastics Outlook 2022 (460 Mt
+  made 2019, 9% recycled); Carbios engineered enzyme ~90% PET in ~10 h (MIT Tech Review 2021; Nature 2020 paper not
+  fetched - nature.com blocked here). "No enzyme eats bags/wrappers well yet" phrased carefully (PE/PP).
+- Costs: 1,197 ElevenLabs credits voice + 85 sfx.

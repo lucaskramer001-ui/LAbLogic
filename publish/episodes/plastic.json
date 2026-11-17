@@ -1,0 +1,31 @@
+{
+  "slug": "plastic",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/plastic/plastic-4K.mp4",
+      "title": "This Bug Eats Plastic. Why Don't We Use It?",
+      "description_file": "publish/episodes/plastic/youtube-description.md",
+      "comment_file": "publish/episodes/plastic/pinned-comment.md",
+      "thumbnail": "publish/episodes/plastic/cover.jpg",
+      "tags": [
+        "plastic eating bacteria",
+        "bacteria that eat plastic",
+        "Ideonella sakaiensis",
+        "PETase",
+        "plastic recycling",
+        "why is plastic not recycled",
+        "plastic pollution",
+        "enzyme recycling",
+        "Carbios",
+        "PET plastic",
+        "can bacteria eat plastic",
+        "landfill",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}
