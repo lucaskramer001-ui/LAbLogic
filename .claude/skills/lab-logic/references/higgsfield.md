@@ -69,3 +69,14 @@ Non-character cut-outs: trim + resize by hand and measure anchor points (e.g. be
   2k high 2.75, 2k medium 1.0, 1k medium 0.5. Explore at 1k/2k medium, final sprites at 2k high (4k only for covers or
   hero art). Pay attention to the cost: the user finds 4.25 per picture expensive.
 - SVG.new plugin is installed but its server is blocked by the cloud network proxy (needs its host allowed).
+
+## Main characters per episode (cheap tiered workflow, user rule 2026-11-18)
+- Drafts at 1k medium (0.5) or 2k medium (1.0); final figures at 2k high (2.75) - BUT check the final: the 2k-high
+  redraw of the tree (job `6a343016-...`) came back with a transparent hole where the face area was, so the 2k-medium
+  draft was used. If a draft already looks clean at the size it is shown (~400-600 px), keep it and say so.
+- Ask for "a large plain smooth area where a face will be added later - NO face" so the code face (art.tsx `Face`,
+  blinks + moods) sits on the sprite. No second "blank" edit needed then.
+- Trees episode: tree job `a07e289a-c7ac-4fa3-9966-ab4706daec58` (`video/public/tree/tree.png`, 671x1000, base
+  (330, 995), face at (325, 340) s 1.55), Earth job `99706b77-4b4b-4c38-9eac-a18425ffed44` (`video/public/earth/earth.png`,
+  800x809, centre (400, 404), r ~398). Both reusable in later episodes.
+- Ground check: every object that stands must stand on the ground line (the user caught floating back rows of trees).

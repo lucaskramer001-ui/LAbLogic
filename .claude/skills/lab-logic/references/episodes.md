@@ -236,4 +236,6 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
 - Facts (search snippets): Bastin et al. Science 2019 (0.9 bn ha, 205 GtC); Veldman et al. comment ("factor of 5
   overestimate"); erratum 2020; GCP 2023 fossil CO2 36.8 Gt; 205 GtC = ~750 GtCO2 = ~20 years; Arctic/boreal planting
   can warm via albedo (Nature Geoscience commentary, 2025 coverage); fires release carbon.
-- Costs: 1,197 ElevenLabs credits (voice only). Higgsfield 0, SFX 0.
+- Main characters (after the user's reminder): illustrated tree + Earth from Higgsfield with code faces.
+- Costs: 1,197 ElevenLabs credits (voice); Higgsfield 4.25 (tree draft 1.0 used, tree 2k-high 2.75 failed, Earth
+  draft 0.5 used); SFX 0.

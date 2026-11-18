@@ -5,7 +5,7 @@ import {Captions} from './Captions';
 import {Sci} from '../iceberg/Sci';
 import {BigText, C, Calendar, FONT_DISPLAY, Face, INK_W, Pill, Sky, Sun, Sunburst, Thermo} from '../iceberg/art';
 import {clamp, easeInOutCubic, easeOutCubic, lerp, pop, prog, rnd, shake} from '../iceberg/anim';
-import {Arrow, Bar, Earth, Stamp} from '../sun/space';
+import {Arrow, Bar, Stamp} from '../sun/space';
 import {BigSci, RedCircle} from '../thumb/SunThumbs';
 import {LayoutProbe} from '../iceberglong/kit';
 import {Flames} from '../blackbox/Main';
@@ -69,27 +69,17 @@ const slam = (t: number, t0: number) => {
 
 type Mood = React.ComponentProps<typeof Face>['mood'];
 
-// Leafy tree, bottom centre (x, y), ~360 px tall at s=1. grow 0..1 scales it up from the ground.
+// Main character: illustrated tree (Higgsfield sprite public/tree/tree.png, 671x1000, face-free crown) with a
+// code-drawn face (blinks, moods), sway from the base and a little breathing. Bottom centre (x, y), ~380 px tall at s=1.
+const TREE_K = 0.38;
 const Tree: React.FC<{x: number; y: number; s?: number; grow?: number; mood?: Mood; t?: number; seed?: number; face?: boolean; rot?: number}> = ({x, y, s = 1, grow = 1, mood = 'happy', t = 0, seed = 0, face = true, rot = 0}) => {
   if (grow <= 0.001) return null;
   const sway = Math.sin(t * 1.6 + seed) * 2.5;
+  const br = 1 + 0.015 * Math.sin(t * 2.2 + seed);
   return (
-    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s * grow}) rotate(${sway})`}>
-      <path d="M -24 0 L -18 -150 L 18 -150 L 24 0 Z" fill={BARK} stroke={C.ink} strokeWidth={6} strokeLinejoin="round" />
-      <path d="M 0 -120 L -40 -170 M 4 -140 L 44 -180" stroke={C.ink} strokeWidth={14} strokeLinecap="round" />
-      <path d="M 0 -120 L -40 -170 M 4 -140 L 44 -180" stroke={BARK} strokeWidth={6} strokeLinecap="round" />
-      {[
-        [-80, -200, 80],
-        [80, -210, 85],
-        [0, -280, 105],
-        [-50, -320, 70],
-        [55, -315, 72],
-      ].map(([cx, cy, r], i) => (
-        <circle key={i} cx={cx} cy={cy} r={r} fill={i % 2 ? LEAF : LEAF_D} stroke={C.ink} strokeWidth={6} />
-      ))}
-      <circle cx={0} cy={-255} r={95} fill={LEAF} />
-      <path d="M -60 -320 Q -30 -345 0 -335" stroke="#9BDB8E" strokeWidth={14} strokeLinecap="round" fill="none" />
-      {face && <Face x={0} y={-245} s={0.55} mood={mood} open={blink(t, seed)} gap={42} />}
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s * grow * TREE_K} ${s * grow * TREE_K * br}) rotate(${sway}) translate(-330 -995)`}>
+      <image href={staticFile('tree/tree.png')} x={0} y={0} width={671} height={1000} />
+      {face && <Face x={325} y={340} s={1.55} mood={mood} open={blink(t, seed)} gap={44} />}
     </g>
   );
 };
@@ -115,7 +105,7 @@ const Seedling: React.FC<{x: number; y: number; s?: number; t?: number}> = ({x, 
   </g>
 );
 
-// Earth with little trees sprouting around its edge; n = how many trees are up.
+// Main character Earth (Higgsfield sprite public/earth/earth.png + code face) with little trees sprouting around its edge; n = how many trees are up.
 const TreeEarth: React.FC<{x: number; y: number; r: number; n: number; t: number; mood?: Mood; sweat?: number}> = ({x, y, r, n, t, mood = 'worried', sweat = 0}) => (
   <g>
     {Array.from({length: 26}).map((_, i) => {
@@ -123,7 +113,10 @@ const TreeEarth: React.FC<{x: number; y: number; r: number; n: number; t: number
       const g = clamp(n - i);
       return g > 0 ? <Tree key={i} x={x + Math.cos(a) * (r - 6)} y={y + Math.sin(a) * (r - 6)} s={0.32} grow={springIn(g, 0, 1, 10)} rot={(a * 180) / Math.PI + 90} face={false} t={t} seed={i} /> : null;
     })}
-    <Earth x={x} y={y} r={r} rot={t * 0.03} face={{mood, open: blink(t, 2)}} />
+    <g transform={`translate(${x} ${y}) rotate(${Math.sin(t * 0.8) * 2}) scale(${r / 398}) translate(-400 -404)`}>
+      <image href={staticFile('earth/earth.png')} x={0} y={0} width={800} height={809} />
+    </g>
+    <Face x={x} y={y - r * 0.05} s={r / 150} mood={mood} open={blink(t, 2)} gap={44} />
     {sweat > 0 &&
       [0, 1].map((i) => {
         const u = (t * 0.9 + i * 0.5) % 1;
@@ -240,7 +233,7 @@ const HowScene: React.FC<{t: number}> = ({t}) => {
     <Stage cam={{s: punch(t, t0)}}>
       <Layer>
         <Sky />
-        <Ground y={1300} color="#8BC86A" shade="#76B257" />
+        <Ground y={forest ? 1010 : 1300} color="#8BC86A" shade="#76B257" />
         {!forest ? (
           <g>
             <Tree x={540} y={1310} s={2} mood="happy" t={t} seed={1} />
@@ -260,8 +253,8 @@ const HowScene: React.FC<{t: number}> = ({t}) => {
             {Array.from({length: 15}).map((_, i) => {
               const row = Math.floor(i / 5);
               const tx = 140 + (i % 5) * 200 + (row % 2) * 90 - 40;
-              const ty = 1080 + row * 120;
-              return <Tree key={i} x={tx} y={ty} s={0.55} grow={springIn(t, haT - 0.1 + i * 0.05, 0.6, 11)} t={t} seed={i} face={i === 7} mood="happy" />;
+              const ty = 1060 + row * 110;
+              return <Tree key={i} x={tx} y={ty} s={0.42 + row * 0.1} grow={springIn(t, haT - 0.1 + i * 0.05, 0.6, 11)} t={t} seed={i} face={i === 7} mood="happy" />;
             })}
             {t > haT && <BigText x={540} y={560} text="900 MILLION HA" size={96 * slam(t, haT)} fill={C.yellow} />}
             {t > cT - 0.1 && <BigText x={540} y={720} text="205 BILLION T CARBON" size={64 * slam(t, cT - 0.1)} fill={C.paper} />}
