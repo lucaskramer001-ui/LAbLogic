@@ -43,7 +43,7 @@ do not guess brand values or tool settings from memory.
    Objects with faces, flat colours, ink outlines, labels as pills, beats timed to words with `ph()`/`at()`.
 6. **QA before every final render** (`lessons.md`): run the layout check (`scripts/layout-qa.mjs` +
    `layout_report.py`) until it reports nothing, then look at contact sheets of every scene.
-7. **Render** at 60 fps (Shorts 4K via `--scale=2`, long-form 1080p), normalise audio to −14 LUFS, verify
+7. **Render** at 60 fps (Shorts and long-form 1080p - no `--scale=2`, decided 2026-11-18), normalise audio to −14 LUFS, verify
    frame count, duration and audio, and pull a few frames from the final file to confirm the fixes are in it.
 8. **Package** (`thumbnails.md`, `packaging.md`): thumbnail (2-3 options), title, description with chapters and
    sources, tags, hashtags, pinned comment, SRT, and platform captions for Shorts / Reels / TikTok.

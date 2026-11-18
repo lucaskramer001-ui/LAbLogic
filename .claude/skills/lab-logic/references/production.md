@@ -91,7 +91,7 @@ poses each time; it rewrites `sprites.ts`) → check on a pink sheet. Sprites ar
 3. Fix → re-run until clean → look at stills of the changed spots.
 
 ## 6. Render and deliver
-- Short: `npx remotion render src/index.ts Iceberg out/x-raw.mp4 --scale=2 --image-format=png --crf=16
+- Short (1080p since 2026-11-18, user: 4K is not needed): `npx remotion render src/index.ts Iceberg out/x-raw.mp4 --image-format=png --crf=16
   --pixel-format=yuv420p --concurrency=4 --browser-executable=<chromium>` (~10 min for 70 s on 4 CPUs).
 - Long-form: same without `--scale`, `--crf=17` (~20-25 min for 5.5 min).
 - Run long renders with the Bash tool's `run_in_background: true` - not with `&` inside a normal command (that

@@ -71,5 +71,5 @@ EVERY DAY?!" (nervous, price tags $1 -> $128).
   = 3 HOMES?!". Second line as big as fits (auto-fit 1000 px, up to ~260 px).
 - Strongest reaction pose for the hero cover (shocked here; dizzy/cash/hot used on the last covers).
 - Covers live in `video/src/lightning/Covers.tsx` (A/B/C Stills, A re-used as frame 0). To swap frame 0 after the
-  final render: render `--frames=0-<hook frame>` muted at --scale=2, concat with the old video from the next frame,
+  final render: render `--frames=0-<hook frame>` muted at the same resolution as the video, concat with the old video from the next frame,
   copy the audio, check the frame count.
