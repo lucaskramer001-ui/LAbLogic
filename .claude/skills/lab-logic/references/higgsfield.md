@@ -80,3 +80,7 @@ Non-character cut-outs: trim + resize by hand and measure anchor points (e.g. be
   (330, 995), face at (325, 340) s 1.55), Earth job `99706b77-4b4b-4c38-9eac-a18425ffed44` (`video/public/earth/earth.png`,
   800x809, centre (400, 404), r ~398). Both reusable in later episodes.
 - Ground check: every object that stands must stand on the ground line (the user caught floating back rows of trees).
+- Zebra (trees episode): happy job `967dafa9-870d-4c79-82ff-319ab5231395`, worried edit `42b11e71-8ac0-4cd9-9997-b1637743c5e2`
+  (1k medium, 0.5 each), sprites `video/public/zebra/{happy,worried}.png` (800x510, same crop, feet y 503). Expression
+  swaps = cheap edit of the same image ("keep EXACTLY identical, change ONLY the face"). Code-drawn animals look bad -
+  the user wants animals from Higgsfield.

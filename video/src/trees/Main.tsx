@@ -125,21 +125,18 @@ const TreeEarth: React.FC<{x: number; y: number; r: number; n: number; t: number
   </g>
 );
 
-// Simple striped grazer (zebra-ish), bottom centre, facing left.
-const Grazer: React.FC<{x: number; y: number; s?: number; mood?: Mood; t?: number; seed?: number}> = ({x, y, s = 1, mood = 'happy', t = 0, seed = 0}) => (
-  <g transform={`translate(${x} ${y}) scale(${s})`}>
-    {[-55, -20, 25, 60].map((lx, i) => (
-      <rect key={i} x={lx - 10} y={-80} width={20} height={80} rx={6} fill="#fff" stroke={C.ink} strokeWidth={5} />
-    ))}
-    <ellipse cx={0} cy={-110} rx={95} ry={55} fill="#fff" stroke={C.ink} strokeWidth={6} />
-    {[-40, -5, 30].map((sx) => <path key={sx} d={`M ${sx} -160 Q ${sx + 12} -110 ${sx} -60`} stroke={C.ink} strokeWidth={10} fill="none" />)}
-    <g transform={`rotate(${Math.sin(t * 2 + seed) * 4} -80 -140)`}>
-      <ellipse cx={-120} cy={-170} rx={42} ry={50} fill="#fff" stroke={C.ink} strokeWidth={6} />
-      <path d="M -110 -220 L -96 -250 L -88 -214 Z" fill="#fff" stroke={C.ink} strokeWidth={5} />
-      <Face x={-124} y={-170} s={0.3} mood={mood} open={blink(t, seed + 1)} gap={30} />
+// Zebra (Higgsfield sprites public/zebra/happy.png + worried.png, 800x510, same pose; feet at y 503), bottom centre,
+// facing left. Grazing bob; switching mood triggers a little startled hop.
+const Grazer: React.FC<{x: number; y: number; s?: number; mood?: Mood; t?: number; seed?: number; moodT?: number}> = ({x, y, s = 1, mood = 'happy', t = 0, seed = 0, moodT = 1e9}) => {
+  const hop = t > moodT ? Math.max(0, Math.sin(Math.min(1, (t - moodT) / 0.3) * Math.PI)) * 30 : 0;
+  const imp = impact(t, moodT + 0.3, 0.12);
+  const bob = Math.sin(t * 2.2 + seed) * 0.012;
+  return (
+    <g transform={`translate(${x} ${y - hop}) scale(${s * 0.4 * imp.sx} ${s * 0.4 * imp.sy * (1 + bob)}) translate(-400 -503)`}>
+      <image href={staticFile(mood === 'worried' ? 'zebra/worried.png' : 'zebra/happy.png')} x={0} y={0} width={800} height={510} />
     </g>
-  </g>
-);
+  );
+};
 
 // Shield (protect).
 const Shield: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) => (
@@ -357,10 +354,10 @@ const PlaceScene: React.FC<{t: number}> = ({t}) => {
         <Sky />
         <Sun x={880} y={520} r={80} t={t} />
         <Ground y={1250} color={GRASS} shade="#D2AE52" />
-        {[[260, 1300, 0], [700, 1340, 2]].map(([gx, gy, sd]) =>
-          t > grT - 0.2 ? <Grazer key={sd} x={gx} y={gy} s={1.1 * springIn(t, grT - 0.2 + sd * 0.05, 0.6)} mood={sad ? 'worried' : 'happy'} t={t} seed={sd} /> : null,
+        {[[290, 1300, 0], [800, 1350, 2]].map(([gx, gy, sd]) =>
+          t > grT - 0.2 ? <Grazer key={sd} x={gx} y={gy} s={1.55 * springIn(t, grT - 0.2 + sd * 0.05, 0.6)} mood={sad ? 'worried' : 'happy'} t={t} seed={sd} moodT={wlT + 0.3} /> : null,
         )}
-        {t > wlT + 0.3 && <Tree x={480} y={1200} s={1.0} grow={springIn(t, wlT + 0.3, 0.6, 10)} t={t} mood="smug" seed={5} />}
+        {t > wlT + 0.3 && <Tree x={545} y={1270} s={1.15} grow={springIn(t, wlT + 0.3, 0.6, 10)} t={t} mood="smug" seed={5} />}
         {t > emT - 0.1 && t < grT - 0.2 && <BigText x={540} y={760} text='"EMPTY"?' size={130 * springIn(t, emT - 0.1, 0.5, 9)} fill={C.paper} />}
         <Pill x={540} y={300} text="PROBLEM 3: THE PLACE" s={span(t, t0 + 0.1, grT - 0.2)} bg={C.red} fg={C.paper} size={54} />
         <Pill x={540} y={300} text="GRASSLAND + SAVANNA" s={span(t, grT - 0.2, wlT)} bg={GRASS} size={54} />

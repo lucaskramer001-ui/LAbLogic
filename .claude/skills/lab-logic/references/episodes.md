@@ -238,4 +238,4 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   can warm via albedo (Nature Geoscience commentary, 2025 coverage); fires release carbon.
 - Main characters (after the user's reminder): illustrated tree + Earth from Higgsfield with code faces.
 - Costs: 1,197 ElevenLabs credits (voice); Higgsfield 4.25 (tree draft 1.0 used, tree 2k-high 2.75 failed, Earth
-  draft 0.5 used); SFX 0.
+  draft 0.5 used) + zebra 1.0 (happy + worried, 0.5 each) = 5.25; SFX 0.
