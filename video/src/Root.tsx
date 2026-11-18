@@ -23,6 +23,7 @@ import {TitanicShort, TitanicCover, DURATION_FRAMES as TITANIC_FRAMES} from './t
 import {PlasticShort, PlasticCover, DURATION_FRAMES as PLASTIC_FRAMES} from './plastic/Main';
 import {PlasticHookAfter, HOOK_V2_FRAMES} from './plastic/HookV2';
 import {BugRigSheet} from './kit/BugRig';
+import {TreesShort, TreesCover, DURATION_FRAMES as TREES_FRAMES} from './trees/Main';
 import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
@@ -64,6 +65,8 @@ export const Root = () => (
     <Still id="TitanicCover" component={TitanicCover} width={1080} height={1920} />
     <Composition id="Plastic" component={PlasticShort} durationInFrames={PLASTIC_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="PlasticCover" component={PlasticCover} width={1080} height={1920} />
+    <Composition id="Trees" component={TreesShort} durationInFrames={TREES_FRAMES} fps={60} width={1080} height={1920} />
+    <Still id="TreesCover" component={TreesCover} width={1080} height={1920} />
     <Still id="BugRigSheet" component={BugRigSheet} width={1080} height={1920} />
     <Composition id="PlasticHookAfter" component={PlasticHookAfter} durationInFrames={HOOK_V2_FRAMES} fps={60} width={1080} height={1920} />
     <Composition id="PlasticHookRig" component={PlasticHookAfter} defaultProps={{V: 2}} durationInFrames={HOOK_V2_FRAMES} fps={60} width={1080} height={1920} />

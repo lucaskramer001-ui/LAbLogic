@@ -21,6 +21,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just stop sleeping? | Short | made 2026-11-15 |
 | Why don't we just raise the Titanic? | Short | made 2026-11-16 |
 | Why don't we just let bacteria eat all our plastic? | Short | made 2026-11-17 |
+| Why don't we just plant a trillion trees? | Short | made 2026-11-18 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -223,3 +224,16 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   made 2019, 9% recycled); Carbios engineered enzyme ~90% PET in ~10 h (MIT Tech Review 2021; Nature 2020 paper not
   fetched - nature.com blocked here). "No enzyme eats bags/wrappers well yet" phrased carefully (PE/PP).
 - Costs: 1,197 ElevenLabs credits voice + 85 sfx.
+
+## Trees Short - "Why Don't We Just Plant a Trillion Trees?" (~68 s) - first Short with the new rules
+- New rules: 1080p render (6.7 min instead of ~20), no cover at frame 0 (hook starts at frame 0, cover = Still
+  `TreesCover` -> `publish/episodes/trees/cover.jpg`), motion kit (springIn/impact/jiggle/blink/camShake), zero new
+  pictures and zero new SFX (all sounds reused from earlier episodes).
+- Hook (scorer 63, best of 5): "You could plant one trillion trees and still lose the climate fight. So why don't we
+  just plant them anyway?" - "1 TRILLION" slams at 1.1 s over a sweating Earth ringed with sprouting trees.
+  217 words, 82.5 s raw -> 66.6 s (atempo 1.13). Composition `Trees`, code `video/src/trees/` (Tree, Pine, Seedling,
+  TreeEarth, Grazer, Shield, Ground; reuses Earth, Factory, Co2, Clock, Flames, Thermo, Sun, Arrow, Bar).
+- Facts (search snippets): Bastin et al. Science 2019 (0.9 bn ha, 205 GtC); Veldman et al. comment ("factor of 5
+  overestimate"); erratum 2020; GCP 2023 fossil CO2 36.8 Gt; 205 GtC = ~750 GtCO2 = ~20 years; Arctic/boreal planting
+  can warm via albedo (Nature Geoscience commentary, 2025 coverage); fires release carbon.
+- Costs: 1,197 ElevenLabs credits (voice only). Higgsfield 0, SFX 0.

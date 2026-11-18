@@ -1,0 +1,30 @@
+{
+  "slug": "trees",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand. Rendered at 1080p; the cover is a separate JPEG (not frame 0).",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/trees/trees.mp4",
+      "title": "Why Don't We Just Plant a Trillion Trees?",
+      "description_file": "publish/episodes/trees/youtube-description.md",
+      "comment_file": "publish/episodes/trees/pinned-comment.md",
+      "thumbnail": "publish/episodes/trees/cover.jpg",
+      "tags": [
+        "trillion trees",
+        "plant a trillion trees",
+        "can trees stop climate change",
+        "tree planting climate",
+        "reforestation",
+        "carbon capture trees",
+        "trees and CO2",
+        "climate change solutions",
+        "albedo effect",
+        "boreal forest",
+        "forest fires carbon",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

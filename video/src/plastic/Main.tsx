@@ -184,7 +184,7 @@ const Enzyme: React.FC<{x: number; y: number; s?: number; t: number; color?: str
 };
 
 // Cartoon clock (centre x, y); spin = hand angle in turns.
-const Clock: React.FC<{x: number; y: number; s?: number; spin: number}> = ({x, y, s = 1, spin}) => (
+export const Clock: React.FC<{x: number; y: number; s?: number; spin: number}> = ({x, y, s = 1, spin}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     <circle r={110} fill={C.ink} transform="translate(8 10)" />
     <circle r={110} fill={C.paper} stroke={C.ink} strokeWidth={INK_W} />
@@ -213,7 +213,7 @@ const Landfill: React.FC<{y: number; t: number; gone?: number}> = ({y, t, gone =
 );
 
 // CO2 bubble.
-const Co2: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) => (
+export const Co2: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     <circle r={52} fill={CO2C} stroke={C.ink} strokeWidth={6} />
     <text x={0} y={14} textAnchor="middle" fontFamily={FONT_DISPLAY} fontWeight={900} fontSize={38} fill={C.ink}>
@@ -223,7 +223,7 @@ const Co2: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) => (
 );
 
 // Factory with a big round reactor tank (bottom centre x, y).
-const Factory: React.FC<{x: number; y: number; s?: number; t: number; on?: number}> = ({x, y, s = 1, t, on = 0}) => (
+export const Factory: React.FC<{x: number; y: number; s?: number; t: number; on?: number}> = ({x, y, s = 1, t, on = 0}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     <rect x={-360} y={-560} width={60} height={240} fill="#9AA5AD" stroke={C.ink} strokeWidth={6} />
     {on > 0 && [0, 1, 2].map((i) => {
