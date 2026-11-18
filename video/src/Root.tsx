@@ -21,6 +21,7 @@ import {AsteroidShort, AsteroidCover, DURATION_FRAMES as ASTEROID_FRAMES} from '
 import {SleepShort, SleepCover, DURATION_FRAMES as SLEEP_FRAMES} from './sleep/Main';
 import {TitanicShort, TitanicCover, DURATION_FRAMES as TITANIC_FRAMES} from './titanic/Main';
 import {PlasticShort, PlasticCover, DURATION_FRAMES as PLASTIC_FRAMES} from './plastic/Main';
+import {PlasticHookAfter, HOOK_V2_FRAMES} from './plastic/HookV2';
 import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
@@ -62,6 +63,7 @@ export const Root = () => (
     <Still id="TitanicCover" component={TitanicCover} width={1080} height={1920} />
     <Composition id="Plastic" component={PlasticShort} durationInFrames={PLASTIC_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="PlasticCover" component={PlasticCover} width={1080} height={1920} />
+    <Composition id="PlasticHookAfter" component={PlasticHookAfter} durationInFrames={HOOK_V2_FRAMES} fps={60} width={1080} height={1920} />
     <Composition id="BlackBoxLong" component={BlackBoxLong} durationInFrames={BBL_FRAMES} fps={60} width={1920} height={1080} />
     <Still id="BlackBoxThumbA" component={BlackBoxThumbA} width={1280} height={720} />
     <Still id="BlackBoxThumbB" component={BlackBoxThumbB} width={1280} height={720} />

@@ -134,3 +134,15 @@ poses each time; it rewrites `sprites.ts`) → check on a pink sheet. Sprites ar
   end - it ran on through three unrelated scenes and the user heard it.
 - DON'T transcribe music to check for vocals: the estimate said ~60 credits but each 3-min track cost 990 credits.
   The tracks were instrumental anyway; trust the "no vocals" prompt or ask the user to listen.
+
+## Motion kit (pro animation layer, added 2026-11-18)
+`video/src/kit/motion.ts` + Remotion plugin guidance (remotion-markup). First used in `src/plastic/HookV2.tsx`
+(composition `PlasticHookAfter`, before/after vs. `Plastic` frames 0-446). Use these instead of bare `pop()`:
+- `springIn` (overshoot springs via `Easing.spring`), `ease` (expo-out bezier), `jiggle` (damped impulse).
+- `squash`/`impact` for volume-preserving squash & stretch on landings, bites and slams.
+- `anticipate`: wind back before a big move (bug peeks, pulls back, leaps).
+- `blink`, `breathe` + `Face open/look` so characters are never frozen; eyes look at the action.
+- `camShake`, `drift`, push-in camera; parallax planes (background depth ~0.35, foreground ~1.15).
+- `@remotion/motion-blur` `CameraMotionBlur` on fast movers only (the component must call useCurrentFrame itself);
+  directional SVG blur for the whip-pan out of a scene.
+- Stagger text word by word; slam big numbers from 2.6x with a squash on impact.

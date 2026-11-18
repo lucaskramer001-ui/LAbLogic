@@ -25,7 +25,7 @@ const CO2C = '#C9D3DB';
 const ORANGE = '#FF9F1C';
 const BLUE = '#3E7CC9';
 
-const useFonts = () => {
+export const useFonts = () => {
   const [handle] = useState(() => delayRender('fonts'));
   useEffect(() => {
     const faces = [
@@ -68,7 +68,7 @@ const slam = (t: number, t0: number) => {
 type Mood = React.ComponentProps<typeof Face>['mood'];
 
 // Teal background with slow rays.
-const Rays: React.FC<{t: number; cx?: number; cy?: number}> = ({t, cx = 540, cy = 900}) => (
+export const Rays: React.FC<{t: number; cx?: number; cy?: number}> = ({t, cx = 540, cy = 900}) => (
   <g>
     <rect x={-400} y={-400} width={1880} height={2800} fill={BG} />
     {Array.from({length: 16}).map((_, i) => {
@@ -81,18 +81,18 @@ const Rays: React.FC<{t: number; cx?: number; cy?: number}> = ({t, cx = 540, cy 
 );
 
 // Ideonella sakaiensis: a rod-shaped bacterium with a whip tail and a munching mouth (centre x, y).
-const Bug: React.FC<{x: number; y: number; s?: number; t: number; chomp?: boolean; mood?: 'happy' | 'yuck'; rot?: number}> = ({x, y, s = 1, t, chomp = true, mood = 'happy', rot = 0}) => {
-  const m = chomp ? Math.abs(Math.sin(t * 11 + x * 0.01)) : 0.3;
+export const Bug: React.FC<{x: number; y: number; s?: number; t: number; chomp?: boolean; mood?: 'happy' | 'yuck'; rot?: number; sx?: number; sy?: number; open?: number; mouth?: number}> = ({x, y, s = 1, t, chomp = true, mood = 'happy', rot = 0, sx = 1, sy = 1, open = 1, mouth}) => {
+  const m = mouth ?? (chomp ? Math.abs(Math.sin(t * 11 + x * 0.01)) : 0.3);
   const tail = Array.from({length: 7}).map((_, i) => `${i ? 'L' : 'M'} ${70 + i * 16} ${Math.sin(t * 9 + i * 1.1) * 10}`).join(' ');
   return (
-    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s * sx} ${s * sy})`}>
       <path d={tail} stroke={C.ink} strokeWidth={6} fill="none" strokeLinecap="round" />
       <rect x={-80} y={-40} width={160} height={80} rx={40} fill={BUG} stroke={C.ink} strokeWidth={6} />
       <ellipse cx={20} cy={-22} rx={40} ry={8} fill="#A9DE98" />
-      <circle cx={-34} cy={-8} r={9} fill={C.ink} />
-      <circle cx={-6} cy={-8} r={9} fill={C.ink} />
-      <circle cx={-31} cy={-11} r={3} fill="#fff" />
-      <circle cx={-3} cy={-11} r={3} fill="#fff" />
+      <ellipse cx={-34} cy={-8} rx={9} ry={Math.max(1.5, 9 * open)} fill={C.ink} />
+      <ellipse cx={-6} cy={-8} rx={9} ry={Math.max(1.5, 9 * open)} fill={C.ink} />
+      {open > 0.5 && <circle cx={-31} cy={-11} r={3} fill="#fff" />}
+      {open > 0.5 && <circle cx={-3} cy={-11} r={3} fill="#fff" />}
       {mood === 'yuck' ? (
         <g>
           <path d="M -36 18 Q -22 8 -6 18" stroke={C.ink} strokeWidth={6} fill="none" strokeLinecap="round" />
@@ -106,10 +106,10 @@ const Bug: React.FC<{x: number; y: number; s?: number; t: number; chomp?: boolea
 };
 
 // PET drink bottle, bottom centre (x, y), ~280 px tall at s=1. eaten 0..1 bites it away from the top.
-const Bottle: React.FC<{x: number; y: number; s?: number; mood?: Mood; eaten?: number; rot?: number; label?: string; id?: string}> = ({x, y, s = 1, mood, eaten = 0, rot = 0, label, id = 'b'}) => {
+export const Bottle: React.FC<{x: number; y: number; s?: number; mood?: Mood; eaten?: number; rot?: number; label?: string; id?: string; sx?: number; sy?: number; open?: number; look?: {x: number; y: number}}> = ({x, y, s = 1, mood, eaten = 0, rot = 0, label, id = 'b', sx = 1, sy = 1, open = 1, look}) => {
   const top = -280 + 280 * eaten;
   return (
-    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s * sx} ${s * sy})`}>
       <clipPath id={`clip-${id}`}>
         <path d={`M -80 ${top} ${Array.from({length: 6}).map((_, i) => `Q ${-80 + i * 32 + 16} ${top + (eaten > 0 ? 26 : 0)} ${-80 + (i + 1) * 32} ${top}`).join(' ')} L 80 20 L -80 20 Z`} />
       </clipPath>
@@ -123,7 +123,7 @@ const Bottle: React.FC<{x: number; y: number; s?: number; mood?: Mood; eaten?: n
           </text>
         )}
         <path d="M -38 -175 L -38 -20" stroke="#fff" strokeWidth={10} strokeLinecap="round" opacity={0.7} />
-        {mood && <Face x={0} y={-50} s={0.36} mood={mood} gap={36} />}
+        {mood && <Face x={0} y={-50} s={0.36} mood={mood} gap={36} open={open} look={look} />}
       </g>
     </g>
   );
@@ -263,7 +263,7 @@ const Pie: React.FC<{x: number; y: number; r: number; share: number; color: stri
   );
 };
 
-const Crumbs: React.FC<{x: number; y: number; t: number; n?: number; color?: string}> = ({x, y, t, n = 8, color = PETC}) => (
+export const Crumbs: React.FC<{x: number; y: number; t: number; n?: number; color?: string}> = ({x, y, t, n = 8, color = PETC}) => (
   <g>
     {Array.from({length: n}).map((_, i) => {
       const u = (t * 1.4 + rnd(i)) % 1;
@@ -276,7 +276,7 @@ const Crumbs: React.FC<{x: number; y: number; t: number; n?: number; color?: str
 
 // ------------------------------------------------------------------ scenes
 
-const S = {
+export const S = {
   cover: 0,
   hook: 0.3,
   disc: ph('in twenty sixteen') - 0.05,
