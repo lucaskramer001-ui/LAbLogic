@@ -56,3 +56,16 @@ Flat 2D cartoon, thick smooth black outlines… Isolated on a fully transparent 
 `scripts/prep.py` trims to alpha + 12 px, scales to 1600 px tall, finds the head (largest inscribed disc in the
 top 45%), the feet (bottom 3.5% of rows) and the rightmost point (hand / rope end), and writes `sprites.ts`.
 Non-character cut-outs: trim + resize by hand and measure anchor points (e.g. beak tip = leftmost opaque pixel).
+
+## Rigged characters (cut-out rig, added 2026-11-18)
+- Workflow: 1) master character with the scientist hero as style reference, 2) edit of the master with the face and
+  tail removed ("keep the body EXACTLY identical, remove…"), 3) trim (alpha > 60) to 1400 px wide, measure the capsule,
+  4) draw face (eyes with pupils + eyelids, brows, mouth shapes) and wobbly parts (tail) in code on top.
+  Result: illustrated look + full animation control (blink, look, chomp, moods, lip-sync later).
+- Bacterium: master job `69d59bf1-082b-417f-8d62-a6f6c21dd424`, blank body job `9ff69b6a-1594-45a0-afa7-41d5f1a73489`,
+  sprite `video/public/bug/body.png`, rig `video/src/kit/BugRig.tsx` (moods happy/chomp/scared/yuck/smug/determined,
+  sheet = Still `BugRigSheet`). Used in composition `PlasticHookRig`.
+- Model now `gpt_image_2_6` (also does native SVG output, but without references). Prices per image: 4k high 4.25,
+  2k high 2.75, 2k medium 1.0, 1k medium 0.5. Explore at 1k/2k medium, final sprites at 2k high (4k only for covers or
+  hero art). Pay attention to the cost: the user finds 4.25 per picture expensive.
+- SVG.new plugin is installed but its server is blocked by the cloud network proxy (needs its host allowed).

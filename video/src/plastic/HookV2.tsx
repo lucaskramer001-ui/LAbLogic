@@ -7,6 +7,7 @@ import {BigText, C, Pill, textWidth} from '../iceberg/art';
 import {TrashHeap} from '../sun/space';
 import {clamp, lerp, rnd} from '../iceberg/anim';
 import {Bottle, Bug, PlasticCover, Rays, S, useFonts} from './Main';
+import {BugRig} from '../kit/BugRig';
 import {anticipate, blink, breathe, camShake, drift, ease, impact, jiggle, springIn, squash} from '../kit/motion';
 
 // "Nachher" version of the plastic hook (0-7.3 s) built with the motion kit:
@@ -80,13 +81,17 @@ const bugState = (t: number) => {
 };
 
 // The bug lives in its own component so CameraMotionBlur can re-render it at sub-frame times.
-const BugPlane: React.FC = () => {
+const BugPlane: React.FC<{V: number}> = ({V}) => {
   const t = useCurrentFrame() / FPS;
   const b = bugState(t);
   if (!b.visible) return null;
   return (
     <Plane t={t} depth={1.1}>
-      <Bug x={b.x} y={b.y} s={2.1} t={t} rot={b.rot} sx={b.sx} sy={b.sy} mouth={b.mouth} open={blink(t, 3)} />
+      {V === 2 ? (
+        <BugRig x={b.x - 30} y={b.y + 10} s={2.5} t={t} rot={-b.rot} sx={-b.sx} sy={b.sy} mouth={b.mouth} open={blink(t, 3)} mood={b.mouth > 0.55 ? 'chomp' : t < LAND ? 'determined' : 'happy'} look={t < LAND ? {x: -0.7, y: 0.1} : {x: -0.8, y: 0.4}} tailAmp={t > BUG - 0.4 && t < LAND ? 1.6 : 1} />
+      ) : (
+        <Bug x={b.x} y={b.y} s={2.1} t={t} rot={b.rot} sx={b.sx} sy={b.sy} mouth={b.mouth} open={blink(t, 3)} />
+      )}
     </Plane>
   );
 };
@@ -126,7 +131,7 @@ const StaggerText: React.FC<{t: number; t0: number; y: number; words: Array<[str
   );
 };
 
-const HookAfterScene: React.FC<{t: number}> = ({t}) => {
+const HookAfterScene: React.FC<{t: number; V: number}> = ({t, V}) => {
   const heapJ = jiggle(t, PCT, 0.05, 6, 6) + BITES.reduce((n, b) => n + jiggle(t, b, 0.015, 7, 9), 0);
   const eaten = BITES.reduce((n, b) => n + 0.25 * ease(t, b - 0.03, b + 0.08), 0);
   const scared = t > BUG - 0.2;
@@ -156,7 +161,7 @@ const HookAfterScene: React.FC<{t: number}> = ({t}) => {
         <Bottle id="v1" x={300} y={1180} s={0.9} rot={-14 + flinch1} mood={scared ? 'scared' : 'worried'} sx={b1.sx} sy={b1.sy} open={blink(t, 0)} look={lookToBug} />
       </Plane>
       <CameraMotionBlur samples={6} shutterAngle={200}>
-        <BugPlane />
+        <BugPlane V={V} />
       </CameraMotionBlur>
       <Plane t={t} depth={1.15}>
         <Bottle
@@ -215,7 +220,7 @@ const whipBlur = (t: number) => {
   return Math.min(60, Math.abs(c1 - c0) * 0.6);
 };
 
-export const PlasticHookAfter: React.FC = () => {
+export const PlasticHookAfter: React.FC<{V?: number}> = ({V = 1}) => {
   useFonts();
   const frame = useCurrentFrame();
   const t = frame / FPS;
@@ -228,7 +233,7 @@ export const PlasticHookAfter: React.FC = () => {
         </filter>
       </svg>
       <AbsoluteFill style={{filter: blur > 0.5 ? 'url(#whip)' : undefined}}>
-        {t < S.hook ? <PlasticCover t={t} /> : <HookAfterScene t={t} />}
+        {t < S.hook ? <PlasticCover t={t} /> : <HookAfterScene t={t} V={V} />}
       </AbsoluteFill>
       <Captions t={t} hide={t < S.hook} />
       <Sequence from={Math.round(0.1 * FPS)} layout="none">
