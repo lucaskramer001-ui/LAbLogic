@@ -58,7 +58,7 @@ and `video/src/sun/space.tsx`.
 ## Covers (Shorts / Reels / TikTok)
 - The question is the title: setup words in Paper, payoff words big in Lab Yellow. Wordmark small at the top.
 - Keep text between 330 and 1100 px from the top (Instagram 3:4 grid crop and TikTok UI).
-- **Frame 0 of every Short matches its cover**, because YouTube Shorts covers are picked from a frame.
+- **The cover is a separate JPEG** that the user uploads by hand (since 2026-11-18); the Short starts with the hook.
 - Look: Sky Blue sunburst, scientist on one side, one big object (with a face) on the other.
 
 ## Long-form YouTube thumbnails

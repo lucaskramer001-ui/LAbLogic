@@ -67,7 +67,7 @@ poses each time; it rewrites `sprites.ts`) → check on a pink sheet. Sprites ar
   In long-form wrap pills to 1.18× size for phone readability.
 - **Effects:** splash drops, sweat drops, puffs with one merged outline, impact stars, meltwater blobs that
   shrink away (never fade outlined shapes).
-- **Shorts frame 0 = cover** (title text + scientist + object on Sky Blue sunburst + small wordmark).
+- **Shorts start straight with the hook at frame 0** (since 2026-11-18). The cover is a separate Still/JPEG, not part of the video.
 - **Long-form end card:** Sky Blue sunburst, wordmark, tagline pill.
 - Long-form has **no burned-in captions**; deliver an SRT instead (built from words.json, ≤ ~70 chars per cue,
   no overlapping cue times).

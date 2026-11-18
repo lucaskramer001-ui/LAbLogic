@@ -25,9 +25,9 @@ Established on the trash-into-the-Sun video and the woodpecker redesign; the use
 - Avoid untrue clickbait ("IMPOSSIBLE", "IT COMES BACK").
 
 ## Every episode gets two thumbnails
-1. **9:16 cover (YouTube Shorts, Instagram Reels, TikTok):** frame 0 of the Short, exported as
-   `publish/episodes/<slug>/cover.jpg`. TikTok's API can only use a frame of the video as cover, and Instagram's API
-   only a frame unless the image is at a public URL, so the cover must *be* frame 0.
+1. **9:16 cover (YouTube Shorts, Instagram Reels, TikTok):** a separate JPEG, `publish/episodes/<slug>/cover.jpg`,
+   rendered from its own `<Still>`. **Since 2026-11-18 the cover is NOT embedded at the start of the Short** - the
+   user uploads the cover by hand on every platform, so the video starts straight with the hook (no 0.3 s hold).
    **Grid-safe layout:** Instagram and TikTok profile grids crop covers to the centre 3:4 (rows 240-1680 of 1920).
    Keep the wordmark, all text, the scientist (feet included) and the object inside that band; text inside 330-1100.
    Iceberg cover layout: wordmark top 300 (500 px wide), title lines at y 530/652/812/964 (sizes 106/106/142/142),
@@ -37,9 +37,8 @@ Established on the trash-into-the-Sun video and the woodpecker redesign; the use
    `IcebergThumbB` "3 KM ICEBERG?!" (giant berg over a tiny Cape Town).
 
 ## Shorts covers - MrBeast style, vertical (since the money Short, 2026-11-04; user asked for it)
-Frame 0 of the Short = the cover, built as a component that is both the first scene and a `<Still>` (e.g.
-`MoneyCover` in `video/src/money/Main.tsx`, rendered to `video/out/thumbs/<Id>.png`, copied to
-`publish/episodes/<slug>/cover.jpg`). 1080x1920, everything that matters inside the grid-safe rows 240-1680:
+The cover is a `<Still>` only (e.g. `<Slug>Cover`), rendered with `npx remotion still ... <Slug>Cover` and saved as
+`publish/episodes/<slug>/cover.jpg` (JPEG, quality ~92). Older Shorts (lightning ... plastic) still have it as frame 0. 1080x1920, everything that matters inside the grid-safe rows 240-1680:
 - Wordmark small at the top (420 px wide, top 290).
 - 2 lines of text rotated -4 deg around (540, 640): Paper line ~124 px at y 560, Lab Yellow payoff ~196 px at y 770.
   The text must add what the title doesn't say (title asks the question; cover shows the shocking number).
@@ -70,6 +69,6 @@ EVERY DAY?!" (nervous, price tags $1 -> $128).
 - Headline = a punchy claim with a stake, not a summary: "300 MILLION VOLTS / WASTED?!" beat "A YEAR OF LIGHTNING /
   = 3 HOMES?!". Second line as big as fits (auto-fit 1000 px, up to ~260 px).
 - Strongest reaction pose for the hero cover (shocked here; dizzy/cash/hot used on the last covers).
-- Covers live in `video/src/lightning/Covers.tsx` (A/B/C Stills, A re-used as frame 0). To swap frame 0 after the
+- (Old episodes only) Covers live in `video/src/lightning/Covers.tsx` (A/B/C Stills, A re-used as frame 0). To swap frame 0 after the
   final render: render `--frames=0-<hook frame>` muted at the same resolution as the video, concat with the old video from the next frame,
   copy the audio, check the frame count.

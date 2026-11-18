@@ -40,8 +40,8 @@
 
 ## Publishing
 - The first YouTube test upload went out without a thumbnail: YouTube does not use frame 0 on its own. `post.py`
-  now exports frame 0 as `episodes/<slug>/cover.jpg` and sets it for vertical videos when the plan names no
-  thumbnail (the API accepted a 1080x1920 cover for the Short). Long-form needs a designed thumbnail in the plan.
+  sets `episodes/<slug>/cover.jpg` (or the plan's thumbnail) for every upload; frame 0 is only a fallback for old
+  Shorts (the API accepted a 1080x1920 cover for the Short). Since 2026-11-18 covers are separate Stills, not frame 0. Long-form needs a designed thumbnail in the plan.
 
 ## Environment
 - Higgsfield needs `upload.higgsfield.ai` and `*.cloudfront.net` allowed (environment → Edit → Network access).

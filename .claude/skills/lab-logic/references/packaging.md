@@ -41,7 +41,7 @@ Long-form: upload the SRT in YouTube Studio → Subtitles → Upload file → Wi
 ## Platform versions
 | Platform | File | Notes |
 |---|---|---|
-| YouTube Shorts | 1080×1920 (rendered 1080p, 60 fps), ≤ 3 min | cover = frame 0, `#shorts`, title ≤ 60 chars |
+| YouTube Shorts | 1080×1920 (rendered 1080p, 60 fps), ≤ 3 min | cover = separate cover.jpg (uploaded by hand), `#shorts`, title ≤ 60 chars |
 | TikTok | same, no watermark | captions clear of the right-side buttons and bottom text, short hook caption, 3-5 hashtags |
 | Instagram Reels | same | cover image 1080×1920 with grid-safe 3:4 centre, own caption |
 | YouTube long-form | 1920×1080 60 fps | thumbnail, chapters, SRT, pinned comment; publish 1-3 days after the Short and link them |

@@ -59,7 +59,7 @@ def validate(plan):
 
 
 def frame0_cover(video, slug):
-    """Shorts covers are frame 0 by design (brand rule). Export it as a JPEG when the plan names no thumbnail."""
+    """Fallback for old Shorts whose frame 0 was the cover: export it as a JPEG when there is no cover.jpg."""
     import subprocess
     probe = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height',
                             '-of', 'csv=p=0', video], capture_output=True, text=True)
@@ -110,7 +110,10 @@ def do_run(path, now=False):
             # Always upload private so YouTube can finish processing (HD/4K) first: with a time, YouTube publishes it
             # then; without one it stays private until the user publishes it in YouTube Studio.
             vid = youtube.upload(video, it['title'], text_of(it, 'description'), it.get('tags', []), publish_at, privacy='private')
-            thumb = str(ROOT / it['thumbnail']) if it.get('thumbnail') else frame0_cover(video, plan['slug'])
+            # Covers are separate JPEGs (since 2026-11-18 the Short no longer starts with the cover); frame 0 is only a
+            # fallback for old episodes that have neither a thumbnail in the plan nor a cover.jpg.
+            cover = HERE / 'episodes' / plan['slug'] / 'cover.jpg'
+            thumb = str(ROOT / it['thumbnail']) if it.get('thumbnail') else str(cover) if cover.exists() else frame0_cover(video, plan['slug'])
             if thumb:
                 youtube.set_thumbnail(vid, thumb)
             if it.get('captions'):
