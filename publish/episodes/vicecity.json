@@ -1,0 +1,31 @@
+{
+  "slug": "vicecity",
+  "note": "Times are US Eastern. GTA 6 launch-day tie-in (2026-11-19): post as soon as possible. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand. 1080p; cover is a separate JPEG.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/vicecity/vicecity.mp4",
+      "title": "Why Don't We Just Wall Off the Real Vice City?",
+      "description_file": "publish/episodes/vicecity/youtube-description.md",
+      "comment_file": "publish/episodes/vicecity/pinned-comment.md",
+      "thumbnail": "publish/episodes/vicecity/cover.jpg",
+      "tags": [
+        "GTA 6",
+        "GTA 6 Vice City",
+        "real Vice City",
+        "Vice City Miami",
+        "Miami flooding",
+        "sunny day flooding",
+        "Miami sea level rise",
+        "why a seawall won't save Miami",
+        "Miami limestone",
+        "Biscayne Aquifer",
+        "Miami Beach pumps",
+        "sea level rise",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

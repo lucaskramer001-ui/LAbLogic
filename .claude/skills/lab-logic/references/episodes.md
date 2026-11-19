@@ -22,6 +22,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just raise the Titanic? | Short | made 2026-11-16 |
 | Why don't we just let bacteria eat all our plastic? | Short | made 2026-11-17 |
 | Why don't we just plant a trillion trees? | Short | made 2026-11-18 |
+| Why don't we just wall off the real Vice City? (GTA 6 tie-in) | Short | made 2026-11-19 (GTA 6 launch day) |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -239,3 +240,16 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
 - Main characters (after the user's reminder): illustrated tree + Earth from Higgsfield with code faces.
 - Costs: 1,197 ElevenLabs credits (voice); Higgsfield 4.25 (tree draft 1.0 used, tree 2k-high 2.75 failed, Earth
   draft 0.5 used) + zebra 1.0 (happy + worried, 0.5 each) = 5.25; SFX 0.
+
+## Vice City Short - "Why Don't We Just Wall Off the Real Vice City?" (~62 s) - GTA 6 launch-day tie-in
+- Hype hook without game IP: only the names "GTA 6"/"Vice City" used factually, no logos/game art/lookalike font;
+  description says "not affiliated with Rockstar Games or Take-Two". Science = Miami sea level rise.
+- Hook (honest version, scorer 53 - a 60-scoring variant exaggerated, rejected): "You can explore Vice City in GTA 6
+  today. The real one, Miami, already floods on sunny days. So why don't we just wall it off?" 193 words, 69.2 s raw ->
+  60.9 s (atempo 1.04). Composition `Vice`, cover Still `ViceCover` ("REAL VICE CITY / IS FLOODING?!"), code
+  `video/src/vicecity/`. Main characters (Higgsfield 1k medium drafts, 0.5 each): Wave `3187b333-...`
+  (`public/vicecity/wave.png`, code face at (640, 560)), pastel Miami backdrop `89052081-...` (`public/vicecity/miami.jpg`).
+- Facts (search snippets): porous limestone, water under seawalls, sunny-day flooding; Biscayne Aquifer saltwater
+  intrusion (Miami-Dade); SE Florida Compact 2019: +10-17 in by 2040 vs 2000; Miami Beach ~$400M pumps/valves/raised
+  roads (2014), streets raised up to 31 in.
+- Costs: 1,044 ElevenLabs credits (voice); Higgsfield 1.0; SFX 0 (all reused).
