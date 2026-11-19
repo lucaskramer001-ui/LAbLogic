@@ -173,16 +173,17 @@ const Pump: React.FC<{x: number; y: number; s?: number; t: number; on: number}> 
   </g>
 );
 
-// Simple car (bottom centre), splash when moving through water.
-const Car: React.FC<{x: number; y: number; s?: number; color?: string; splash?: number; t?: number}> = ({x, y, s = 1, color = '#F07AA8', splash = 0, t = 0}) => (
-  <g transform={`translate(${x} ${y}) scale(${s})`}>
-    <path d="M -150 -40 L -120 -100 L 60 -100 L 110 -40 L 150 -36 L 150 -10 L -150 -10 Z" fill={color} stroke={C.ink} strokeWidth={6} strokeLinejoin="round" />
-    <path d="M -100 -90 L -80 -55 L 0 -55 L 0 -90 Z M 15 -90 L 15 -55 L 85 -55 L 55 -90 Z" fill="#BFE6F5" stroke={C.ink} strokeWidth={5} />
-    {[-90, 90].map((wx) => <circle key={wx} cx={wx} cy={-10} r={30} fill={C.ink} stroke="#555" strokeWidth={8} />)}
+// Car (Higgsfield sprite public/vicecity/car.png, 800x450, front to the right, wheels at y 444), bottom centre,
+// ~300 px long at s=1. flip = drive to the left. Bounces a little; spray behind the rear wheel when splash > 0.
+const Car: React.FC<{x: number; y: number; s?: number; color?: string; splash?: number; t?: number; flip?: boolean}> = ({x, y, s = 1, splash = 0, t = 0, flip = false}) => (
+  <g transform={`translate(${x} ${y - Math.abs(Math.sin(t * 9)) * 4}) scale(${flip ? -s : s} ${s})`}>
+    <g transform="scale(0.375) translate(-400 -444)">
+      <image href={staticFile('vicecity/car.png')} x={0} y={0} width={800} height={450} />
+    </g>
     {splash > 0 &&
       [0, 1, 2, 3].map((i) => {
         const u = (t * 2 + i / 4) % 1;
-        return <path key={i} d="M 0 0 Q 10 -20 0 -40 Q -10 -20 0 0 Z" transform={`translate(${-170 - u * 120} ${-20 - Math.sin(u * Math.PI) * 90}) rotate(${-40 - u * 30}) scale(${1.4 * splash})`} fill={SEA} stroke={C.ink} strokeWidth={3} />;
+        return <path key={i} d="M 0 0 Q 10 -20 0 -40 Q -10 -20 0 0 Z" transform={`translate(${-150 - u * 120} ${-20 - Math.sin(u * Math.PI) * 90}) rotate(${-40 - u * 30}) scale(${1.4 * splash})`} fill={SEA} stroke={C.ink} strokeWidth={3} />;
       })}
   </g>
 );
@@ -235,7 +236,7 @@ export const ViceCover: React.FC = () => (
     <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
       <Miami />
       <Flood y={1560} level={1.2} t={0.4} />
-      <Car x={560} y={1560} s={1.15} splash={1} t={0.3} />
+      <Car x={555} y={1570} s={1.55} splash={1} t={0.3} />
       <Wave x={900} y={1700} s={1.2} t={0.4} mood="smug" look={{x: -0.8, y: 0.2}} />
       <RedCircle x={560} y={1450} r={210} />
     </svg>
@@ -365,7 +366,7 @@ const SunnyScene: React.FC<{t: number}> = ({t}) => {
       <Layer>
         <Miami />
         <Flood y={1360} level={lerp(0.6, 1.2, ease(t, t0, S.water, (u) => u))} t={t} />
-        <Car x={lerp(-150, 520, ease(t, t0, t0 + 1.4))} y={1400} s={1.2} splash={1} t={t} color="#7DD3C0" />
+        <Car x={lerp(-200, 520, ease(t, t0, t0 + 1.4))} y={1410} s={1.6} splash={1} t={t} />
         {t > nsT - 0.1 && <Stamp x={540} y={600} text="NO STORM!" s={springIn(t, nsT - 0.1, 0.5, 10)} />}
         <Pill x={540} y={300} text="SUNNY DAY FLOODING" s={pop(t, t0 + 0.1)} bg={C.yellow} size={54} />
       </Layer>
@@ -481,7 +482,7 @@ const FinalScene: React.FC<{t: number}> = ({t}) => {
           <g>
             <Sunburst t={t} cx={540} cy={900} />
             <Flood y={1000} level={0.4} t={t} />
-            <Car x={lerp(1250, -250, ease(t, t0 + 0.4, realT, (u) => u))} y={960} s={1.1} splash={1} t={t} color="#F07AA8" />
+            <Car x={lerp(1250, -250, ease(t, t0 + 0.4, realT, (u) => u))} y={970} s={1.45} splash={1} t={t} flip />
             <Pad x={540} y={1250} s={1.6 * springIn(t, t0 + 0.1, 0.6)} />
           </g>
         ) : (

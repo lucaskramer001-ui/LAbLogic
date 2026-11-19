@@ -253,4 +253,5 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   intrusion (Miami-Dade); SE Florida Compact 2019: +10-17 in by 2040 vs 2000; Miami Beach ~$400M pumps/valves/raised
   roads (2014), streets raised up to 31 in.
 - Scientist wears the "hawaii" skin (Hawaiian shirt + aviators), user request; cover uses it too.
-- Costs: 1,044 ElevenLabs credits (voice); Higgsfield 1.0 (wave + backdrop) + 5.0 (5 outfit poses) = 6.0; SFX 0.
+- Car: Higgsfield sprite `public/vicecity/car.png` (job `0ce9bd22-d7a8-449e-a5e1-3623b389b0e0`, 800x450, front right, wheels y 444).
+- Costs: 1,044 ElevenLabs credits (voice); Higgsfield 1.0 (wave + backdrop) + 5.0 (5 outfit poses) + car 0.5 = 6.5; SFX 0.
