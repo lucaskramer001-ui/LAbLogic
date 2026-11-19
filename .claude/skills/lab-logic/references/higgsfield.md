@@ -84,3 +84,14 @@ Non-character cut-outs: trim + resize by hand and measure anchor points (e.g. be
   (1k medium, 0.5 each), sprites `video/public/zebra/{happy,worried}.png` (800x510, same crop, feet y 503). Expression
   swaps = cheap edit of the same image ("keep EXACTLY identical, change ONLY the face"). Code-drawn animals look bad -
   the user wants animals from Higgsfield.
+
+## Scientist outfit variants ("skins", added 2026-11-19)
+- `Sci` and `BigSci` take `skin="hawaii"` (Hawaiian shirt + gold aviator sunglasses, used in the Vice City Short).
+  Sprites `video/public/sci_hawaii/<pose>.png`, metrics `video/src/iceberg/sprites_hawaii.ts`, made with
+  `video/images/vicecity/scripts/prep_hawaii.py` (a copy of prep.py that writes to its own folder - never run the
+  original prep.py for a skin, it overwrites `public/iceberg/sci/` and `sprites.ts`).
+- Poses so far: present, thumbs, think, point, shocked (2k medium edits, 1.0 credit each). Jobs: present
+  `e98d65d6-…`, thumbs `9a4fdb28-…`, think `49d9ef11-…`, point `e665280d-…`, shocked `1b625bab-…`. A pose without a
+  skin sprite falls back to the default outfit.
+- Recipe: upload the default pose PNG (media_upload + PUT with `If-None-Match: *` + media_confirm), then an edit
+  prompt "keep the scientist EXACTLY identical … change ONLY …". New skins: same pattern, new folder + metrics file.

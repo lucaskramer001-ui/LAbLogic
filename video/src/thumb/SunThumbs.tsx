@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {AbsoluteFill, Img, continueRender, delayRender, staticFile} from 'remotion';
 import {BigText, C} from '../iceberg/art';
+import {Skin, skinSprite} from '../iceberg/Sci';
 import {SPRITES} from '../iceberg/sprites';
 import {Arrow, Rocket, SPACE, SPACE_L, Sun, TrashBag} from '../sun/space';
 
@@ -32,8 +33,8 @@ export const Rays: React.FC<{cx: number; cy: number}> = ({cx, cy}) => (
 );
 
 // The scientist, big and close (feet far below the frame), with a thick yellow rim like a sticker.
-export const BigSci: React.FC<{pose: string; x: number; y: number; headR: number; flip?: boolean}> = ({pose, x, y, headR, flip}) => {
-  const sp = SPRITES[pose];
+export const BigSci: React.FC<{pose: string; x: number; y: number; headR: number; flip?: boolean; skin?: Skin}> = ({pose, x, y, headR, flip, skin = 'default'}) => {
+  const {sp, src} = skinSprite(pose, skin);
   const k = headR / sp.headR;
   const w = sp.w * k;
   const h = sp.h * k;
@@ -44,7 +45,7 @@ export const BigSci: React.FC<{pose: string; x: number; y: number; headR: number
   const o = 7;
   const y1 = '#FFD23F';
   const filter = [`${o}px 0`, `-${o}px 0`, `0 ${o}px`, `0 -${o}px`].map((d) => `drop-shadow(${d} 0 ${y1})`).join(' ') + ' drop-shadow(0 0 2px #141414)';
-  return <Img src={staticFile(`iceberg/sci/${pose}.png`)} style={{...style, filter}} />;
+  return <Img src={staticFile(src)} style={{...style, filter}} />;
 };
 
 export const RedCircle: React.FC<{x: number; y: number; r: number}> = ({x, y, r}) => (

@@ -239,7 +239,7 @@ export const ViceCover: React.FC = () => (
       <Wave x={900} y={1700} s={1.2} t={0.4} mood="smug" look={{x: -0.8, y: 0.2}} />
       <RedCircle x={560} y={1450} r={210} />
     </svg>
-    <BigSci pose="shocked" x={150} y={1420} headR={105} />
+    <BigSci skin="hawaii" pose="shocked" x={150} y={1420} headR={105} />
     <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
       <g transform="rotate(-4 540 640)" data-skip="cover headline">
         <BigText x={540} y={530} text="REAL VICE CITY" size={104} />
@@ -308,7 +308,7 @@ const FixScene: React.FC<{t: number}> = ({t}) => {
         <Pill x={540} y={300} text="THE NETHERLANDS: WALLS" s={span(t, t0 + 0.1, buildT)} bg="#FF9F1C" size={50} />
         <Pill x={540} y={300} text="BUILD ONE AROUND MIAMI" s={pop(t, buildT)} bg={C.green} size={50} />
       </Layer>
-      {!nl && <Sci t={t} x={170} y={1330} headR={40} poses={[[0, 'present'], [goneT, 'thumbs'], [rightT, 'think']]} />}
+      {!nl && <Sci skin="hawaii" t={t} x={170} y={1330} headR={40} poses={[[0, 'present'], [goneT, 'thumbs'], [rightT, 'think']]} />}
     </Stage>
   );
 };
@@ -497,7 +497,7 @@ const FinalScene: React.FC<{t: number}> = ({t}) => {
         <Pill x={540} y={300} text="IN THE GAME: JUST DRIVE" s={span(t, t0 + 0.1, realT)} bg={C.paper} size={50} />
         <Pill x={540} y={300} text="IN REAL LIFE..." s={pop(t, realT)} bg={C.yellow} size={56} />
       </Layer>
-      {t > realT && <Sci t={t} x={170} y={1330} headR={42} poses={[[0, 'point']]} />}
+      {t > realT && <Sci skin="hawaii" t={t} x={170} y={1330} headR={42} poses={[[0, 'point']]} />}
     </Stage>
   );
 };

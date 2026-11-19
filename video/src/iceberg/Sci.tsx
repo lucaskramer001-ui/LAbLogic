@@ -1,6 +1,12 @@
 import React from 'react';
 import {Img, staticFile} from 'remotion';
 import {SPRITES} from './sprites';
+import {SPRITES_HAWAII} from './sprites_hawaii';
+
+// Outfit variants: same poses, different sprite folder + measurements (e.g. 'hawaii' = Hawaiian shirt + aviators).
+export type Skin = 'default' | 'hawaii';
+export const skinSprite = (pose: string, skin: Skin = 'default') =>
+  skin === 'hawaii' && SPRITES_HAWAII[pose] ? {sp: SPRITES_HAWAII[pose], src: `sci_hawaii/${pose}.png`} : {sp: SPRITES[pose], src: `iceberg/sci/${pose}.png`};
 import {clamp} from './anim';
 
 export type Pose = 'rope' | 'point' | 'think' | 'thumbs' | 'shocked' | 'nervous' | 'bucket' | 'facepalm' | 'throw' | 'present' | 'calc' | 'hot' | 'dizzy' | 'glass' | 'thirsty' | 'cash';
@@ -17,7 +23,8 @@ export const Sci: React.FC<{
   tremble?: number;
   hop?: number; // extra vertical offset (jumps)
   rot?: number;
-}> = ({t, x, y, headR = 44, poses, flip = false, tremble = 0, hop = 0, rot = 0}) => {
+  skin?: Skin;
+}> = ({t, x, y, headR = 44, poses, flip = false, tremble = 0, hop = 0, rot = 0, skin = 'default'}) => {
   let pose = poses[0][1];
   let swapT = -99;
   for (const [ts, p] of poses) {
@@ -51,7 +58,7 @@ export const Sci: React.FC<{
   }
   // breathing on holds
   sy *= 1 + 0.009 * Math.sin(t * 2 * Math.PI * 0.6);
-  const sp = SPRITES[pose];
+  const {sp, src} = skinSprite(pose, skin);
   const k = headR / sp.headR;
   const tx = tremble * (Math.sin(t * 71) * 1.5 + Math.sin(t * 43) * 1);
   return (
@@ -81,7 +88,7 @@ export const Sci: React.FC<{
         }}
       />
       <Img
-        src={staticFile(`iceberg/sci/${pose}.png`)}
+        src={staticFile(src)}
         style={{position: 'absolute', left: -sp.footX * k, top: -sp.footY * k, width: sp.w * k, height: sp.h * k}}
       />
     </div>
