@@ -25,6 +25,7 @@ import {PlasticHookAfter, HOOK_V2_FRAMES} from './plastic/HookV2';
 import {BugRigSheet} from './kit/BugRig';
 import {TreesShort, TreesCover, DURATION_FRAMES as TREES_FRAMES} from './trees/Main';
 import {ViceShort, ViceCover, DURATION_FRAMES as VICE_FRAMES} from './vicecity/Main';
+import {SaharaShort, SaharaCover, DURATION_FRAMES as SAHARA_FRAMES} from './sahara/Main';
 import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
@@ -70,6 +71,8 @@ export const Root = () => (
     <Still id="TreesCover" component={TreesCover} width={1080} height={1920} />
     <Composition id="Vice" component={ViceShort} durationInFrames={VICE_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="ViceCover" component={ViceCover} width={1080} height={1920} />
+    <Composition id="Sahara" component={SaharaShort} durationInFrames={SAHARA_FRAMES} fps={60} width={1080} height={1920} />
+    <Still id="SaharaCover" component={SaharaCover} width={1080} height={1920} />
     <Still id="BugRigSheet" component={BugRigSheet} width={1080} height={1920} />
     <Composition id="PlasticHookAfter" component={PlasticHookAfter} durationInFrames={HOOK_V2_FRAMES} fps={60} width={1080} height={1920} />
     <Composition id="PlasticHookRig" component={PlasticHookAfter} defaultProps={{V: 2}} durationInFrames={HOOK_V2_FRAMES} fps={60} width={1080} height={1920} />

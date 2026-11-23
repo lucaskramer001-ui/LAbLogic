@@ -1,0 +1,30 @@
+{
+  "slug": "sahara",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand. 1080p; cover is a separate JPEG.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/sahara/sahara.mp4",
+      "title": "Why Don't We Just Cover the Sahara in Solar Panels?",
+      "description_file": "publish/episodes/sahara/youtube-description.md",
+      "comment_file": "publish/episodes/sahara/pinned-comment.md",
+      "thumbnail": "publish/episodes/sahara/cover.jpg",
+      "tags": [
+        "Sahara solar panels",
+        "cover the Sahara in solar panels",
+        "Sahara solar farm",
+        "solar panels Sahara Amazon",
+        "Desertec",
+        "Xlinks Morocco UK",
+        "solar panel dust",
+        "desert solar power",
+        "albedo effect",
+        "renewable energy",
+        "solar energy facts",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

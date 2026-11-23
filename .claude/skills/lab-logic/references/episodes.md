@@ -23,6 +23,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just let bacteria eat all our plastic? | Short | made 2026-11-17 |
 | Why don't we just plant a trillion trees? | Short | made 2026-11-18 |
 | Why don't we just wall off the real Vice City? (GTA 6 tie-in) | Short | made 2026-11-19 (GTA 6 launch day) |
+| Why don't we just cover the Sahara in solar panels? | Short | made 2026-11-23 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -255,3 +256,17 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
 - Scientist wears the "hawaii" skin (Hawaiian shirt + aviators), user request; cover uses it too.
 - Car: Higgsfield sprite `public/vicecity/car.png` (job `0ce9bd22-d7a8-449e-a5e1-3623b389b0e0`, 800x450, front right, wheels y 444).
 - Costs: 1,044 ElevenLabs credits (voice); Higgsfield 1.0 (wave + backdrop) + 5.0 (5 outfit poses) + car 0.5 = 6.5; SFX 0.
+
+## Sahara Short - "Why Don't We Just Cover the Sahara in Solar Panels?" (~66 s)
+- Hook (scorer 67, honest wording "could lose rain"): "You could cover twenty percent of the Sahara in solar panels,
+  and the Amazon could lose rain. So why don't we just do it anyway?" 210 words, 79.8 s raw -> 64.9 s (atempo 1.1).
+  Composition `Sahara`, cover Still `SaharaCover` ("SAHARA SOLAR / DRIES THE AMAZON?!"), code `video/src/sahara/`.
+  Frame 0 lesson: start pop-in animations before t=0 (t0 negative) so frame 0 is never an empty background.
+- Main characters (Higgsfield 1k medium, 0.5 each): solar Panel `b6823df4-…` (`public/sahara/panel.png`, face at
+  (350, 300)), desert backdrop `43b08c46-…` (has its own sun top right - don't add a code sun), Camel `daf81633-…`.
+  Reused tree + Earth sprites from the trees episode.
+- Facts (search snippets): Lu et al. 2021 GRL (20% -> desert +1.5 C, global +0.16 C, rain belt north, Amazon drier;
+  Li et al. 2018 Science finds more Sahel rain - mentioned in the description); Desertec collapse 2013; Xlinks rejected
+  by UK June 2025 (~4,000 km, 3.6 GW); MIT: dust up to 30% loss in a month, cleaning water. The "1% of the Sahara could
+  power the world" figure was NOT verified - not used.
+- Costs: 1,158 ElevenLabs credits (voice); Higgsfield 1.5; SFX 0.
