@@ -44,6 +44,7 @@ References for poses: the hero job + the avatar media. Prompt = framing + expres
 | calc | holding a calculator, long receipt piling up at his feet |
 | hot | red cheeks, sweat, fanning himself |
 | dizzy | spiral glasses, bump on head, tongue out, hand on bump (from old woodpecker thumbnail) |
+| shrug | facing viewer, shoulders up, both palms up, eyebrow raised, puzzled "huh?" - the "asking" pose (job `7d9aa304-13b2-4a41-ad06-59cf133e9c4b`, 2k medium, 2026-11-24) |
 
 ## Objects
 Most objects are drawn in code (better control and a perfect match with the ink-outline style). Use Higgsfield
@@ -105,3 +106,6 @@ Non-character cut-outs: trim + resize by hand and measure anchor points (e.g. be
   fix one part with a cheap edit of the parts sheet ("redraw ONLY the head piece … REMOVE … ADD …", 1k medium 0.5)
   and match its scale to the old part by the size of its main colour area.
 - Always render the rig test Still (`MammothRigTest`) and zoom into every joint before the full render.
+
+- Adding ONE new default pose: `python3 video/scripts/prep_add_pose.py <pose> <raw.png>` (merges into sprites.ts; the
+  old prep.py rewrites the whole file and would drop all other poses), then add the name to `Pose` in Sci.tsx.

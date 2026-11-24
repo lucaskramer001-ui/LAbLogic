@@ -264,7 +264,7 @@ export const MammothCover: React.FC = () => (
       <RedCircle x={840} y={960} r={150} />
       <Snow t={1.2} n={30} />
     </svg>
-    <BigSci pose="shocked" x={150} y={1400} headR={105} />
+    <BigSci pose="shrug" x={210} y={1380} headR={100} />
     <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
       <g transform="rotate(-4 540 640)" data-skip="cover headline">
         <BigText x={540} y={530} text="WHERE'S MY" size={120} />

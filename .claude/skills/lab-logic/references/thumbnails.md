@@ -72,3 +72,8 @@ EVERY DAY?!" (nervous, price tags $1 -> $128).
 - (Old episodes only) Covers live in `video/src/lightning/Covers.tsx` (A/B/C Stills, A re-used as frame 0). To swap frame 0 after the
   final render: render `--frames=0-<hook frame>` muted at the same resolution as the video, concat with the old video from the next frame,
   copy the audio, check the frame count.
+
+## Vary the scientist's pose on covers (user feedback 2026-11-24)
+- "shocked" was used on almost every cover - the user noticed the repetition. Match the pose to the headline:
+  question headlines ("WHERE'S MY…?!", "…?!") -> `shrug`; warnings -> `nervous`/`facepalm`; "it works!" -> `thumbs`;
+  explaining -> `point`/`present`; only real shock -> `shocked`. Don't reuse the previous episode's cover pose.

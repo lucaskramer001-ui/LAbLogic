@@ -9,7 +9,7 @@ export const skinSprite = (pose: string, skin: Skin = 'default') =>
   skin === 'hawaii' && SPRITES_HAWAII[pose] ? {sp: SPRITES_HAWAII[pose], src: `sci_hawaii/${pose}.png`} : {sp: SPRITES[pose], src: `iceberg/sci/${pose}.png`};
 import {clamp} from './anim';
 
-export type Pose = 'rope' | 'point' | 'think' | 'thumbs' | 'shocked' | 'nervous' | 'bucket' | 'facepalm' | 'throw' | 'present' | 'calc' | 'hot' | 'dizzy' | 'glass' | 'thirsty' | 'cash';
+export type Pose = 'rope' | 'point' | 'think' | 'thumbs' | 'shocked' | 'nervous' | 'bucket' | 'facepalm' | 'throw' | 'present' | 'calc' | 'hot' | 'dizzy' | 'glass' | 'thirsty' | 'cash' | 'shrug';
 
 // The scientist: a cut-out picture per pose. Swaps happen on the narrowest frame of a quick squash
 // (never a cross-fade). x/y = feet in scene coordinates; headR = on-screen head radius.
