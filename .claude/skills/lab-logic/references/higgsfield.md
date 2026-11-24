@@ -95,3 +95,13 @@ Non-character cut-outs: trim + resize by hand and measure anchor points (e.g. be
   skin sprite falls back to the default outfit.
 - Recipe: upload the default pose PNG (media_upload + PUT with `If-None-Match: *` + media_confirm), then an edit
   prompt "keep the scientist EXACTLY identical … change ONLY …". New skins: same pattern, new folder + metrics file.
+
+## Parts-sheet rigs - checklist (user feedback on the mammoth Short, 2026-11-24)
+- Tails: check which way the part curves; a tail must curve AWAY from the body (mirror with sx: -1 around its base)
+  and its base must sit inside the fur/skin outline (draw it behind the body).
+- Legs: draw all legs that join the underside BEHIND the body so their tops disappear; a leg drawn in front shows a
+  hard top edge and looks unattached.
+- Faces: check species details before animating (elephants get tusks; no stray smiling mouths on animal faces) -
+  fix one part with a cheap edit of the parts sheet ("redraw ONLY the head piece … REMOVE … ADD …", 1k medium 0.5)
+  and match its scale to the old part by the size of its main colour area.
+- Always render the rig test Still (`MammothRigTest`) and zoom into every joint before the full render.

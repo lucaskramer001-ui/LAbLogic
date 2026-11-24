@@ -86,7 +86,7 @@ export const Mammoth: React.FC<{x: number; y: number; s?: number; t: number; wal
   const parts: Part[] = [
     {src: 'm6', w: 144, h: 256, x: 330, y: 250, px: 72, py: 30, rot: -legA},
     {src: 'm4', w: 147, h: 258, x: 60, y: 252, px: 73, py: 30, rot: legA},
-    {src: 'm7', w: 131, h: 215, x: 440, y: 110 - bob, px: 12, py: 12, rot: tail},
+    {src: 'm7', w: 131, h: 215, x: 430, y: 120 - bob, px: 14, py: 14, rot: tail},
     {src: 'm2', w: 470, h: 372, x: 0, y: -bob, px: 235, py: 186},
     {src: 'm5', w: 140, h: 258, x: 270, y: 262, px: 70, py: 30, rot: legA * 0.9},
     {src: 'm3', w: 152, h: 260, x: 0, y: 264, px: 76, py: 30, rot: -legA * 0.9},
@@ -112,14 +112,14 @@ export const Elephant: React.FC<{x: number; y: number; s?: number; t: number; wa
   const trunk = Math.sin(t * 2.1) * 8 + sad * 12;
   const tail = Math.sin(t * 4.5 + 1) * 14;
   const parts: Part[] = [
-    {src: 'e5', w: 142, h: 247, x: 20, y: 215, px: 71, py: 30, rot: legA},
-    {src: 'e7', w: 124, h: 247, x: 230, y: 215, px: 62, py: 30, rot: -legA},
-    {src: 'e4', w: 100, h: 236, x: -40, y: 95 - bob, px: 85, py: 12, rot: tail},
+    {src: 'e5', w: 142, h: 247, x: 30, y: 200, px: 71, py: 30, rot: legA},
+    {src: 'e7', w: 124, h: 247, x: 215, y: 200, px: 62, py: 30, rot: -legA},
+    {src: 'e6', w: 135, h: 246, x: 95, y: 210, px: 67, py: 30, rot: -legA * 0.9},
+    {src: 'e8', w: 132, h: 250, x: 265, y: 207, px: 66, py: 30, rot: legA * 0.9},
+    {src: 'e4', w: 100, h: 236, x: 4, y: 105 - bob, px: 14, py: 12, rot: -tail, sx: -1},
     {src: 'e0', w: 379, h: 309, x: 0, y: -bob, px: 190, py: 155},
-    {src: 'e6', w: 135, h: 246, x: 80, y: 225, px: 67, py: 30, rot: -legA * 0.9},
-    {src: 'e8', w: 132, h: 250, x: 290, y: 222, px: 66, py: 30, rot: legA * 0.9},
     {src: 'e3', w: 169, h: 235, x: 470, y: 150 - bob, px: 30, py: 15, rot: trunk + head},
-    {src: 'e1', w: 259, h: 271, x: 290, y: -50 - bob, px: 60, py: 200, rot: head},
+    {src: 'e1t', w: 250, h: 260, x: 293, y: -47 - bob, px: 57, py: 197, rot: head},
     {src: 'e2', w: 158, h: 202, x: 262, y: 20 - bob, px: 150, py: 60, rot: head, sx: ear},
   ];
   return (
