@@ -1,0 +1,30 @@
+{
+  "slug": "mammoth",
+  "note": "Times are US Eastern. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand. 1080p; cover is a separate JPEG.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/mammoth/mammoth.mp4",
+      "title": "Why Don't We Just Bring Back the Woolly Mammoth?",
+      "description_file": "publish/episodes/mammoth/youtube-description.md",
+      "comment_file": "publish/episodes/mammoth/pinned-comment.md",
+      "thumbnail": "publish/episodes/mammoth/cover.jpg",
+      "tags": [
+        "woolly mammoth",
+        "bring back the woolly mammoth",
+        "mammoth de-extinction",
+        "de-extinction",
+        "Colossal Biosciences",
+        "mammoth 2028",
+        "dire wolf",
+        "woolly mouse",
+        "Asian elephant",
+        "Pleistocene Park",
+        "permafrost",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

@@ -24,6 +24,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just plant a trillion trees? | Short | made 2026-11-18 |
 | Why don't we just wall off the real Vice City? (GTA 6 tie-in) | Short | made 2026-11-19 (GTA 6 launch day) |
 | Why don't we just cover the Sahara in solar panels? | Short | made 2026-11-23 |
+| Why don't we just bring back the woolly mammoth? | Short | made 2026-11-24 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -270,3 +271,18 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   by UK June 2025 (~4,000 km, 3.6 GW); MIT: dust up to 30% loss in a month, cleaning water. The "1% of the Sahara could
   power the world" figure was NOT verified - not used.
 - Costs: 1,158 ElevenLabs credits (voice); Higgsfield 1.5; SFX 0.
+
+## Mammoth Short - "Why Don't We Just Bring Back the Woolly Mammoth?" (~65 s) - first "parts rig" episode
+- Hook (scorer 53, short beats long for the 2-s window): "You were promised a woolly mammoth by twenty twenty-eight.
+  So why don't we just bring it back already?" 201 words, 76 s raw -> 63.5 s (atempo 1.1). Composition `Mammoth`,
+  cover Still `MammothCover` ("WHERE'S MY / MAMMOTH?!"), code `video/src/mammoth/`.
+- New method (0 video credits): Higgsfield "parts sheets" (exploded cut-out puppet) for mammoth `9c03a434-…` and
+  elephant `45b230ee-…`, split with OpenCV connected components into `public/mammoth/parts/m0-m7, e0-e8`, assembled
+  as rigs (`Mammoth`, `Elephant` in Main.tsx: walk cycle, trunk swing, ear flap, tail wag, head nod). Backgrounds as
+  3 parallax layers (sky `c28cb40d-…`, mountains `32e736d1-…`, ground `95d39129-…`) with a wavy aurora (sky drawn in
+  24 swaying strips - makes rendering ~2x slower) and drifting snow. Wolf `e015083f-…` as a single sprite.
+  Rig test sheet: Still `MammothRigTest`. Tile scrolling layers (2 copies) so panning never shows an edge.
+- Facts (search snippets): Colossal 2028 target -> early 2030s (TIME interview, Sept 2026), 65 -> >150 genes; elephant
+  gestation ~22 months; Asian elephant endangered (IUCN, general knowledge); dire wolves 2025 = 20 edits in 14 genes
+  in gray wolf cells, disputed; Pleistocene Park 2022 pilot study (grazing -> more stable ground temperatures).
+- Costs: 1,160 ElevenLabs credits (voice); Higgsfield 3.0 (6 images x 0.5); SFX 0.
