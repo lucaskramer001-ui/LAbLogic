@@ -26,6 +26,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just cover the Sahara in solar panels? | Short | made 2026-11-23 |
 | Why don't we just bring back the woolly mammoth? | Short | made 2026-11-24 |
 | Why don't we just catch up with Voyager 1? (one light-day, 2026-11-18) | Short | made 2026-11-25 |
+| What was normal when Voyager 1 left Earth? (1977, companion Short) | Short | made 2026-11-25 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -300,3 +301,18 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   New Horizons launched faster but is slower now (gravity assists); RTG ~4 W/yr loss, 7 of 10 instruments off per
   probe, LECP off April 2026. "3x faster in 20 years" = own calculation (25.9e9 km + 17 km/s x 20 yr = ~58 km/s).
 - Costs: 1,103 ElevenLabs credits (voice); Higgsfield 1.5; SFX 0.
+
+## 1977 Short - "What Was Normal When Voyager 1 Left Earth?" (~62 s) - first episode with REAL photos
+- User approved the fact list first (dropped: fuel price, Pluto; added: Golden Record, Shuttle Enterprise 1977).
+  Saturn's moon count was dropped for length. Hook (scorer ~70): "You've never lived in a world without the web.
+  Voyager 1 did." ("internet" would be wrong - ARPANET existed). Composition `Y1977`, cover `Y1977Cover`
+  ("1977: NO WEB, NO MOBILES", pose `shocked`), code `video/src/y1977/`.
+- Real photos as Polaroid cards (`Photo` component: white frame, ink outline, hard shadow, tilt, slow zoom, credit
+  line, small yellow label INSIDE the picture top-left - labels outside the card collided with captions/stamps).
+  Sources: NASA image library (public domain; host images-api.nasa.gov + images-assets.nasa.gov, use https URLs)
+  and Wikimedia Commons (commons.wikimedia.org API + upload.wikimedia.org files; heavy rate limiting - batch
+  `titles=` in one imageinfo call, send a User-Agent, wait 20-30 s between calls; rewrite thumb.wikimedia.org
+  URLs to upload.wikimedia.org). Credit CC BY-SA photos on the card and in the description. Hosts were added to
+  the environment's network allowlist on 2026-11-25.
+- Mixed with cartoon style: Higgsfield rotary wall phone + retro TV (one sheet, 0.5), Voyager sprite reused, scientist.
+- Costs: 1,050 ElevenLabs credits (voice); Higgsfield 0.5; photos free; SFX 0.

@@ -28,6 +28,7 @@ import {ViceShort, ViceCover, DURATION_FRAMES as VICE_FRAMES} from './vicecity/M
 import {SaharaShort, SaharaCover, DURATION_FRAMES as SAHARA_FRAMES} from './sahara/Main';
 import {MammothRigTest, MammothShort, MammothCover, DURATION_FRAMES as MAMMOTH_FRAMES} from './mammoth/Main';
 import {VoyagerShort, VoyagerCover, DURATION_FRAMES as VOYAGER_FRAMES} from './voyager/Main';
+import {Y1977Short, Y1977Cover, DURATION_FRAMES as Y1977_FRAMES} from './y1977/Main';
 import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
@@ -79,6 +80,8 @@ export const Root = () => (
     <Still id="MammothCover" component={MammothCover} width={1080} height={1920} />
     <Composition id="Voyager" component={VoyagerShort} durationInFrames={VOYAGER_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="VoyagerCover" component={VoyagerCover} width={1080} height={1920} />
+    <Composition id="Y1977" component={Y1977Short} durationInFrames={Y1977_FRAMES} fps={60} width={1080} height={1920} />
+    <Still id="Y1977Cover" component={Y1977Cover} width={1080} height={1920} />
     <Still id="MammothRigTest" component={MammothRigTest} width={1080} height={1920} />
     <Still id="BugRigSheet" component={BugRigSheet} width={1080} height={1920} />
     <Composition id="PlasticHookAfter" component={PlasticHookAfter} durationInFrames={HOOK_V2_FRAMES} fps={60} width={1080} height={1920} />
