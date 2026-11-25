@@ -214,24 +214,26 @@ const S = {
   end: VO_END + 0.3,
 };
 
-// Separate cover (Still "Y1977Cover"): photo collage + "1977: NO WEB / NO PHONES?!"
+// Separate cover (Still "Y1977Cover"): built around the Voyager launch - launch photo as the hero, cartoon Voyager
+// flying out of it, "WHEN VOYAGER LAUNCHED / IT WAS 1977" + small 1977 items (cassette, rotary phone).
 export const Y1977Cover: React.FC = () => (
   <AbsoluteFill style={{backgroundColor: RETRO}}>
     <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
       <Retro t={0} />
-      <Photo src="apple2" iw={1000} ih={512} x={330} y={1060} w={520} t={10} t0={0} rot={-8} />
-      <Photo src="cassette" iw={1000} ih={688} x={780} y={1180} w={440} t={10} t0={0} rot={7} />
-      <Photo src="launch" iw={889} ih={900} x={640} y={1530} w={440} t={10} t0={0} rot={-4} />
-      <WallPhone x={230} y={1520} s={0.75} t={0} />
+      <Photo src="launch" iw={889} ih={900} x={590} y={1300} w={680} t={10} t0={0} rot={-4} label="SEPT 5, 1977" />
+      <Photo src="cassette" iw={1000} ih={688} x={850} y={1720} w={300} t={10} t0={0} rot={9} />
+      <Voyager x={850} y={1000} s={0.9} t={0.4} mood="happy" rot={12} />
+      <RedCircle x={850} y={990} r={185} />
     </svg>
-    <BigSci pose="shocked" x={150} y={1500} headR={92} />
+    <BigSci pose="shocked" x={160} y={1420} headR={90} />
     <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
       <g transform="rotate(-4 540 640)" data-skip="cover headline">
-        <BigText x={540} y={540} text="1977:" size={150} fill={C.yellow} />
-        <BigText x={540} y={720} text="NO WEB, NO MOBILES" size={84} />
+        <BigText x={470} y={500} text="WHEN VOYAGER" size={92} />
+        <BigText x={470} y={610} text="LAUNCHED..." size={92} />
+        <BigText x={500} y={760} text="NO WEB! NO MOBILES!" size={70} fill={C.yellow} />
       </g>
     </svg>
-    <Img src={staticFile('iceberg/wordmark.png')} style={{position: 'absolute', left: 540 - 210, top: 280, width: 420}} />
+    <Img src={staticFile('iceberg/wordmark.png')} style={{position: 'absolute', left: 540 - 210, top: 270, width: 420}} />
   </AbsoluteFill>
 );
 
