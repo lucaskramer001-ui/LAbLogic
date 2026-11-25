@@ -1470,7 +1470,7 @@ export const VoyagerLong: React.FC = () => {
         <Audio src={staticFile('voyagerlong/vo/vo.wav')} />
       </Sequence>
       <Sequence from={Math.round(VO_OFFSET * FPS)} layout="none">
-        <Audio src={staticFile('voyagerlong/music/music.wav')} />
+        <Audio src={staticFile('voyagerlong/music/music.mp3')} />
       </Sequence>
       {SFX.map((c, i) => (
         <Sequence key={i} from={Math.max(0, Math.round(c.at * FPS))} durationInFrames={c.len ? Math.max(1, Math.round(c.len * FPS)) : undefined} layout="none">
