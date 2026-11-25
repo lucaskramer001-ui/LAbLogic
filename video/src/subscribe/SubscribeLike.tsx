@@ -154,10 +154,12 @@ const PLACEMENT: Record<Layout, {s: number; cx: number; cy: number}> = {
 };
 
 // Channels that use this overlay
-type Brand = 'msk' | 'sticks';
-const BRANDS: Record<Brand, {name: string; logo: string}> = {
+type Brand = 'msk' | 'sticks' | 'mskpro';
+const BRANDS: Record<Brand, {name: string; logo: string; handle?: string}> = {
   msk: {name: 'Music Store', logo: 'subscribe/msk-logo.png'},
   sticks: {name: 'Sticks & Tricks', logo: 'subscribe/sticks-logo.png'},
+  // Instagram account music_store_professional: the handle replaces the call-to-action line
+  mskpro: {name: 'Music Store', logo: 'subscribe/msk-logo.png', handle: '@music_store_professional'},
 };
 
 export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; layout?: Layout; brand?: Brand}> = ({
@@ -333,7 +335,7 @@ export const SubscribeLike: React.FC<{bg?: 'transparent' | 'green' | 'preview'; 
             {B.name}
           </div>
           <div style={{fontFamily: FONT, fontWeight: 600, fontSize: 19, color: '#6B6B6B', marginTop: 6}}>
-            {txt.line}
+            {B.handle ?? txt.line}
           </div>
         </div>
 
