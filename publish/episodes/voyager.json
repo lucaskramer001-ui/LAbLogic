@@ -1,0 +1,30 @@
+{
+  "slug": "voyager",
+  "note": "Times are US Eastern. Topical (Voyager 1 one light-day, 2026-11-18): post soon. YouTube uploads private and is published by YouTube at publish_at_et. Instagram and TikTok: upload by hand. 1080p; cover is a separate JPEG.",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/voyager/voyager.mp4",
+      "title": "Why Don't We Just Catch Up With Voyager 1?",
+      "description_file": "publish/episodes/voyager/youtube-description.md",
+      "comment_file": "publish/episodes/voyager/pinned-comment.md",
+      "thumbnail": "publish/episodes/voyager/cover.jpg",
+      "tags": [
+        "Voyager 1",
+        "Voyager 1 one light day",
+        "Voyager 1 light day",
+        "Voyager 1 2026",
+        "how far is Voyager 1",
+        "can we catch Voyager 1",
+        "gravity assist",
+        "New Horizons",
+        "interstellar space",
+        "NASA Voyager",
+        "light-day",
+        "why don't we just",
+        "Lab Logic",
+        "science shorts"
+      ]
+    }
+  ]
+}

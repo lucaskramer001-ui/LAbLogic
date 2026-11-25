@@ -27,6 +27,7 @@ import {TreesShort, TreesCover, DURATION_FRAMES as TREES_FRAMES} from './trees/M
 import {ViceShort, ViceCover, DURATION_FRAMES as VICE_FRAMES} from './vicecity/Main';
 import {SaharaShort, SaharaCover, DURATION_FRAMES as SAHARA_FRAMES} from './sahara/Main';
 import {MammothRigTest, MammothShort, MammothCover, DURATION_FRAMES as MAMMOTH_FRAMES} from './mammoth/Main';
+import {VoyagerShort, VoyagerCover, DURATION_FRAMES as VOYAGER_FRAMES} from './voyager/Main';
 import {BlackBoxLong, DURATION_FRAMES as BBL_FRAMES} from './blackboxlong/Main';
 
 export const Root = () => (
@@ -76,6 +77,8 @@ export const Root = () => (
     <Still id="SaharaCover" component={SaharaCover} width={1080} height={1920} />
     <Composition id="Mammoth" component={MammothShort} durationInFrames={MAMMOTH_FRAMES} fps={60} width={1080} height={1920} />
     <Still id="MammothCover" component={MammothCover} width={1080} height={1920} />
+    <Composition id="Voyager" component={VoyagerShort} durationInFrames={VOYAGER_FRAMES} fps={60} width={1080} height={1920} />
+    <Still id="VoyagerCover" component={VoyagerCover} width={1080} height={1920} />
     <Still id="MammothRigTest" component={MammothRigTest} width={1080} height={1920} />
     <Still id="BugRigSheet" component={BugRigSheet} width={1080} height={1920} />
     <Composition id="PlasticHookAfter" component={PlasticHookAfter} durationInFrames={HOOK_V2_FRAMES} fps={60} width={1080} height={1920} />

@@ -25,6 +25,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just wall off the real Vice City? (GTA 6 tie-in) | Short | made 2026-11-19 (GTA 6 launch day) |
 | Why don't we just cover the Sahara in solar panels? | Short | made 2026-11-23 |
 | Why don't we just bring back the woolly mammoth? | Short | made 2026-11-24 |
+| Why don't we just catch up with Voyager 1? (one light-day, 2026-11-18) | Short | made 2026-11-25 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
 - 228 words, 68.6 s after pause trim + atempo 1.1, Tim Riley. Render `video/out/iceberg-lablogic-4K.mp4`
@@ -286,3 +287,16 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   gestation ~22 months; Asian elephant endangered (IUCN, general knowledge); dire wolves 2025 = 20 edits in 14 genes
   in gray wolf cells, disputed; Pleistocene Park 2022 pilot study (grazing -> more stable ground temperatures).
 - Costs: 1,160 ElevenLabs credits (voice); Higgsfield 3.0 (6 images x 0.5); SFX 0.
+
+## Voyager Short - "Why Don't We Just Catch Up With Voyager 1?" (~65 s) - topical (one light-day, 2026-11-18)
+- Hook (scorer 56; a 69-scoring "you could never call it again" variant was rejected as overstated): "You'd wait two
+  days for Voyager 1 to answer a single hello. It's now one light-day away. So why don't we just catch up with it?"
+  190 words, 75.8 s raw -> 64.0 s (atempo 1.04 - script was short). Composition `Voyager`, cover Still `VoyagerCover`
+  ("1 FULL DAY / TO SAY HELLO?!", pose `think` - the mammoth cover used `shrug`), code `video/src/voyager/`.
+- Higgsfield 1k medium drafts (0.5 each): Voyager `ab5693e8-…` (`public/voyager/voyager.png`, code face on the dish at
+  (425, 250)), space backdrop `3639de74-…`, sprite sheet `7d00398b-…` -> jupiter/saturn/newhorizons PNGs (OpenCV split).
+  Reused Earth sprite. Code: parallax star layers, travelling signal pulse, slingshot path, battery + instrument lights.
+- Facts: NASA release - one light-day on Nov 18, 2026, 10:16 UTC, ~16.1 bn mi / 25.9 bn km / 173.14 AU; ~17 km/s;
+  New Horizons launched faster but is slower now (gravity assists); RTG ~4 W/yr loss, 7 of 10 instruments off per
+  probe, LECP off April 2026. "3x faster in 20 years" = own calculation (25.9e9 km + 17 km/s x 20 yr = ~58 km/s).
+- Costs: 1,103 ElevenLabs credits (voice); Higgsfield 1.5; SFX 0.
