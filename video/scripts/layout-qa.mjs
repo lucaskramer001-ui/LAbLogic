@@ -17,6 +17,7 @@ await renderMedia({
   inputProps,
   codec: 'gif',
   everyNthFrame: Number(nth),
+  ...(process.env.FROM ? {frameRange: [Number(process.env.FROM), Number(process.env.TO)]} : {}),
   scale: 0.2,
   outputLocation: 'out/qa/probe.gif',
   browserExecutable: BROWSER,

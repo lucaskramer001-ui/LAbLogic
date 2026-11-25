@@ -1,0 +1,35 @@
+Next came Saturn, in November nineteen eighty. Here, Voyager 1 faced a choice. Saturn's biggest moon, Titan, has a thick atmosphere, and scientists badly wanted a close look. But flying past Titan would bend Voyager 1's path up and out of the plane of the planets. No Uranus. No Neptune.
+
+They chose Titan. Voyager 1's tour of the planets ended right there.
+
+So the grand tour fell to Voyager 2. It reached Uranus in January nineteen eighty-six, and Neptune in August nineteen eighty-nine. At Neptune, it measured the strongest winds in the solar system, and on its moon Triton, it caught dark plumes shooting up from the ice, like geysers. It is still the only spacecraft that has ever visited either of these planets. Every close-up picture of those two worlds comes from a few days of Voyager 2 flying past.
+
+By nineteen ninety, Voyager 1 was about six billion kilometers from the Sun. Carl Sagan pushed for one last picture: turn the camera around, and photograph home.
+
+On February fourteenth, nineteen ninety, it did. In that picture, Earth is smaller than a single pixel. A pale blue dot, caught in a beam of scattered sunlight.
+
+Thirty-four minutes later, Voyager 1's cameras were switched off for good, to save power for the long road ahead.
+
+The Sun blows a constant wind of charged particles. That wind carves out a huge bubble around the planets, called the heliosphere. Where the bubble ends, interstellar space begins.
+
+In August twenty-twelve, Voyager 1 crossed that edge. But nobody could say so for sure. The instrument built to measure the solar wind directly had stopped working back in nineteen eighty. It took more than a year, and a burst of activity from the Sun that made the gas around Voyager ring like a bell, before scientists were confident. Voyager 1 was in interstellar space. Voyager 2 followed in November twenty-eighteen. They are the only working spacecraft that have ever measured interstellar space directly. Out there, there is no map. Voyager is drawing it.
+
+Fixing a spacecraft you can never touch is hard. Fixing one that is almost a full day of light travel away is something else.
+
+In July twenty twenty-three, a wrong command tilted Voyager 2's antenna two degrees away from Earth. Two degrees, and it went silent. The giant dish in Canberra, Australia, sent its strongest signal, an interstellar shout, telling the spacecraft to turn back. The message took about eighteen and a half hours to arrive. Voyager 2 turned home.
+
+A few months later, Voyager 1 started sending gibberish. One memory chip in its computer had failed. Nobody can replace a chip twenty-four billion kilometers away. So the team moved the code around the dead chip, piece by piece, because no single free spot was big enough to hold it. In April twenty twenty-four, Voyager 1 started making sense again.
+
+And in twenty twenty-five, engineers brought back a set of thrusters that had been considered dead since two thousand four. They gambled, switched them on, and it worked.
+
+Every one of those repairs went the same way. Send a command, then wait almost two days to find out if it worked.
+
+So, why don't we just switch it off?
+
+Each Voyager loses about four watts of power every year. To keep them going, the team turns things off one by one: heaters first, then instruments. On Voyager 1, an instrument that had been running since nineteen seventy-seven was switched off in April twenty twenty-six.
+
+But the two Voyagers are still the only spacecraft taking measurements in interstellar space. Every extra year is data that nobody else can collect, and a new probe would need decades just to get there. So nobody is switching it off. The team keeps it alive for as long as the power lasts.
+
+One day, the power will run out, and Voyager will go quiet on its own. But it won't stop. In about forty thousand years, Voyager 1 will pass less than two light-years from a star called Gliese four four five.
+
+Nobody will be listening by then. But it will still be carrying our music, our pictures, and our hello.

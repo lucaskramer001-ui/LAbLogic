@@ -59,3 +59,12 @@
 - Check every person's role before the voice-over: "a test pilot" was wrong for John Paul Stapp (a flight surgeon).
 - Fixing one sentence after the voice is made: regenerate that sentence plus the one before it, transcribe it,
   splice it into take1 at word boundaries, match loudness, then rerun voice.py (see video/public/blackbox/vo).
+
+## Long-form story video (Voyager, 2026-11-25)
+- `ph()` takes the FIRST match: a short cue like "today" matched "call Voyager 1 today" in the hook (scene showed 2 s
+  early). Use 2-3 word cues and run the order check (all cue times must increase) before rendering stills.
+- Labels inside a `data-obj` group (photo cards, gauges, switches, character tags) are reported as "ON <obj>" by the
+  layout check - keep `data-obj` only on the drawing itself and put tags/labels outside it.
+- Slam-in titles (scale 1.3 -> 1) overshoot into the corner HUDs for a frame; use 1.12 and keep titles at y >= 200
+  when a HUD sits in the top corners.
+- Thumbnail numbers must sit on the thing they describe ("69 KB" on a phone read as the phone's memory).

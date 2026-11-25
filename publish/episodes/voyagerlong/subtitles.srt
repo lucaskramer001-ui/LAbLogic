@@ -1,0 +1,769 @@
+1
+00:00:00,400 --> 00:00:05,240
+You could call Voyager 1 today, but your
+hello would take a full day to
+
+2
+00:00:05,260 --> 00:00:06,100
+arrive.
+
+3
+00:00:06,120 --> 00:00:09,820
+And in nineteen seventy-seven, it
+almost never left Earth.
+
+4
+00:00:09,920 --> 00:00:12,300
+Today it's forty-nine years old.
+
+5
+00:00:12,320 --> 00:00:15,180
+It's running on less than half of
+its original power,
+
+6
+00:00:15,200 --> 00:00:18,360
+and it has two working science
+instruments left.
+
+7
+00:00:18,380 --> 00:00:20,720
+So why don't we just switch it off?
+
+8
+00:00:20,820 --> 00:00:23,240
+To answer that, you need the whole story.
+
+9
+00:00:23,260 --> 00:00:26,040
+And it starts with planets lining up.
+
+10
+00:00:26,060 --> 00:00:30,840
+In the mid nineteen-sixties, a young engineer at
+NASA's Jet Propulsion Laboratory,
+
+11
+00:00:30,860 --> 00:00:34,600
+Gary Flandro, was working out routes
+to the outer planets.
+
+12
+00:00:34,620 --> 00:00:36,440
+He noticed something rare.
+
+13
+00:00:36,460 --> 00:00:39,680
+In the late nineteen-seventies,
+Jupiter, Saturn,
+
+14
+00:00:39,700 --> 00:00:43,920
+Uranus and Neptune would all sit on
+the same side of the Sun,
+
+15
+00:00:43,940 --> 00:00:45,930
+lined up like stepping stones.
+
+16
+00:00:46,020 --> 00:00:49,840
+That only happens about once every
+hundred and seventy-five years.
+
+17
+00:00:49,920 --> 00:00:50,950
+Why does that matter?
+
+18
+00:00:51,200 --> 00:00:53,990
+Because a planet can throw a spacecraft.
+
+19
+00:00:54,080 --> 00:00:58,460
+Fly close behind Jupiter as it moves, and
+its gravity pulls you along and
+
+20
+00:00:58,480 --> 00:01:02,300
+flings you out faster, like a skateboarder
+grabbing the back of a passing
+
+21
+00:01:02,320 --> 00:01:03,030
+bus.
+
+22
+00:01:03,120 --> 00:01:07,790
+Planet after planet, each one hands the
+spacecraft on to the next.
+
+23
+00:01:07,880 --> 00:01:11,990
+Without that trick, a trip to Neptune
+would take about forty years.
+
+24
+00:01:12,040 --> 00:01:13,950
+With it, less than ten.
+
+25
+00:01:14,220 --> 00:01:17,920
+Miss the window, and you wait more
+than a century and a half.
+
+26
+00:01:18,040 --> 00:01:19,550
+NASA didn't miss it.
+
+27
+00:01:19,760 --> 00:01:24,750
+NASA built two identical spacecraft,
+Voyager 1 and Voyager 2.
+
+28
+00:01:24,840 --> 00:01:27,420
+Each one is about the size of a small car,
+
+29
+00:01:27,440 --> 00:01:30,340
+with a big white dish antenna
+pointed at home.
+
+30
+00:01:30,360 --> 00:01:32,820
+The official mission was
+Jupiter and Saturn,
+
+31
+00:01:32,840 --> 00:01:35,580
+and it was planned to last
+about five years.
+
+32
+00:01:35,600 --> 00:01:39,220
+Their computers had about
+sixty-nine kilobytes of memory.
+
+33
+00:01:39,240 --> 00:01:42,180
+A single photo on your phone is
+bigger than that.
+
+34
+00:01:42,200 --> 00:01:44,780
+There are no solar panels,
+because out there,
+
+35
+00:01:44,800 --> 00:01:46,710
+sunlight is far too weak.
+
+36
+00:01:46,840 --> 00:01:50,100
+Instead, each Voyager carries a
+nuclear battery.
+
+37
+00:01:50,120 --> 00:01:54,080
+Plutonium gives off heat, and the heat
+is turned into electricity.
+
+38
+00:01:54,100 --> 00:01:55,960
+It never runs out suddenly.
+
+39
+00:01:55,980 --> 00:01:58,220
+It just slowly fades.
+
+40
+00:01:58,240 --> 00:02:02,300
+And bolted to the side, each one
+carries a gold-plated record.
+
+41
+00:02:02,320 --> 00:02:06,540
+A committee led by the astronomer Carl
+Sagan filled it with pictures,
+
+42
+00:02:06,560 --> 00:02:10,070
+sounds of Earth, and greetings in
+fifty-five languages.
+
+43
+00:02:10,320 --> 00:02:13,540
+There's whale song, thunder, a heartbeat.
+
+44
+00:02:13,560 --> 00:02:16,900
+There's Bach, Beethoven, and
+Chuck Berry's Johnny B.
+
+45
+00:02:16,920 --> 00:02:17,390
+Goode.
+
+46
+00:02:17,660 --> 00:02:21,250
+Some people on the committee thought rock
+and roll was too adolescent.
+
+47
+00:02:21,340 --> 00:02:25,010
+Sagan's answer was that there are a lot of
+adolescents on this planet.
+
+48
+00:02:25,160 --> 00:02:26,620
+It went on the record.
+
+49
+00:02:26,740 --> 00:02:29,850
+Just in case someone, someday, finds it.
+
+50
+00:02:30,060 --> 00:02:33,040
+Voyager 2 launched first, on
+August twentieth,
+
+51
+00:02:33,060 --> 00:02:34,560
+nineteen seventy-seven.
+
+52
+00:02:34,580 --> 00:02:37,080
+Voyager 1 followed on September fifth.
+
+53
+00:02:37,100 --> 00:02:40,640
+It got the number one because it
+was on a faster path,
+
+54
+00:02:40,660 --> 00:02:42,530
+and it would reach Jupiter first.
+
+55
+00:02:42,840 --> 00:02:45,030
+That launch almost went wrong.
+
+56
+00:02:45,200 --> 00:02:48,060
+One stage of the Titan rocket
+underperformed,
+
+57
+00:02:48,080 --> 00:02:51,640
+so the Centaur upper stage had to burn
+longer to make up for it.
+
+58
+00:02:51,800 --> 00:02:55,060
+When it was done, according to the
+mission's planning manager,
+
+59
+00:02:55,080 --> 00:02:58,210
+it had about three and a half
+seconds of fuel left.
+
+60
+00:02:58,340 --> 00:03:00,570
+Three and a half seconds.
+
+61
+00:03:00,700 --> 00:03:03,860
+That was the first time Voyager
+almost didn't make it.
+
+62
+00:03:03,980 --> 00:03:05,250
+It wasn't the last.
+
+63
+00:03:05,520 --> 00:03:10,470
+In April nineteen seventy-eight, Voyager
+2's main radio receiver failed.
+
+64
+00:03:10,560 --> 00:03:12,830
+The backup had a broken part too.
+
+65
+00:03:12,920 --> 00:03:17,660
+It could still hear Earth, but only on
+one very narrow frequency,
+
+66
+00:03:17,680 --> 00:03:21,670
+and that frequency drifts with the
+spacecraft's temperature and motion.
+
+67
+00:03:21,760 --> 00:03:24,070
+So engineers learned to aim.
+
+68
+00:03:24,220 --> 00:03:28,440
+For every command since then, they have
+worked out exactly where Voyager
+
+69
+00:03:28,460 --> 00:03:29,710
+2 will be listening.
+
+70
+00:03:29,760 --> 00:03:33,540
+For forty-eight years, it has been
+flying on its backup receiver.
+
+71
+00:03:33,680 --> 00:03:37,670
+In March nineteen seventy-nine,
+Voyager 1 reached Jupiter.
+
+72
+00:03:37,860 --> 00:03:41,860
+The pictures were stunning:
+storms bigger than Earth,
+
+73
+00:03:41,880 --> 00:03:45,030
+and the Great Red Spot
+swirling like paint.
+
+74
+00:03:45,120 --> 00:03:48,710
+It even found that Jupiter has
+thin, faint rings.
+
+75
+00:03:48,800 --> 00:03:52,060
+But the biggest surprise came from
+a navigation engineer,
+
+76
+00:03:52,080 --> 00:03:53,370
+Linda Morabito.
+
+77
+00:03:53,460 --> 00:03:56,560
+She was checking images used to
+steer the spacecraft,
+
+78
+00:03:56,580 --> 00:04:00,790
+and she saw a strange cloud at the
+edge of Jupiter's moon Io.
+
+79
+00:04:00,840 --> 00:04:04,270
+It was a plume about three
+hundred kilometers high.
+
+80
+00:04:04,440 --> 00:04:06,640
+A volcano, erupting.
+
+81
+00:04:06,820 --> 00:04:10,590
+The first active volcano ever
+found beyond Earth.
+
+82
+00:04:10,720 --> 00:04:14,300
+Scientists had expected Io to be a
+dead, cratered moon.
+
+83
+00:04:14,480 --> 00:04:18,240
+Instead, it was the most active
+world they had ever seen.
+
+84
+00:04:18,300 --> 00:04:22,010
+Next came Saturn, in November
+nineteen eighty.
+
+85
+00:04:22,060 --> 00:04:24,770
+Here, Voyager 1 faced a choice.
+
+86
+00:04:24,900 --> 00:04:28,800
+Saturn's biggest moon, Titan, has
+a thick atmosphere,
+
+87
+00:04:28,820 --> 00:04:31,560
+and scientists badly wanted a close look.
+
+88
+00:04:31,580 --> 00:04:36,000
+But flying past Titan would bend Voyager
+1's path up and out of the plane
+
+89
+00:04:36,020 --> 00:04:37,320
+of the planets.
+
+90
+00:04:37,340 --> 00:04:38,440
+No Uranus.
+
+91
+00:04:38,460 --> 00:04:39,480
+No Neptune.
+
+92
+00:04:39,500 --> 00:04:40,820
+They chose Titan.
+
+93
+00:04:40,840 --> 00:04:43,940
+Voyager 1's tour of the planets
+ended right there.
+
+94
+00:04:43,960 --> 00:04:46,660
+So the grand tour fell to Voyager 2.
+
+95
+00:04:46,680 --> 00:04:49,900
+It reached Uranus in January
+nineteen eighty-six,
+
+96
+00:04:49,920 --> 00:04:52,840
+and Neptune in August
+nineteen eighty-nine.
+
+97
+00:04:52,860 --> 00:04:56,920
+At Neptune, it measured the strongest
+winds in the solar system,
+
+98
+00:04:56,940 --> 00:05:01,440
+and on its moon Triton, it caught dark
+plumes shooting up from the ice,
+
+99
+00:05:01,460 --> 00:05:02,740
+like geysers.
+
+100
+00:05:02,760 --> 00:05:07,800
+It is still the only spacecraft that has ever
+visited either of these planets.
+
+101
+00:05:07,820 --> 00:05:12,120
+Every close-up picture of those two worlds
+comes from a few days of Voyager
+
+102
+00:05:12,140 --> 00:05:13,840
+2 flying past.
+
+103
+00:05:13,860 --> 00:05:18,240
+By nineteen ninety, Voyager 1 was about
+six billion kilometers from the
+
+104
+00:05:18,260 --> 00:05:18,960
+Sun.
+
+105
+00:05:18,980 --> 00:05:23,540
+Carl Sagan pushed for one last
+picture: turn the camera around,
+
+106
+00:05:23,560 --> 00:05:24,920
+and photograph home.
+
+107
+00:05:24,940 --> 00:05:28,460
+On February fourteenth,
+nineteen ninety, it did.
+
+108
+00:05:28,480 --> 00:05:32,460
+In that picture, Earth is smaller
+than a single pixel.
+
+109
+00:05:32,480 --> 00:05:36,580
+A pale blue dot, caught in a beam
+of scattered sunlight.
+
+110
+00:05:36,600 --> 00:05:40,860
+Thirty-four minutes later, Voyager 1's
+cameras were switched off for good,
+
+111
+00:05:40,880 --> 00:05:43,360
+to save power for the long road ahead.
+
+112
+00:05:43,380 --> 00:05:46,880
+The Sun blows a constant wind of
+charged particles.
+
+113
+00:05:46,900 --> 00:05:50,000
+That wind carves out a huge bubble
+around the planets,
+
+114
+00:05:50,020 --> 00:05:51,500
+called the heliosphere.
+
+115
+00:05:51,520 --> 00:05:55,087
+Where the bubble ends,
+interstellar space begins.
+
+116
+00:05:55,107 --> 00:05:58,980
+In August twenty-twelve, Voyager
+1 crossed that edge.
+
+117
+00:05:59,000 --> 00:06:01,267
+But nobody could say so for sure.
+
+118
+00:06:01,287 --> 00:06:05,080
+The instrument built to measure the solar
+wind directly had stopped working
+
+119
+00:06:05,100 --> 00:06:06,540
+back in nineteen eighty.
+
+120
+00:06:06,560 --> 00:06:10,300
+It took more than a year, and a burst of
+activity from the Sun that made
+
+121
+00:06:10,320 --> 00:06:15,000
+the gas around Voyager ring like a bell,
+before scientists were confident.
+
+122
+00:06:15,020 --> 00:06:18,160
+Voyager 1 was in interstellar space.
+
+123
+00:06:18,180 --> 00:06:21,280
+Voyager 2 followed in November
+twenty-eighteen.
+
+124
+00:06:21,300 --> 00:06:25,040
+They are the only working spacecraft that
+have ever measured interstellar
+
+125
+00:06:25,060 --> 00:06:26,320
+space directly.
+
+126
+00:06:26,340 --> 00:06:28,840
+Out there, there is no map.
+
+127
+00:06:28,860 --> 00:06:30,700
+Voyager is drawing it.
+
+128
+00:06:30,720 --> 00:06:34,080
+Fixing a spacecraft you can
+never touch is hard.
+
+129
+00:06:34,100 --> 00:06:38,940
+Fixing one that is almost a full day of light
+travel away is something else.
+
+130
+00:06:38,960 --> 00:06:43,740
+In July twenty twenty-three, a wrong
+command tilted Voyager 2's antenna
+
+131
+00:06:43,760 --> 00:06:45,740
+two degrees away from Earth.
+
+132
+00:06:45,760 --> 00:06:48,540
+Two degrees, and it went silent.
+
+133
+00:06:48,560 --> 00:06:52,567
+The giant dish in Canberra, Australia,
+sent its strongest signal,
+
+134
+00:06:52,587 --> 00:06:56,487
+an interstellar shout, telling the
+spacecraft to turn back.
+
+135
+00:06:56,507 --> 00:07:00,280
+The message took about eighteen and
+a half hours to arrive.
+
+136
+00:07:00,300 --> 00:07:02,360
+Voyager 2 turned home.
+
+137
+00:07:02,380 --> 00:07:06,290
+A few months later, Voyager 1
+started sending gibberish.
+
+138
+00:07:06,640 --> 00:07:09,350
+One memory chip in its
+computer had failed.
+
+139
+00:07:09,520 --> 00:07:13,510
+Nobody can replace a chip twenty-four
+billion kilometers away.
+
+140
+00:07:13,680 --> 00:07:16,700
+So the team moved the code
+around the dead chip,
+
+141
+00:07:16,720 --> 00:07:21,250
+piece by piece, because no single free
+spot was big enough to hold it.
+
+142
+00:07:21,420 --> 00:07:25,730
+In April twenty twenty-four, Voyager 1
+started making sense again.
+
+143
+00:07:25,920 --> 00:07:29,780
+And in twenty twenty-five, engineers
+brought back a set of thrusters that
+
+144
+00:07:29,800 --> 00:07:32,790
+had been considered dead since
+two thousand four.
+
+145
+00:07:32,960 --> 00:07:36,340
+They gambled, switched them
+on, and it worked.
+
+146
+00:07:36,520 --> 00:07:39,070
+Every one of those repairs
+went the same way.
+
+147
+00:07:39,360 --> 00:07:43,590
+Send a command, then wait almost two
+days to find out if it worked.
+
+148
+00:07:43,980 --> 00:07:46,290
+So, why don't we just switch it off?
+
+149
+00:07:46,560 --> 00:07:50,230
+Each Voyager loses about four watts
+of power every year.
+
+150
+00:07:50,400 --> 00:07:55,300
+To keep them going, the team turns things
+off one by one: heaters first,
+
+151
+00:07:55,320 --> 00:07:56,470
+then instruments.
+
+152
+00:07:56,600 --> 00:08:00,980
+On Voyager 1, an instrument that had been
+running since nineteen seventy-seven
+
+153
+00:08:01,000 --> 00:08:04,000
+was switched off in April
+twenty twenty-six.
+
+154
+00:08:04,020 --> 00:08:08,160
+But the two Voyagers are still the only
+spacecraft taking measurements in
+
+155
+00:08:08,180 --> 00:08:09,830
+interstellar space.
+
+156
+00:08:09,880 --> 00:08:13,540
+Every extra year is data that
+nobody else can collect,
+
+157
+00:08:13,560 --> 00:08:16,490
+and a new probe would need
+decades just to get there.
+
+158
+00:08:16,660 --> 00:08:18,670
+So nobody is switching it off.
+
+159
+00:08:18,800 --> 00:08:22,150
+The team keeps it alive for as
+long as the power lasts.
+
+160
+00:08:22,480 --> 00:08:26,940
+One day, the power will run out, and
+Voyager will go quiet on its own.
+
+161
+00:08:27,100 --> 00:08:28,210
+But it won't stop.
+
+162
+00:08:28,340 --> 00:08:33,200
+In about forty thousand years, Voyager 1 will
+pass less than two light-years
+
+163
+00:08:33,220 --> 00:08:36,020
+from a star called Gliese four four five.
+
+164
+00:08:36,040 --> 00:08:38,000
+Nobody will be listening by then.
+
+165
+00:08:38,020 --> 00:08:41,720
+But it will still be carrying our
+music, our pictures,
+
+166
+00:08:41,740 --> 00:08:43,090
+and our hello.
+

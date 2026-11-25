@@ -44,6 +44,7 @@ References for poses: the hero job + the avatar media. Prompt = framing + expres
 | calc | holding a calculator, long receipt piling up at his feet |
 | hot | red cheeks, sweat, fanning himself |
 | dizzy | spiral glasses, bump on head, tongue out, hand on bump (from old woodpecker thumbnail) |
+| phone | facing viewer, holding a chunky smartphone at chest with both hands, hopeful waiting smile (job `ad8ae78b-...`, 2k medium, 2026-11-25) |
 | shrug | facing viewer, shoulders up, both palms up, eyebrow raised, puzzled "huh?" - the "asking" pose (job `7d9aa304-13b2-4a41-ad06-59cf133e9c4b`, 2k medium, 2026-11-24) |
 
 ## Objects

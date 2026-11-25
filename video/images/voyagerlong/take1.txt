@@ -1,0 +1,33 @@
+You could call Voyager 1 today, but your hello would take a full day to arrive. And in nineteen seventy-seven, it almost never left Earth.
+
+Today it's forty-nine years old. It's running on less than half of its original power, and it has two working science instruments left. So why don't we just switch it off?
+
+To answer that, you need the whole story. And it starts with planets lining up.
+
+In the mid nineteen-sixties, a young engineer at NASA's Jet Propulsion Laboratory, Gary Flandro, was working out routes to the outer planets. He noticed something rare. In the late nineteen-seventies, Jupiter, Saturn, Uranus and Neptune would all sit on the same side of the Sun, lined up like stepping stones. That only happens about once every hundred and seventy-five years.
+
+Why does that matter? Because a planet can throw a spacecraft. Fly close behind Jupiter as it moves, and its gravity pulls you along and flings you out faster, like a skateboarder grabbing the back of a passing bus. Planet after planet, each one hands the spacecraft on to the next.
+
+Without that trick, a trip to Neptune would take about forty years. With it, less than ten. Miss the window, and you wait more than a century and a half. NASA didn't miss it.
+
+NASA built two identical spacecraft, Voyager 1 and Voyager 2. Each one is about the size of a small car, with a big white dish antenna pointed at home. The official mission was Jupiter and Saturn, and it was planned to last about five years.
+
+Their computers had about sixty-nine kilobytes of memory. A single photo on your phone is bigger than that.
+
+There are no solar panels, because out there, sunlight is far too weak. Instead, each Voyager carries a nuclear battery. Plutonium gives off heat, and the heat is turned into electricity. It never runs out suddenly. It just slowly fades.
+
+And bolted to the side, each one carries a gold-plated record. A committee led by the astronomer Carl Sagan filled it with pictures, sounds of Earth, and greetings in fifty-five languages. There's whale song, thunder, a heartbeat. There's Bach, Beethoven, and Chuck Berry's Johnny B. Goode. Some people on the committee thought rock and roll was too adolescent. Sagan's answer was that there are a lot of adolescents on this planet. It went on the record. Just in case someone, someday, finds it.
+
+Voyager 2 launched first, on August twentieth, nineteen seventy-seven. Voyager 1 followed on September fifth. It got the number one because it was on a faster path, and it would reach Jupiter first.
+
+That launch almost went wrong. One stage of the Titan rocket underperformed, so the Centaur upper stage had to burn longer to make up for it. When it was done, according to the mission's planning manager, it had about three and a half seconds of fuel left.
+
+Three and a half seconds. That was the first time Voyager almost didn't make it. It wasn't the last.
+
+In April nineteen seventy-eight, Voyager 2's main radio receiver failed. The backup had a broken part too. It could still hear Earth, but only on one very narrow frequency, and that frequency drifts with the spacecraft's temperature and motion.
+
+So engineers learned to aim. For every command since then, they have worked out exactly where Voyager 2 will be listening. For forty-eight years, it has been flying on its backup receiver.
+
+In March nineteen seventy-nine, Voyager 1 reached Jupiter. The pictures were stunning: storms bigger than Earth, and the Great Red Spot swirling like paint. It even found that Jupiter has thin, faint rings.
+
+But the biggest surprise came from a navigation engineer, Linda Morabito. She was checking images used to steer the spacecraft, and she saw a strange cloud at the edge of Jupiter's moon Io. It was a plume about three hundred kilometers high. A volcano, erupting. The first active volcano ever found beyond Earth. Scientists had expected Io to be a dead, cratered moon. Instead, it was the most active world they had ever seen.

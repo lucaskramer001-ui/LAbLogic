@@ -1,0 +1,32 @@
+{
+  "slug": "voyagerlong",
+  "note": "Long-form (1920x1080, 60 fps, ~8:50). Upload private; YouTube Studio: add thumbnail A, test B and C with Test & Compare, upload subtitles.srt, pin the comment. Link from the Voyager and 1977 Shorts (Related video + pinned comment).",
+  "items": [
+    {
+      "platform": "youtube",
+      "file": "video/out/voyagerlong/voyager-long-1080p.mp4",
+      "title": "Why Don't We Just Turn Voyager 1 Off?",
+      "description_file": "publish/episodes/voyagerlong/youtube-description.md",
+      "comment_file": "publish/episodes/voyagerlong/pinned-comment.md",
+      "thumbnail": "publish/episodes/voyagerlong/thumb-a.jpg",
+      "captions_file": "publish/episodes/voyagerlong/subtitles.srt",
+      "tags": [
+        "Voyager 1",
+        "Voyager 2",
+        "Voyager story",
+        "how is Voyager 1 still working",
+        "Voyager 1 2026",
+        "Voyager one light-day",
+        "Pale Blue Dot",
+        "Golden Record",
+        "Io volcanoes",
+        "Grand Tour",
+        "interstellar space",
+        "NASA JPL",
+        "why don't we just",
+        "Lab Logic",
+        "science animation"
+      ]
+    }
+  ]
+}

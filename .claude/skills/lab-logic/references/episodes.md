@@ -26,6 +26,7 @@ Add a row for every new episode (and every topic the user mentions as already do
 | Why don't we just cover the Sahara in solar panels? | Short | made 2026-11-23 |
 | Why don't we just bring back the woolly mammoth? | Short | made 2026-11-24 |
 | Why don't we just catch up with Voyager 1? (one light-day, 2026-11-18) | Short | made 2026-11-25 |
+| Why don't we just turn Voyager 1 off? (the whole Voyager story) | long-form (~8:50) | made 2026-11-25 |
 | What was normal when Voyager 1 left Earth? (1977, companion Short) | Short | made 2026-11-25 |
 
 ## Iceberg Short - "Why don't we just tow an iceberg?"
@@ -321,3 +322,26 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   (+3.33 s; word times shifted, originals kept as vo_before_insert.wav / words_before_insert.json). On screen:
   "1 LIGHT-DAY AWAY" + "25.9 BILLION KM · 16.1 BILLION MI". Splicing one line is far cheaper than a new full take.
 - Costs: 1,090 ElevenLabs credits (voice incl. insert); Higgsfield 0.5; photos free; SFX 0.
+
+## Voyager long-form - "Why Don't We Just Turn Voyager 1 Off?" (~8:50) - first STORY long-form, real photos + people
+- User choices: 9 min (story needs room), archival photos of real people allowed (Flandro, Sagan, 1972 team), music bed.
+- Hook (yt-script scorer 72 STRONG): "You could call Voyager 1 today, but your hello would take a full day to arrive.
+  And in 1977, it almost never left Earth." Title (title.py 100): "Why Don't We Just Turn Voyager 1 Off?"; A/B title
+  "How Is Voyager 1 Still Alive After 49 Years?". Thumbs `VoyagerThumbA` STILL ALIVE?! (point), `B` 1977 TECH (shocked,
+  "69 KB MEMORY" badge on the real photo - not on a phone, that read as the phone's memory), `C` 1 DAY DELAY (new pose `phone`).
+- 1,373 words, 2 takes (3,952 + 4,024 chars), split before "Next came Saturn"; joined with voice.py (pauses 0.5, no
+  tempo) -> 522.4 s. Composition `VoyagerLong`, code `video/src/voyagerlong/` (Main.tsx scenes + overlays, Thumbs.tsx).
+- Retention devices: reply countdown chip (24 h -> 0 when the "hello" reply lands at the end), "close calls" heart HUD
+  (5 near-deaths crack/patch a heart, "CLOSE CALL #n"), chapter cards bottom-left (= YouTube chapters), pattern change
+  every 20-40 s (photo / diagram / character / stamp).
+- Music: ElevenLabs music (`eleven_music_v2_5`, 900 credits per track): bed A curious ambient 3:00 (0:00-5:13, looped
+  with a 4 s crossfade), bed B wistful piano 3:30 (Pale Blue Dot to the end); mixed to ~-33 LUFS under the voice
+  (`public/voyagerlong/music/music.wav`). Do NOT check music for vocals with Scribe on the music connector: it cost
+  990 + 1,155 credits (Scribe on the voice connector's own TTS nodes is free).
+- Higgsfield (2.5 credits): worlds sheet Uranus/Neptune/Io/Titan with blank face areas (2k medium, job d98eb5ad-...),
+  DSN dish (1k medium, e576b8e2-...), scientist `phone` pose (2k medium, ad8ae78b-...). Sprites in
+  `public/voyagerlong/sprites/` (centres measured with a distance transform; see SP in Main.tsx).
+- Photos: NASA library only (Commons was rate-limited all session; Morabito has no free photo found -> name pill only).
+  Pale Blue Dot (PIA23645 crop 1100x1087): Earth is the bright speck at (654, 564) - zoom/circle use that point.
+- Costs: ElevenLabs voice 7,976 + music 1,800 + accidental music scribe 2,145 = ~11,900 credits; Higgsfield 2.5;
+  photos and SFX free.
