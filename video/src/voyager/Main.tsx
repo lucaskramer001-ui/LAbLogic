@@ -382,7 +382,7 @@ const TimeScene: React.FC<{t: number}> = ({t}) => {
         <Space t={t} drift={0.4} />
         <Voyager x={620} y={1080} s={1.4} t={t} mood={t > silT ? 'dizzy' : t > wT ? 'worried' : 'happy'} power={t > silT ? 0 : level} />
         {t > batT - 0.1 && <Battery x={170} y={1380} s={0.9 * springIn(t, batT - 0.1, 0.5)} level={level} />}
-        {t > wT - 0.1 && t < offT && <BigText x={540} y={600} text="-4 WATTS A YEAR" size={86 * slam(t, wT - 0.1)} fill={C.red} />}
+        {t > wT - 0.1 && t < offT - 0.25 && <BigText x={540} y={600} text="-4 WATTS A YEAR" size={86 * slam(t, wT - 0.1)} fill={C.red} />}
         {t > offT - 0.2 && <Lights x={540} y={600} on={t > silT ? 0 : on} />}
         {t > silT - 0.1 && <Stamp x={540} y={760} text="SILENT" s={springIn(t, silT - 0.1, 0.5, 10)} />}
         <Pill x={540} y={300} text="PROBLEM 3: TIME" s={span(t, t0 + 0.1, offT - 0.2)} bg={C.red} fg={C.paper} size={56} />
