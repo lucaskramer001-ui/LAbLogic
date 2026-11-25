@@ -1,10 +1,11 @@
-Voyager 1 just became the first human-made object one light-day from Earth. It left in 1977, into a world with no web and no mobile phones. So what was normal back then?
+Voyager 1 just became the first human-made object one light-day from Earth: about 25.9 billion km (16.1 billion miles), reached on 18 November 2026, according to NASA. It left in 1977, into a world with no web and no mobile phones. So what was normal back then?
 
 The Apple II had just gone on sale (June 1977). Voyager itself runs on computers with about 69 KB of memory, less than a single photo on your phone. Phones had cords and hung on the wall: the first handheld mobile phone call was made in 1973, but ordinary people didn't own one. Music came on cassettes; the Sony Walkman only arrived in 1979. Games meant the Atari 2600, and Star Wars had just hit cinemas (May 1977). The Space Shuttle had never been to space: in 1977 the test orbiter Enterprise was gliding off the back of a Boeing 747 (first spaceflight: 1981). About 4.2 billion people lived on Earth; today it's more than 8 billion. Smallpox still infected people; the last natural case was in Somalia in October 1977, and the disease was declared eradicated in 1980. And nobody knew a single planet around another star; the first was confirmed in 1992.
 
 That's why Voyager carries the Golden Record, with greetings in 55 languages: a message from that world, to whoever finds it.
 
 Photos:
+Voyager 1 at Kennedy Space Center, August 1977 - NASA (public domain), KSC-77PP-229
 Voyager 1 launch, 5 Sept 1977 - NASA (public domain), PIA21746
 Golden Record - NASA/JPL (public domain), PIA14113
 Shuttle Enterprise above the NASA 747, 1977 - NASA (public domain), S77-27512

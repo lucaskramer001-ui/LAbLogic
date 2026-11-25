@@ -19,6 +19,7 @@ const PHRASES: Array<[string, string]> = [
   ['twenty-six hundred', '2600'],
   ['fifty-five', '55'],
   ['two more years', '2 MORE YEARS'],
+  ['one full', '1 FULL'],
 ];
 
 const buildTokens = (): Tok[] => {
@@ -48,7 +49,7 @@ const buildTokens = (): Tok[] => {
   return toks;
 };
 
-const KEY = new Set(['WEB', 'VOYAGER', '1', '1977', 'NORMAL', 'COMPUTERS', 'APPLE', 'II', '69', 'KILOBYTES', 'PHOTO', 'PHONES', 'CORDS', 'WALL', '1973', 'MOBILE', 'MUSIC', 'CASSETTES', 'WALKMAN', '2 MORE YEARS', 'GAMES', 'ATARI', '2600', 'STAR', 'WARS', 'SPACE', 'SHUTTLE', 'JUMBO', 'JET', '4.2 BILLION', '8 BILLION', 'SMALLPOX', 'PLANET', 'STAR', 'GOLDEN', 'RECORD', '55', 'LANGUAGES', 'MESSAGE']);
+const KEY = new Set(['WEB', 'LIGHT-DAY', '1 FULL', 'VOYAGER', '1', '1977', 'NORMAL', 'COMPUTERS', 'APPLE', 'II', '69', 'KILOBYTES', 'PHOTO', 'PHONES', 'CORDS', 'WALL', '1973', 'MOBILE', 'MUSIC', 'CASSETTES', 'WALKMAN', '2 MORE YEARS', 'GAMES', 'ATARI', '2600', 'STAR', 'WARS', 'SPACE', 'SHUTTLE', 'JUMBO', 'JET', '4.2 BILLION', '8 BILLION', 'SMALLPOX', 'PLANET', 'STAR', 'GOLDEN', 'RECORD', '55', 'LANGUAGES', 'MESSAGE']);
 
 type Group = {toks: Tok[]; s: number; e: number};
 const buildGroups = (): Group[] => {

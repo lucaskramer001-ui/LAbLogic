@@ -237,19 +237,36 @@ export const Y1977Cover: React.FC = () => (
   </AbsoluteFill>
 );
 
-// HOOK (frame 0): Voyager launch photo already on screen, "NO WEB" stamp, "1977" slams.
+// HOOK (frame 0): the REAL Voyager 1 (NASA photo, Aug 1977) is on screen from frame 0, "NO WEB" stamp,
+// then "one full light-day away" (NASA, 18 Nov 2026: 25.9 bn km / 16.1 bn mi), then the launch photo + "1977" slam.
 const HookScene: React.FC<{t: number}> = ({t}) => {
   const webT = ph('without the web');
+  const nowT = ph('right now');
+  const ldT = ph('one full');
+  const itT = ph('it left earth') - 0.15;
   const yrT = ph('nineteen seventyseven');
-  const sh = camShake(t, [[yrT, 12]]);
+  const sh = camShake(t, [[ldT, 8], [yrT, 12]]);
+  const out = 1 - easeInOutCubic(clamp((t - itT) / 0.3));
   return (
     <Stage cam={{s: lerp(1.08, 1, ease(t, 0, 1.6)), x: 540 + sh.x, y: 960 + sh.y}}>
       <Layer>
         <Retro t={t} />
-        <Photo src="launch" iw={889} ih={900} x={560} y={990} w={590} t={t} t0={-0.6} rot={-4} credit="NASA" label="VOYAGER 1 LAUNCH" />
-        {t > webT - 0.05 && t < yrT - 0.2 && <Stamp x={540} y={500} text="NO WEB" s={springIn(t, webT - 0.05, 0.5, 10)} size={90} />}
+        {out > 0.01 && (
+          <g transform={`translate(${-700 * (1 - out)} 0)`} data-skip={out < 1 ? "slide-out" : undefined}>
+            <Photo src="voyager1" iw={1310} ih={1560} x={540} y={985} w={500} t={t} t0={-0.6} rot={3} credit="NASA / KSC, AUG 1977" label="THE REAL VOYAGER 1" />
+          </g>
+        )}
+        {t > itT && <Photo src="launch" iw={889} ih={900} x={560} y={990} w={590} t={t} t0={itT} rot={-4} credit="NASA" label="VOYAGER 1 LAUNCH" />}
+        {t > webT - 0.05 && t < nowT - 0.1 && <Stamp x={540} y={420} text="NO WEB" s={springIn(t, webT - 0.05, 0.5, 10)} size={90} />}
+        {t > ldT - 0.1 && t < itT && (
+          <g>
+            <Pill x={540} y={300} text="RIGHT NOW" s={span(t, nowT - 0.05, itT)} bg={PAPER} size={46} />
+            <BigText x={540} y={450} text="1 LIGHT-DAY AWAY" size={82 * slam(t, ldT - 0.1)} fill={C.yellow} />
+            <Pill x={540} y={565} text="25.9 BILLION KM · 16.1 BILLION MI" s={span(t, ldT + 0.5, itT)} bg={PAPER} size={40} />
+          </g>
+        )}
         {t > yrT - 0.1 && <BigText x={540} y={520} text="1977" size={210 * slam(t, yrT - 0.1)} fill={C.yellow} />}
-        <Pill x={540} y={300} text="SEPTEMBER 5, 1977" s={span(t, 0.1, yrT - 0.1)} bg={PAPER} size={54} />
+        {t > itT && <Pill x={540} y={300} text="SEPTEMBER 5, 1977" s={span(t, itT + 0.05, yrT - 0.1)} bg={PAPER} size={54} />}
       </Layer>
     </Stage>
   );
@@ -518,6 +535,9 @@ const SFX: Cue[] = [
   {f: 'sun/sfx/rocket', at: 0, db: -20, len: 2.5},
   {f: I('stamp'), at: ph('without the web') - 0.05, db: -13},
   {f: I('stamp'), at: ph('nineteen seventyseven') - 0.1, db: -12},
+  {f: I('pop'), at: ph('right now') - 0.05, db: -20},
+  {f: I('stamp'), at: ph('one full') - 0.1, db: -13},
+  {f: I('whoosh'), at: ph('it left earth') - 0.2, db: -18},
   {f: 'bbstream/sfx/ping', at: S.normal + 0.2, db: -18},
   {f: 'sun/sfx/printer', at: S.comp + 0.4, db: -20, len: 1.5},
   {f: I('pop'), at: ph('voyager itself') - 0.1, db: -20},

@@ -315,4 +315,9 @@ long-forms from new Shorts (Shorts "Related video" link + pinned comment).
   URLs to upload.wikimedia.org). Credit CC BY-SA photos on the card and in the description. Hosts were added to
   the environment's network allowlist on 2026-11-25.
 - Mixed with cartoon style: Higgsfield rotary wall phone + retro TV (one sheet, 0.5), Voyager sprite reused, scientist.
-- Costs: 1,050 ElevenLabs credits (voice); Higgsfield 0.5; photos free; SFX 0.
+- Update (user request): real NASA photo of Voyager 1 itself (KSC-77PP-229, Aug 1977, cropped to
+  `photos/voyager1.jpg`) on screen from frame 0, plus the line "Right now, it's one full light-day away." -
+  generated alone (40 credits), atempo 1.04, loudness matched and spliced into vo.wav after "Voyager 1 did."
+  (+3.33 s; word times shifted, originals kept as vo_before_insert.wav / words_before_insert.json). On screen:
+  "1 LIGHT-DAY AWAY" + "25.9 BILLION KM · 16.1 BILLION MI". Splicing one line is far cheaper than a new full take.
+- Costs: 1,090 ElevenLabs credits (voice incl. insert); Higgsfield 0.5; photos free; SFX 0.
