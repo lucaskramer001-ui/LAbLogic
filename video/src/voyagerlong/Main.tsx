@@ -558,9 +558,17 @@ const AlignScene: React.FC<{t: number}> = ({t}) => {
         ))}
         <Sun x={cx} y={cy} r={52} t={t} />
         {keys.map((k, i) => {
-          const free = starts[i] + t * speeds[i];
-          const target = -0.35;
-          const a = lerp(free, target + Math.round((free - target) / (2 * Math.PI)) * 2 * Math.PI, align);
+          // Free orbit until the line-up starts, then a Hermite ease that starts at the orbit speed and stops exactly
+          // on the shared line (always moving forward, no wrap-around jumps).
+          const t0 = T.late70s;
+          const D = T.stones + 0.3 - t0;
+          const a0 = starts[i] + t0 * speeds[i];
+          const minGap = (speeds[i] * D) / 3;
+          const target = -0.35 + Math.ceil((a0 + minGap + 0.35) / (2 * Math.PI)) * 2 * Math.PI;
+          const v0 = (speeds[i] * D) / (target - a0);
+          const u = clamp((t - t0) / D);
+          const f = v0 * u + (3 - 2 * v0) * u * u + (v0 - 2) * u * u * u;
+          const a = t < t0 ? starts[i] + t * speeds[i] : a0 + (target - a0) * f;
           const x = cx + Math.cos(a) * radii[i] * 1.25;
           const y = cy + Math.sin(a) * radii[i] * 0.78;
           return <Body key={k} k={k} x={x} y={y} r={rs[i]} t={t} seed={i} face={rs[i] > 30} mood={align > 0.9 ? 'smug' : 'happy'} />;
@@ -652,11 +660,11 @@ const BuiltScene: React.FC<{t: number}> = ({t}) => {
         {mem && !pw && (
           <g>
             <BigText x={960} y={215} text="69 KB OF MEMORY" size={110 * slam(t, T.memory + 0.3)} fill={C.yellow} />
-            <Txt x={330} y={480} text="VOYAGER" size={50} />
+            <Txt x={650} y={480} text="VOYAGER" size={50} anchor="end" />
             <rect x={680} y={430} width={Math.max(6, 30 * prog(t, T.memory + 0.6, T.memory + 1.2))} height={80} rx={10} fill={C.green} stroke={C.ink} strokeWidth={6} />
             {t > T.photoBig && (
               <g>
-                <Txt x={330} y={660} text="1 PHONE PHOTO" size={50} />
+                <Txt x={650} y={660} text="1 PHONE PHOTO" size={50} anchor="end" />
                 <rect x={680} y={610} width={Math.max(6, 1100 * prog(t, T.photoBig + 0.3, T.photoBig + 1.6))} height={80} rx={10} fill={C.red} stroke={C.ink} strokeWidth={6} />
                 {t > T.photoBig + 1.7 && <Txt x={1300} y={820} text="BIGGER" size={60} fill={C.yellow} anchor="middle" />}
               </g>
@@ -780,7 +788,9 @@ const FuelScene: React.FC<{t: number}> = ({t}) => {
       <Layer>
         <Space t={t} drift={3} cx={700} cy={900} />
         <Rocket x={700} y={560} s={2.1} rot={8} flame={t > T.titan + 1 && t < T.titan + 2 ? 0.3 : 1} t={t} />
-        <Face x={700 + 10} y={430} s={0.7} mood={t > T.titan ? 'scared' : 'happy'} open={blink(t, 2)} gap={34} />
+        <g transform="translate(700 560) rotate(8) scale(2.1)">
+          <Face x={0} y={26} s={0.3} mood={t > T.titan ? 'scared' : 'happy'} open={blink(t, 2)} gap={34} />
+        </g>
         {t > T.titan && t < T.centaur && <Pill x={700} y={150} text="TITAN STAGE UNDERPERFORMS" size={36} bg={PAPER} s={pop(t, T.titan + 0.6)} />}
         {t > T.centaur && t < T.threeHalf && <Pill x={700} y={150} text="CENTAUR BURNS LONGER" size={36} s={pop(t, T.centaur + 0.3)} />}
         <g transform={`translate(1380 560) scale(${pop(t, T.wrong + 0.4)})`}>
